@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './_App.scss';
+import './style/_reset.scss';
+import Header from './component/header';
+import Sidebar from './component/sidebar';
+import Content from './component/content';
+import MusicBar from './component/music-bar';
 
-function App() {
+// react.FC로 타입 지정
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <Header />
+        <Sidebar />
+        <Content />
+        <MusicBar />
+      </div>
     </div>
   );
 }
