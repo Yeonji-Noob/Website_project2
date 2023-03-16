@@ -1,7 +1,6 @@
 import React from 'react';
-import main from './sass/_main.scss'
-import './style/_App.scss';
-// import './style/base/_reset.scss';
+import './sass/_main.scss' ;
+// import './style/_App.scss' ;
 import Header from './component/header';
 import Sidebar from './component/sidebar';
 import Content from './component/content';

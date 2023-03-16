@@ -1,0 +1,15 @@
+.header {
+  position: relative;
+  grid-area: 1 / 1 / 2 / 10;
+  background-color: $light-main-color;
+  width: 100%;
+  height: 110px;
+  @include set-container-style;
+
+  & .header-logo {
+
+    margin-left: 70px;
+
+  }
+
+}
