@@ -21,6 +21,11 @@
     "jsx": "react-jsx",
     "baseUrl": "src"
   },
+  "typeRoots": [
+    "./node_modules/@types",
+    "./custom-typings",
+    "./node_modules/@types/aria-query",
+  ],
   "include": [
     "src"
   ]

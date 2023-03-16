@@ -1,7 +1,9 @@
 .music-bar {
-  grid-area: 8 / 1 / 10 / 10;
+  position:sticky;
+  bottom: 0;
+  grid-area: 4 / 1 / 10 / 10;
   background-color: #e5e5e5;
-  height: 110px;
-  z-index: 10;
+  width: 100%;
+  height: 100px;
   @include set-container-style;
 }

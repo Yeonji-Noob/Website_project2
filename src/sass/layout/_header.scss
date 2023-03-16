@@ -1,4 +1,5 @@
 .header {
+  display: flex;
   position: relative;
   grid-area: 1 / 1 / 2 / 10;
   background-color: $light-main-color;
@@ -12,4 +13,14 @@
 
   }
 
+}
+
+
+.header-right {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 200px;
+  cursor: pointer;
 }

@@ -1,24 +1,21 @@
-.sidebar {
-  grid-area: 2 / 1 / 8 / 2;
-  background-color: #e5e5e5;
-  width: 235px;
-  height: 97%;
-  padding-top: 20px;
-  @include set-container-style;
 
-  & input {
-    display: block;
-    color: #e5e5e5;
-    background-color: $light-main-color;
-    margin: 0 auto;
-    height: 30px;
-    width: 80%;
-    margin-bottom: 12px;
-    border-radius: 5px;
-  }
+.sidebar {
+  grid-area: 2 / 1 / 4 / 2 ;
+  background-color: #e5e5e5;
+  width: 230px;
+  height: 100vh;
+  padding-top: 20px;
+  overflow: auto;
+  overflow-x: hidden;
+  @include set-container-style;
 }
 
+
+
 .sidebar-contents {
+
+
+
   & p {
     display: flex;
     color: #000;
@@ -33,8 +30,8 @@
 
     & h3 {
       position: relative;
-      top: 2px;
-      left: 33%;
+      top: 3px;
+      left: 70px;
     }
 
     &:hover {
@@ -45,16 +42,17 @@
     & img {
       position: relative;
       top: 3px;
-      left: 25%;
+      left: 55px;
       width: 16px;
     }
   }
 
   & .sns-icon {
     position: relative;
-    left: 15%;
+    left: 3.8vh;
+    padding-left: 0;
     & img {
-      margin: 14px;
+      margin: 2vh;
     }
 
     & img:last-child{
@@ -69,8 +67,10 @@
   }
 }
 
+
+
 /*------구분선-------*/
 hr {
-  background-color: #d9d9d9;
-  margin: 15px 35px;
+  background-color: #f1f1f1;
+  margin: 20px 5vh;
 }
