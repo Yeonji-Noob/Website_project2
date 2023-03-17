@@ -1,12 +1,14 @@
 
 .sidebar {
+  position: sticky;
   grid-area: 2 / 1 / 4 / 2 ;
   background-color: #e5e5e5;
-  width: 230px;
-  height: 100vh;
+  width: 250px;
+  height: 50vh;
   padding-top: 20px;
   overflow: auto;
   overflow-x: hidden;
+  min-height: calc(100vh - 100px);
   @include set-container-style;
 }
 
@@ -14,7 +16,7 @@
 
 .sidebar-contents {
 
-
+  overflow: auto;
 
   & p {
     display: flex;
@@ -36,7 +38,8 @@
 
     &:hover {
       color: #fff;
-      background-color: #231edc;
+      background-color: $main-color;
+      cursor: pointer;
     }
 
     & img {
@@ -49,10 +52,12 @@
 
   & .sns-icon {
     position: relative;
-    left: 3.8vh;
-    padding-left: 0;
+    margin: 0 35px;
     & img {
-      margin: 2vh;
+      
+      padding: 1vh;
+      margin-left: 10px;
+
     }
 
     & img:last-child{
@@ -72,5 +77,20 @@
 /*------구분선-------*/
 hr {
   background-color: #f1f1f1;
-  margin: 20px 5vh;
+  width: 160px;
+  margin: 20px 40px;
+}
+
+
+.sidebar-contents {
+  overflow-x: hidden;
+
+  & .scroll-content {
+      width: 500px;
+      display: block;
+      margin-top: 2vh;
+      overflow: auto;
+      background-color: #e5e5e5;
+  }
+  
 }

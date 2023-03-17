@@ -1,4 +1,3 @@
-import React from "react";
 import Soribadalogo from "../assets/soribadalogo.svg"
 import Setting from "../assets/setting.svg"
 

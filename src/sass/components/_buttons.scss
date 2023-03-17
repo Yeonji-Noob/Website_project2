@@ -1,10 +1,10 @@
 .sidebar--button--container {
-    display: block;
     position: sticky;
+    display: block;
     width: 200px;
     height: 140px;
     margin: auto;
-    bottom: -20px;
+    bottom: 100px;
     border-radius: 10px;
     background-color: #e5e5e5;
 }
@@ -21,7 +21,7 @@
     & .ticket {
         display: flex;
         padding: 10px;
-        background-color: #231edc;
+        background-color: $main-color;
         cursor: pointer;
         @include set-button;
 
@@ -33,10 +33,10 @@
 
         & span {
             color: #fff;
-            font-size: 1em;
+            font-size: 13px;
             font-weight: 600;
             margin-top: -1px;
-            margin-left: 3vh;
+            margin-left: 18px;
             letter-spacing: 3px;
         }
     }
@@ -45,6 +45,7 @@
         margin-top: 10px;
         padding: 10px;
         background-color: #aff7d4;
+        font-size: 13px;
         cursor: pointer;
         @include set-button;
 

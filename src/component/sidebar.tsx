@@ -1,4 +1,5 @@
-import React from "react";
+import Ticket from "../assets/buyticket.svg"
+import Seach from "../assets/seachimg.svg"
 import Home from "../assets/home.svg";
 import Today from "../assets/today_music.svg";
 import Chart from "../assets/chart.svg"
@@ -12,22 +13,25 @@ import Cloud from "../assets/cloud.svg"
 import Facebook from "../assets/facebook.svg"
 import Twitter from "../assets/twitter.svg"
 import Blog from "../assets/blog.svg"
-import Ticket from "../assets/buyticket.svg"
-import Seach from "../assets/seachimg.svg"
-
 
 
 const Sidebar: React.FC = () => (
 
+
     <div className="sidebar">
 
+        <div className="search-container">
+            <img className="seach-icon" src={Seach} alt="seach-icon" />
+            <input type="search" />
+        </div>
 
-        <img className="seach-icon" src={Seach} alt="seach-icon" />
-        <input type="search" />
 
         <div className="sidebar-contents">
+            <div className="scroll-content" >
 
-            <div className="scroll-area">
+                {/* ---------------- */}
+                {/* ---첫번째 섹션--- */}
+                {/* ---------------- */}
                 <p>
                     <img src={Home} alt="home" />
                     <h3>Home</h3>
@@ -54,7 +58,9 @@ const Sidebar: React.FC = () => (
                 {/*----------------- 구분선 ----------------------*/}
                 <hr />
 
-
+                {/* ---------------- */}
+                {/* ---두번째 섹션--- */}
+                {/* ---------------- */}
                 <p>
                     <img src={Foryou} alt="foryou" />
                     <h3>For you</h3></p>
@@ -77,6 +83,7 @@ const Sidebar: React.FC = () => (
 
                 {/*----------------- 구분선 ----------------------*/}
                 <hr />
+
                 {/* ---------------- */}
                 {/* --- sns icon --- */}
                 {/* ---------------- */}
@@ -107,5 +114,6 @@ const Sidebar: React.FC = () => (
     </div>
 
 )
+
 
 export default Sidebar;

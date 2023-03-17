@@ -1,4 +1,3 @@
-import React from 'react';
 import './sass/_main.scss' ;
 // import './style/_App.scss' ;
 import Header from './component/header';
@@ -13,9 +12,9 @@ const App: React.FC = () => {
     <div className="App">
       <div className="container">
         <Header />
-        <Sidebar />
-        <Content />
-        <MusicBar />
+        <Sidebar/>
+        <Content/>
+        <MusicBar/>
       </div>
     </div>
   );
