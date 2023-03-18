@@ -10,7 +10,7 @@ const MusicBar: React.FC = () => (
             <p>Pathos</p>
             <p>20:69</p>
         </div>
-        <figure>
+        <figure className="left-icon">
             <img src={Heart} alt="heart" />
             <img src={Lylics} alt="lylics" />
             <img src={Etc} alt="etc" />

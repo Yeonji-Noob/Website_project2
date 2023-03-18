@@ -31,4 +31,28 @@
     }
   }
 
+ 
+}
+
+
+.left-icon {
+
+  position: absolute;
+  top: 37px;
+  transform: translateY(-50%);
+  left: 135px;
+
+
+  & img {
+
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  & img:last-child {
+
+  }
+
 }
