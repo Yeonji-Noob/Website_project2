@@ -1,11 +1,10 @@
 .content {
-  grid-area: 2 / 2 / 2 / 10;
   position: relative;
   display: block;
   background-color: $light-main-color;
-  height: 100%;
-  margin-left: -2px;
-  left: 0;
-  min-height: calc(100vh - 100px);
+  grid-area: content;
+  overflow-y: auto;
+  height: 101%;
+  width: 100%;
   @include set-container-style;
   }

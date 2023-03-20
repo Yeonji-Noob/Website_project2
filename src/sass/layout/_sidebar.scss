@@ -1,26 +1,34 @@
 .sidebar {
-  position: sticky;
-  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  grid-area: sidebar;
+  // grid-area: 2 / 1 / 3 / 2;
   background-color: #e5e5e5;
-  width: 240px;
+  width: 230px;
+  height: 99%;
   padding-top: 15px;
-  overflow-x: hidden;
-
-  min-height: calc(100vh - 100px);
+  overflow: hidden;
   @include set-container-style;
+}
+
+.scroll-content {
+  height: 550px;
+  width: 230px;
 }
 
 .sidebar-contents {
   position: relative;
-  overflow: auto;
+  height: 90vh;
+  width: 230px;
+  left: -5px;
   overflow-x: hidden;
-  height: 50vh;
-  left: -2px;
+  overflow-y: auto;
 
   & p {
     display: flex;
     color: #000;
-    width: 100%;
+    width: 50%;
     transition: all 100ms;
     line-height: 20px;
     font-weight: 800;
@@ -32,7 +40,7 @@
     & h3 {
       position: relative;
       top: 3px;
-      left: 80px;
+      left: 85px;
     }
 
     &:hover,
@@ -54,13 +62,14 @@
 
   & .sns-icon {
     position: relative;
-    left: 0;
-    margin-left: 35px;
-    padding-bottom: 10px;
-    margin-bottom: 5vh;
+    left: 1.4vw;
+    padding-bottom: 15px;
+    margin-bottom: 2vw;
+    left: 54px;
+    bottom: 10px;
     & img {
-      padding: 1vh;
-      margin-left: 9px;
+      padding: 9px;
+      margin: 0 auto;
     }
 
     & img:last-child {
@@ -80,18 +89,18 @@ hr {
   background-color: #f1f1f1;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 20vh;
+  width: 15vh;
   right: 130px;
 }
 
 .sidebar-contents {
   overflow-x: hidden;
+  width: 430px;
 
   & .scroll-content {
     width: 500px;
     display: block;
     margin-top: 2vh;
-    overflow: auto;
     background-color: #e5e5e5;
   }
 }

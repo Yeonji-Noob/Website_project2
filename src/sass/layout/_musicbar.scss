@@ -1,8 +1,8 @@
 .music-bar {
   display: flex;
   position: fixed;
+  grid-area: footer;
   bottom: 8px;
-  grid-area: 4 / 1 / 8 / 10;
   background-color: #e5e5e5;
   width: 99%;
   height: 100px;
@@ -30,29 +30,64 @@
       font-weight: 600;
     }
   }
-
- 
 }
 
-
 .left-icon {
-
   position: absolute;
   top: 37px;
   transform: translateY(-50%);
   left: 135px;
 
-
   & img {
-
     width: 16px;
     height: 16px;
     margin-right: 20px;
     cursor: pointer;
   }
+}
 
-  & img:last-child {
+.music-play-button {
+  position: relative;
+  left: 160px;
 
+  & img {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
   }
 
+  & img:first-child {
+    top: -12px;
+    margin-right: 15px;
+  }
+
+  & img:nth-child(2) {
+    top: -7px;
+  }
+
+  & img:nth-child(3) {
+    top: 10px;
+  }
+
+  & img:nth-child(4) {
+    top: -7px;
+  }
+
+  & img:last-child {
+    top: -12px;
+    margin-left: 4px;
+
+  }
+}
+
+.blur {
+  position: relative;
+  top: 25px;
+  left: -20px;
+  width: 100px;
+  height: 48px;
+  background-color: $main-color;
+  z-index: -5;
+  border-radius: 50%;
+  filter: blur(15px);
 }
