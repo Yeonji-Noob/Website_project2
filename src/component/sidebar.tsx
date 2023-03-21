@@ -34,51 +34,52 @@ const Sidebar: React.FC = () => (
                 {/* ---------------- */}
                 <p>
                     <img src={Home} alt="home" />
-                    <h3>Home</h3>
+                    <span>Home</span>
                 </p>
 
                 <p>
                     <img src={Today} alt="today" />
-                    <h3>오늘의 음악</h3>
+                    <span>오늘의 음악</span>
                 </p>
 
                 <p>
                     <img src={Chart} alt="chart" />
-                    <h3>음악 차트</h3></p>
+                    <span>음악 차트</span>
+                </p>
                 <p>
                     <img src={Playlist} alt="playlist" />
-                    <h3>플레이리스트</h3>
+                    <span>플레이리스트</span>
                 </p>
                 <p>
                     <img src={Musicvideo} alt="musicvideo" />
-                    <h3>뮤직비디오</h3>
+                    <span>뮤직비디오</span>
                 </p>
 
 
                 {/*----------------- 구분선 ----------------------*/}
-                <hr/>
+                <hr />
 
                 {/* ---------------- */}
                 {/* ---두번째 섹션--- */}
                 {/* ---------------- */}
                 <p>
                     <img src={Foryou} alt="foryou" />
-                    <h3>For you</h3></p>
+                    <span>For you</span></p>
                 <p>
                     <img src={Friend} alt="friend" />
-                    <h3>음악친구</h3>
+                    <span>음악친구</span>
                 </p>
                 <p>
                     <img src={Mymusic} alt="mymusic" />
-                    <h3>내 음악</h3>
+                    <span>내 음악</span>
                 </p>
                 <p>
                     <img src={Shopping} alt="shopping" />
-                    <h3>구매한 음악</h3>
+                    <span>구매한 음악</span>
                 </p>
                 <p>
                     <img src={Cloud} alt="cloud" />
-                    <h3>클라우드</h3>
+                    <span>클라우드</span>
                 </p>
 
                 {/*----------------- 구분선 ----------------------*/}

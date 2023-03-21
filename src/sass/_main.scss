@@ -12,15 +12,15 @@
 /*---------------------------*/
 /*---------base 폴더---------*/
 /*---------------------------*/
-@import 'base/reset' ;
 @import 'base/typo' ;
+@import 'base/reset' ;
 
 
 /*---------------------------*/
 /*------components 폴더-------*/
 /*---------------------------*/
 
-@import 'components/buttons.scss';
+@import 'components/buttons';
 @import 'components/searchinput';
 
 /*---------------------------*/

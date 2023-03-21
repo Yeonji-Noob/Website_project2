@@ -1,4 +1,4 @@
-import Mainimg from "../assets/playlistbox.svg"
+import Mainimg from "../assets/playlistbox.png"
 
 const Home: React.FC = () => (
 

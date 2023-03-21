@@ -1,5 +1,4 @@
 import './sass/_main.scss';
-// import './style/_App.scss' ;
 import Header from './component/header';
 import Sidebar from './component/sidebar';
 import Content from './component/content';
