@@ -1,6 +1,6 @@
 import Ticket from "../assets/buyticket.svg"
 import Seach from "../assets/seachimg.svg"
-import Home from "../assets/home.svg";
+import {ReactComponent as Home} from "../assets/home.svg";
 import Today from "../assets/today_music.svg";
 import Chart from "../assets/chart.svg"
 import Playlist from "../assets/playlist.svg"
@@ -15,107 +15,108 @@ import Twitter from "../assets/twitter.svg"
 import Blog from "../assets/blog.svg"
 
 
-const Sidebar: React.FC = () => (
+const Sidebar: React.FC = () => {
 
 
-    <div className="sidebar">
+    return (
+        <div className="sidebar">
 
-        <div className="search-container">
-            <img className="seach-icon" src={Seach} alt="seach-icon" />
-            <input type="search" />
-        </div>
-
-
-        <div className="sidebar-contents">
-            <div className="scroll-content" >
-
-                {/* ---------------- */}
-                {/* ---첫번째 섹션--- */}
-                {/* ---------------- */}
-                <p>
-                    <img src={Home} alt="home" />
-                    <span>Home</span>
-                </p>
-
-                <p>
-                    <img src={Today} alt="today" />
-                    <span>오늘의 음악</span>
-                </p>
-
-                <p>
-                    <img src={Chart} alt="chart" />
-                    <span>음악 차트</span>
-                </p>
-                <p>
-                    <img src={Playlist} alt="playlist" />
-                    <span>플레이리스트</span>
-                </p>
-                <p>
-                    <img src={Musicvideo} alt="musicvideo" />
-                    <span>뮤직비디오</span>
-                </p>
+            <div className="search-container">
+                <img className="seach-icon" src={Seach} alt="seach-icon" />
+                <input type="search" />
+            </div>
 
 
-                {/*----------------- 구분선 ----------------------*/}
-                <hr />
+            <div className="sidebar-contents">
+                <div className="scroll-content" >
 
-                {/* ---------------- */}
-                {/* ---두번째 섹션--- */}
-                {/* ---------------- */}
-                <p>
-                    <img src={Foryou} alt="foryou" />
-                    <span>For you</span></p>
-                <p>
-                    <img src={Friend} alt="friend" />
-                    <span>음악친구</span>
-                </p>
-                <p>
-                    <img src={Mymusic} alt="mymusic" />
-                    <span>내 음악</span>
-                </p>
-                <p>
-                    <img src={Shopping} alt="shopping" />
-                    <span>구매한 음악</span>
-                </p>
-                <p>
-                    <img src={Cloud} alt="cloud" />
-                    <span>클라우드</span>
-                </p>
+                    {/* ---------------- */}
+                    {/* ---첫번째 섹션--- */}
+                    {/* ---------------- */}
+                    <p>
+                        <Home id="menu-icon"/>
+                        <span>Home</span>
+                    </p>
 
-                {/*----------------- 구분선 ----------------------*/}
-                <hr />
+                    <p>
+                        <img src={Today} alt="today" />
+                        <span>오늘의 음악</span>
+                    </p>
 
-                {/* ---------------- */}
-                {/* --- sns icon --- */}
-                {/* ---------------- */}
-                <div className="sns-icon">
-                    <img src={Facebook} alt="facebook" />
-                    <img src={Twitter} alt="twitter" />
-                    <img src={Blog} alt="blog" />
+                    <p>
+                        <img src={Chart} alt="chart" />
+                        <span>음악 차트</span>
+                    </p>
+                    <p>
+                        <img src={Playlist} alt="playlist" />
+                        <span>플레이리스트</span>
+                    </p>
+                    <p>
+                        <img src={Musicvideo} alt="musicvideo" />
+                        <span>뮤직비디오</span>
+                    </p>
+
+
+                    {/*----------------- 구분선 ----------------------*/}
+                    <hr />
+
+                    {/* ---------------- */}
+                    {/* ---두번째 섹션--- */}
+                    {/* ---------------- */}
+                    <p>
+                        <img src={Foryou} alt="foryou" />
+                        <span>For you</span></p>
+                    <p>
+                        <img src={Friend} alt="friend" />
+                        <span>음악친구</span>
+                    </p>
+                    <p>
+                        <img src={Mymusic} alt="mymusic" />
+                        <span>내 음악</span>
+                    </p>
+                    <p>
+                        <img src={Shopping} alt="shopping" />
+                        <span>구매한 음악</span>
+                    </p>
+                    <p>
+                        <img src={Cloud} alt="cloud" />
+                        <span>클라우드</span>
+                    </p>
+
+                    {/*----------------- 구분선 ----------------------*/}
+                    <hr />
+
+                    {/* ---------------- */}
+                    {/* --- sns icon --- */}
+                    {/* ---------------- */}
+                    <div className="sns-icon">
+                        <img src={Facebook} alt="facebook" />
+                        <img src={Twitter} alt="twitter" />
+                        <img src={Blog} alt="blog" />
+                    </div>
                 </div>
             </div>
-        </div>
 
-        {/* ---------------- */}
-        {/* ---- buttons ---- */}
-        {/* ---------------- */}
-        <div className="sidebar--button--container">
-            <div className="sidebar-button">
-                <button className="ticket">
-                    <img src={Ticket} alt="buy-ticket" />
-                    <span>이용권 구매</span>
-                </button>
-                <button className="event-button">
-                    <span>이벤트</span>
-                </button>
+            {/* ---------------- */}
+            {/* ---- buttons ---- */}
+            {/* ---------------- */}
+            <div className="sidebar--button--container">
+                <div className="sidebar-button">
+                    <button className="ticket">
+                        <img src={Ticket} alt="buy-ticket" />
+                        <span>이용권 구매</span>
+                    </button>
+                    <button className="event-button">
+                        <span>이벤트</span>
+                    </button>
+                </div>
             </div>
+
+
         </div>
 
-
-    </div>
-
-)
-
+    )
+}
 
 export default Sidebar;
 

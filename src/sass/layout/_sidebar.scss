@@ -49,6 +49,31 @@
       color: #fff;
       background-color: $main-color;
       cursor: pointer;
+
+      // & img:hover {
+      //   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(2deg) brightness(108%) contrast(100%);;
+      // }
+
+    }
+
+
+    p:hover {
+      // filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(2deg) brightness(108%) contrast(100%);
+      color: #fff;
+    }
+    
+    p:hover path {
+      // filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(2deg) brightness(108%) contrast(100%);
+      fill: currentColor;
+    }
+    
+
+
+    & #menu-icon {
+      position: relative;
+      top: 2.5px;
+      left: 60px;
+      width: 16px;
     }
 
     & img {
@@ -83,14 +108,21 @@
   }
 }
 
+
+
+
+
+
 /*------구분선-------*/
 hr {
   position: relative;
-  background-color: #f1f1f1;
+  background-color: #c2c2c2;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 15vh;
   right: 130px;
+  border: 0;
+  width: 15vh;
+  height: 1px;
 }
 
 

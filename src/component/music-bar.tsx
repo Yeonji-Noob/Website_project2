@@ -6,10 +6,13 @@ import Reverse from "../assets/reverse.svg"
 import Play from "../assets/playbutton.png"
 import Forward from "../assets/forward.svg"
 import Repeat from "../assets/repeatplay.svg"
+// import Parse from "../assets/parse.png"
+// import { useState } from "react"
 
-const MusicBar: React.FC = () => (
+const MusicBar: React.FC = () => {
 
-    <div className="music-bar">
+
+    return (<div className="music-bar">
         <div className="album-frame"></div>
         <div className="song-by">
             <p>Pathos</p>
@@ -30,6 +33,8 @@ const MusicBar: React.FC = () => (
         <div className="blur"></div>
     </div>
 
-)
+    )
+}
+
 
 export default MusicBar;
