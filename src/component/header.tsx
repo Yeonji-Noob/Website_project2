@@ -1,4 +1,4 @@
-import Soribadalogo from "../assets/soribadalogo.svg"
+import Soribadalogo from "../assets/soribadalogo.png"
 import Setting from "../assets/setting.svg"
 
 

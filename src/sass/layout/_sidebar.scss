@@ -31,58 +31,38 @@
     transition: all 100ms;
     line-height: 20px;
     font-weight: 800;
-    font-size: 10px;
     padding-top: 8px;
     padding-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
     & span {
+      display: block;
       position: relative;
       font-size: 12px;
       top: 2px;
       left: 85px;
     }
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       color: #fff;
       background-color: $main-color;
       cursor: pointer;
-
-      // & img:hover {
-      //   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(2deg) brightness(108%) contrast(100%);;
-      // }
-
     }
 
-
-    p:hover {
-      // filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(2deg) brightness(108%) contrast(100%);
-      color: #fff;
-    }
-    
-    p:hover path {
-      // filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(2deg) brightness(108%) contrast(100%);
-      fill: currentColor;
-    }
-    
-
-
-    & #menu-icon {
+    & svg {
       position: relative;
-      top: 2.5px;
+      top: 2px;
       left: 60px;
       width: 16px;
     }
 
-    & img {
-      position: relative;
-      top: 2.5px;
-      left: 60px;
-      width: 16px;
-
+    &:hover > svg path {
+      fill: #fff;
     }
+
+    /*------------------------------------------*/
+    /*---------------sns icons------------------*/
+    /*------------------------------------------*/
   }
 
   & .sns-icon {
@@ -92,9 +72,11 @@
     margin-bottom: 2vw;
     left: 54px;
     bottom: 10px;
+
     & img {
       padding: 9px;
       margin: 0 auto;
+      transition: all 500ms;
     }
 
     & img:last-child {
@@ -104,14 +86,11 @@
 
     & img:hover {
       cursor: pointer;
+      transform: scale(1.1);
+      transition: all 0.2s linear 0.2s;
     }
   }
 }
-
-
-
-
-
 
 /*------구분선-------*/
 hr {
@@ -124,7 +103,6 @@ hr {
   width: 15vh;
   height: 1px;
 }
-
 
 /*-----sidebar의 스크롤-----*/
 .sidebar-contents {
