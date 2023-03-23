@@ -1,12 +1,18 @@
 
 // 왼쪽 sidebar 하단 버튼 두개
 
+/*-----------------------------*/ 
+/* sidebar/bottom/components/two_button */
+
 /*  ┌────────────┐
     │ 이용권 구매 │
     └────────────┘  
     ┌────────────┐
     │    Event   │
     └────────────┘ */
+
+/*-----------------------------*/
+/*-----------------------------*/  
 
 // 버튼 컨테이너
 .sidebar--button--container {
@@ -25,7 +31,14 @@
     top: 20%;
     transform: translateY(-50%);
 
-    // sidebar의 이용권 구매 버튼
+    /*-----------------------------*/ 
+    /*-----------------------------*/ 
+    /*-----------------------------*/ 
+    /*  
+    ┌────────────┐
+    │ 이용권 구매 │
+    └────────────┘ */
+    // sidebar의 <이용권 구매> 버튼 틀
     & .ticket {
         display: flex;
         padding: 10px;
@@ -35,13 +48,14 @@
         @include set-button;
 
 
+        // ticket icon img //
         & img {
             position: relative;
             top: 0;
             left: 1vh;
         }
 
-
+        // '이용권 구매' 텍스트 
         & span {
             color: #fff;
             font-size: 12px;
@@ -50,9 +64,21 @@
             margin-left: 18px;
             letter-spacing: 3px;
         }
-    }
 
-    // sidebar의 이벤트 버튼
+        // mouse hover
+        &:hover {
+            background-color:#3029ff;
+        }
+    }
+    /*-----------------------------*/ 
+    /*-----------------------------*/
+    /*-----------------------------*/  
+    /*
+    ┌────────────┐
+    │    Event   │
+    └────────────┘ */
+
+    // sidebar의 <이벤트> 버튼 틀
     & .event-button {
         margin-top: 10px;
         padding: 10px;
@@ -61,88 +87,24 @@
         transition: all 300ms;
         @include set-button;
 
+        // '이벤트' 텍스트
         & span {
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 2px;
         }
+
+        // mouse hover
+        &:hover {
+            background-color:#c2fcdf;
+        }
     }
-}
-
-
-// hover 추가
-
-.ticket:hover {
-
-    background-color:#3029ff;
-}
-
-.event-button:hover {
-
-    background-color:#c2fcdf;
+    /*-----------------------------*/ 
+    /*-----------------------------*/ 
 }
 
 
 
-/*-------------------------------------*/
-/*-------------------------------------*/
-
-.home-icon {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    bottom: 2vh;
-    right: 3vw;
-    width: 10vw;
-    height: 40px;
-    margin: 65px;
-    scale: 1.5;
-    gap: 20px;
-    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.397));
-    cursor: pointer;
-    transition: all 3000ms;
-    z-index: 5;
 
 
-    & :hover {
-        filter: drop-shadow(0px 0px 2px #f7f7f7a1);
-    }
-
-
-    & #home-play  {
-
-
-    }
-
-
-    & #home-shared {
-
-
-    } 
-
-    & #home-add {
-
-
-    }
-}
-
-
-.home-text-box {
-    position: absolute;
-    bottom: 130px;
-    left: 25px;
-    font-size: 2.5em;
-    line-height: 70px;
-}
-
-
-.albums-image {
-    position: absolute;
-    top: 50px;
-    right: 160px;
-    height: 17vw;
-    width: 17vw;
-    z-index: 0;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
 

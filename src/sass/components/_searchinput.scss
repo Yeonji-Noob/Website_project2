@@ -1,17 +1,29 @@
+
+/*----------------------*/
+/*
+sidebar/top/components/search_bar
+┌──────────────────────┐                     
+🔎 │ search bar                   
+└──────────────────────┘
+*/
+/*----------------------*/
+
 .search-container {
     position: sticky;
+    padding-top: 15px;
 
+    /*----🔎 icon-----*/
     & .seach-icon {
         position: absolute;
         display: block;
-        top: 8px;
+        top: 23px;
         left: 35px;
         z-index: 60;
     }
     
+
     & input {
         position: sticky;
-        top: 0px;
         display: block;
         color: $main-color;
         background-color: #fff;
