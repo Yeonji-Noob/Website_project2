@@ -1,12 +1,26 @@
+// (3/25일 기록)
+
+// import * as ~~~~는 namespace를 생성하고 모듈의 모든 내용을 가져옴
+// 그냥 import ~~ from은 default export를 가져옴
+
+// * as를 한번 적용해봤으나 밑줄이 떴었음 이유는
+// 이미지 파일은 모듈로 사용할 수 없기 때문에 후자를 사용함
+
+
 import Quality from "../assets/footer_quality_certification.png"
 import MusicCopyright from "../assets/footer_music_copyright.png"
 import Protection from "../assets/footer_protection.png"
 import Awards from "../assets/footer_awards.png"
 import Kisa from "../assets/footer_kisa.png"
 
+interface FooterProps {
+}
 
-
-const Footer: React.FC = () => (
+/**
+ * 
+ * @returns {string} footer text
+ */
+const Footer: React.FC<FooterProps> = () => (
 
     <footer>
         {/* -----상단 메뉴----- */}
@@ -37,7 +51,7 @@ const Footer: React.FC = () => (
                 <p className="chrome">본 사이트는 chrome 브라우저에 최적화되어있습니다.</p>
             </div>
             <div className="certificate">
-                <img src={Quality} alt="사이트 품질인증" />
+                <img src ={Quality} alt="사이트 품질인증" />
                 <img src={MusicCopyright} alt="음악저작권 이용허락인증"/>
                 <img src={Protection} alt="한국저작권보호원" /> 
                 <img src={Awards} alt="2014 스마트 앱 어워즈 기능서비스부문 통합대상" /> 
@@ -48,4 +62,7 @@ const Footer: React.FC = () => (
 
 )
 
+
+// 모듈을 export 하는 방법에는 named export도 있다는 것을 알지만 
+// 어차피 하나의 모듈만 내보낼 것이기 때문에 export default를 사용했음
 export default Footer;

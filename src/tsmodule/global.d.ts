@@ -2,11 +2,21 @@
 error 때문에 추가한 파일 */
 
 declare module "*.scss" {
-    const content: { [className: string]: string };
-    export = content;
-  }
+  const content: { [className: string]: string };
+  export = content;
+}
 
-  declare module '*.svg' {
-    const content: any;
-    export default content;
-  }
+declare module "*.svg" {
+  const content: any;
+  export default content;
+}
+
+declare module "*.png" {
+  const value: any;
+  export default value;
+}
+
+declare module "*.jpg" {
+  const value: any;
+  export default value;
+}

@@ -1,6 +1,5 @@
 import Soribadalogo from "../assets/soribadalogo.png"
 import Setting from "../assets/setting.svg"
-
 import React, { useState } from 'react';
 import Switch from "../component/switch";
 

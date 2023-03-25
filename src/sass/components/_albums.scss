@@ -1,0 +1,50 @@
+.home-text {
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.home-album-container {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.album-info-flexbox {
+    display: flex;
+    flex-direction: column;
+
+    .home-album {
+        position: relative;
+        width: 14vw;
+        height: 14vw;
+        background-color: aquamarine;
+    }
+
+    //앨범 정보 
+    .album-info {
+        display: flex;
+        flex-direction: column;   
+        margin-top: 10px;
+
+        & p {
+            text-align: center;
+            padding-top: 5px;
+        }
+
+
+        & p:first-child {
+            font-weight: 800;
+            font-size: 18px;
+            font-family:'Pretendard';
+
+        }
+    }
+
+}
