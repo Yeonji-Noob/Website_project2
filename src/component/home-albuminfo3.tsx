@@ -1,22 +1,19 @@
-
-// albums의 자식 컴포넌트 입니다
+// albums의 자식 컴포넌트 입니다 (#장르별추천)
 interface AlbumInfoProps {
     // cover: string
     title: string
-    artist: string | number
 }
 
-const AlbumsInfo = ({title, artist}: AlbumInfoProps) => {
+const AlbumsInfo3 = ({title}: AlbumInfoProps) => {
 
     return (
         <>
         <div className="album-info">
             <p>{title}</p>
-            <p>{artist}</p>
         </div>
         </>
     )
 
 }
 
-export default AlbumsInfo;
+export default AlbumsInfo3;

@@ -42,6 +42,7 @@ const Home: React.FC = () => {
 
             <div className="home--contents">
                 <p className="home-text"># {homeText[1]}</p>
+                
             </div>
 
             <div className="home--contents">
