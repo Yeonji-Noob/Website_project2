@@ -4,7 +4,7 @@ import { ReactComponent as Shared } from "../assets/shared.svg"
 import { ReactComponent as Add } from "../assets/addmusic.svg"
 import Album4 from "../assets/album.svg"
 
-import {Albums} from "component/albums"
+import { Albums } from "component/albums"
 // import { useState } from 'react'
 
 
@@ -14,7 +14,7 @@ import {Albums} from "component/albums"
 const Home: React.FC = () => {
 
     //map 메서드를 사용해서 반복되는 부분을 줄임
-    let text = ['추천앨범', '추천플레이리스트', '장르별추천'];
+    let homeText = ['추천앨범', '추천플레이리스트', '장르별추천'];
 
 
     return (
@@ -33,17 +33,25 @@ const Home: React.FC = () => {
                 <img className="albums-image" src={Album4} alt="Albums-home" />
             </div>
 
-            {text.map((txt, i)=>{
-                return (
-                    <div className="home--contents">
-                    <p className="home-text"># {text[i]}</p>
-                        <Albums/>
-                    </div>
-                )
-            })}
+            {/* 추천앨범, 추천플레이리스트, 장르별추천 텍스트 */}
+
+            <div className="home--contents">
+                <p className="home-text"># {homeText[0]}</p>
+                <Albums />
+            </div>
+
+            <div className="home--contents">
+                <p className="home-text"># {homeText[1]}</p>
+            </div>
+
+            <div className="home--contents">
+                <p className="home-text"># {homeText[2]}</p>
+            </div>
 
             <p>Artist News</p>
-            <div></div>
+            <div className="home-news">
+
+            </div>
         </div>
     )
 

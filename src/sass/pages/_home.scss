@@ -2,6 +2,14 @@
     position: relative;
     margin-bottom: 500px;
     overflow: hidden;
+
+    & p {
+        position: relative;
+        top: 10px;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
 }
 
 
@@ -9,13 +17,10 @@
     & p {
         position: relative;
         top: 90px;
-        left: 15px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        font-size: 2em;
-        margin-left: 15px;
-        font-weight: 600;
+        left: 20px;
+        line-height: 5vw;
+        font-size: 4vw;
+        font-weight: 700;
+        letter-spacing: 10px;
     }
 }
-
-
