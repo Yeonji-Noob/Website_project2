@@ -107,19 +107,19 @@
 // home의 playlist button
 
 .playlist-button {
-    display: none;
     position: absolute;
-    width: 60px;
-    margin-top: 190px;
-    margin-left: 20px;
+    top: 10.2vw;
+    left: 1vw;
+    width: 3vw;
     z-index: 10;
+    transition: all 500ms;
 }
 
 .playlist-etc {
-    display: none;
     position: absolute;
+    top: 11.5vw;
+    right: 1.5vw;
     z-index: 10;
-    width: 50px;
-    margin-left: 190px;
-    margin-top: 215px;
+    width: 2vw;
+    transition: all 500ms;
 }

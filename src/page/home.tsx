@@ -7,7 +7,6 @@ import Album4 from "../assets/album.svg"
 import { Albums } from "component/albums"
 import { HomePlayLists } from "component/playlists"
 import { HomeGenreLists } from "component/musicgenres"
-// import { useState } from 'react'
 
 
 //component name 첫글자는 항상 대문자로

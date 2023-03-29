@@ -16,14 +16,13 @@
         position: relative;
         width: 14vw;
         height: 14vw;
-        transition: all 600ms;
 
     }
 
-    & :hover {
-        filter: brightness(0.5);
-        cursor: pointer;
-    }
+    // & :hover {
+    //     filter: brightness(0.5);
+    //     cursor: pointer;
+    // }
 
 
 
@@ -43,13 +42,13 @@
         //앨범
         & p:first-child {
             font-weight: 800;
-            font-size: 18px;
+            font-size: 1.1vw;
             letter-spacing: 3px;
         }
         //아티스트
         & .album-info-artist {
             font-weight: 300;
-            font-size: 14px;
+            font-size: 0.8vw;
             letter-spacing: 3px;
             color: #606060;
         }
@@ -61,4 +60,16 @@
     font-weight: 300;
     font-size: 18px;
     letter-spacing: 3px;
+}
+
+.hover-area {
+    position: absolute;
+    width: 14vw;
+    height: 14vw;
+    transition: all 500ms;
+
+    &:hover {
+        background-color: #36363673;
+        cursor: pointer;
+    }
 }
