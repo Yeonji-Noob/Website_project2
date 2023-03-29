@@ -12,7 +12,7 @@ const AlbumsInfo = ({title, artist}: AlbumInfoProps) => {
         <>
         <div className="album-info">
             <p>{title}</p>
-            <p>{artist}</p>
+            <p className="album-info-artist">{artist}</p>
         </div>
         </>
     )

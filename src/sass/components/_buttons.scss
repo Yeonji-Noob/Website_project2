@@ -1,7 +1,6 @@
-
 // 왼쪽 sidebar 하단 버튼 두개
 
-/*-----------------------------*/ 
+/*-----------------------------*/
 /* sidebar/bottom/components/two_button */
 
 /*  ┌────────────┐
@@ -12,7 +11,7 @@
     └────────────┘ */
 
 /*-----------------------------*/
-/*-----------------------------*/  
+/*-----------------------------*/
 
 // 버튼 컨테이너
 .sidebar--button--container {
@@ -20,7 +19,6 @@
     display: block;
     width: 100%;
     height: 120px;
-    
 }
 
 .sidebar-button {
@@ -32,9 +30,9 @@
     top: 20%;
     transform: translateY(-50%);
 
-    /*-----------------------------*/ 
-    /*-----------------------------*/ 
-    /*-----------------------------*/ 
+    /*-----------------------------*/
+    /*-----------------------------*/
+    /*-----------------------------*/
     /*  
     ┌────────────┐
     │ 이용권 구매 │
@@ -48,7 +46,6 @@
         transition: all 300ms;
         @include set-button;
 
-
         // ticket icon img //
         & img {
             position: relative;
@@ -56,10 +53,10 @@
             left: 1vh;
         }
 
-        // '이용권 구매' 텍스트 
+        // '이용권 구매' 텍스트
         & span {
             color: #fff;
-            font-family:'Pretendard';
+            font-family: "Pretendard";
             font-size: 14px;
             font-weight: 600;
             margin-top: 0px;
@@ -69,12 +66,12 @@
 
         // mouse hover
         &:hover {
-            background-color:#3029ff;
+            background-color: #3029ff;
         }
     }
-    /*-----------------------------*/ 
     /*-----------------------------*/
-    /*-----------------------------*/  
+    /*-----------------------------*/
+    /*-----------------------------*/
     /*
     ┌────────────┐
     │    Event   │
@@ -91,7 +88,7 @@
 
         // '이벤트' 텍스트
         & span {
-            font-family:'Pretendard';
+            font-family: "Pretendard";
             font-size: 14px;
             font-weight: 600;
             margin-top: 0px;
@@ -100,15 +97,29 @@
 
         // mouse hover
         &:hover {
-            background-color:#c2fcdf;
+            background-color: #c2fcdf;
         }
     }
-    /*-----------------------------*/ 
-    /*-----------------------------*/ 
+    /*-----------------------------*/
+    /*-----------------------------*/
 }
 
+// home의 playlist button
 
+.playlist-button {
+    display: none;
+    position: absolute;
+    width: 60px;
+    margin-top: 190px;
+    margin-left: 20px;
+    z-index: 10;
+}
 
-
-
-
+.playlist-etc {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 50px;
+    margin-left: 190px;
+    margin-top: 215px;
+}

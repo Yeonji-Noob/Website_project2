@@ -1,19 +1,11 @@
-.home-text {
-    position: relative;
-    top: 0px;
-    left: 10px;
-    margin-top: 30px;
-    margin-bottom: 25px;
-    font-size: 2em;
-    margin-left: 15px;
-    font-weight: 600;
-}
+// #큰제목
 
+
+// 앨범 5개 사이 간격
 .home-album-container {
     display: flex;
     justify-content: space-evenly;
-
-
+    margin-bottom: 40px;
 }
 
 .album-info-flexbox {
@@ -24,15 +16,24 @@
         position: relative;
         width: 14vw;
         height: 14vw;
-        background-color: aquamarine;
+        transition: all 600ms;
+
     }
 
-    //앨범 정보 
+    & :hover {
+        filter: brightness(0.5);
+        cursor: pointer;
+    }
+
+
+
+
+    //앨범 정보
     .album-info {
         display: flex;
-        flex-direction: column;   
+        flex-direction: column;
         margin-top: 10px;
-        font-family:'Pretendard';
+        font-family: "Pretendard";
 
         & p {
             text-align: center;
@@ -42,18 +43,22 @@
         //앨범
         & p:first-child {
             font-weight: 800;
-            font-size: 20px;
+            font-size: 18px;
             letter-spacing: 3px;
-
         }
         //아티스트
-        & p:last-child {
+        & .album-info-artist {
             font-weight: 300;
-            font-size: 15px;
+            font-size: 14px;
             letter-spacing: 3px;
             color: #606060;
-
         }
     }
+}
 
+// 추천 플레이리스트, 장르별 추천 앨범들 내용 text
+.title-bold {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 3px;
 }

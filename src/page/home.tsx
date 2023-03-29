@@ -5,6 +5,8 @@ import { ReactComponent as Add } from "../assets/addmusic.svg"
 import Album4 from "../assets/album.svg"
 
 import { Albums } from "component/albums"
+import { HomePlayLists } from "component/playlists"
+import { HomeGenreLists } from "component/musicgenres"
 // import { useState } from 'react'
 
 
@@ -42,11 +44,12 @@ const Home: React.FC = () => {
 
             <div className="home--contents">
                 <p className="home-text"># {homeText[1]}</p>
-                
+                <HomePlayLists />
             </div>
 
             <div className="home--contents">
                 <p className="home-text"># {homeText[2]}</p>
+                <HomeGenreLists />
             </div>
 
             <p>Artist News</p>

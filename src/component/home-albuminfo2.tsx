@@ -9,7 +9,7 @@ const AlbumsInfo2 = ({title}: AlbumInfoProps) => {
     return (
         <>
         <div className="album-info">
-            <p>{title}</p>
+            <p className="title-bold">{title}</p>
         </div>
         </>
     )

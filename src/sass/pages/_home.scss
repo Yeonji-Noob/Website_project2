@@ -3,16 +3,20 @@
     margin-bottom: 500px;
     overflow: hidden;
 
-    & p {
+    // home #큰제목들
+    & .home-text {
         position: relative;
         top: 10px;
+        left: 10px;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        margin-left: 15px;
         font-size: 2em;
-        font-weight: 600;
+        font-weight: 700;
     }
-
 }
 
-
+// home 대문 텍스트
 .home-text-box {
     & p {
         position: relative;
