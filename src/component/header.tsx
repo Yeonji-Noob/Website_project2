@@ -1,10 +1,8 @@
 import Soribadalogo from "../assets/soribadalogo.png"
 import Setting from "../assets/setting.svg"
-import React, { useState } from 'react';
 
 const Header: React.FC = () => {
 
-    const [checked, setChecked] = useState(false);
 
     return (
         <div className="header">
