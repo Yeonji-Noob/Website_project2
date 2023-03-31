@@ -1,0 +1,22 @@
+.chart-album-flax {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 35px;
+
+    & .chart-album-cover {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+    }
+
+    & .chart-album-textbox {
+        margin-left: 20px;
+        margin-top: 45px;
+        font-size: 16px;
+
+        & p:first-child,
+        p:nth-child(2) {
+            font-weight: 800;
+        }
+    }
+}

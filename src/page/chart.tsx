@@ -1,9 +1,21 @@
-const Chart = () => {
+// ReactComponent로 쓸 때 꼭 앞글자 대문자여야 한다
+import { ReactComponent as Trophy } from "../assets/trophy.svg"
+import { ReactComponent as Chevron } from  "../assets/chart-chevron.svg"
+
+import ChartRanking from "../component/chart-ranking"
+
+const Chart: React.FC = () => {
     return (
-        <div>
-            <h1>뮤직차트임</h1>
-            <p>라우터 실습하고있음</p>
-            <p>집에가고싶다</p>
+
+        <div className="chart">
+            <Trophy id="chart-icon-trophy" />
+            <p className="chart-text-flex">
+                <p>K - POP</p>
+                <p>Top 100</p>
+            </p>
+            <Chevron id="chart-icon-chevron" />
+
+            <ChartRanking />    
         </div>
     );
 };

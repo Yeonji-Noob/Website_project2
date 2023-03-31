@@ -1,0 +1,50 @@
+
+.chart {
+    position: relative;
+    margin-bottom: 500px;
+    overflow: hidden;
+
+
+    & #chart-icon-trophy {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        width: 21px;
+        cursor: pointer;
+    }
+
+    & .chart-text-flex {
+        display: flex;
+        font-size: 19px;
+        padding-top: 32px;
+        padding-left: 69px;
+        cursor: pointer;
+        user-select: none;
+
+        & p {
+            letter-spacing: 1px;
+        }
+
+        & p:first-child {
+            font-weight: 900;
+            padding-right: 10px;
+
+        }
+
+        & p:last-child {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 1px;
+        }
+
+    }
+
+    & #chart-icon-chevron {
+        position: absolute;
+        top: 35px;
+        left: 243px;
+        width: 9px;
+        cursor: pointer;
+    }
+
+}

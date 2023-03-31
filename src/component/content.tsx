@@ -3,10 +3,11 @@ import TodaysMusic from "page/today";
 import Chart from "page/chart";
 import PlayList from "page/playlist";
 import MusicVideo from "page/musicvideo";
-
 import Footer from "../component/footer"
 import { Route, Routes } from "react-router-dom";
 
+
+// 페이지들 집어넣는 공간
 const Content: React.FC = () => (
 
     <div className="content">

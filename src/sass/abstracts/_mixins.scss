@@ -3,7 +3,27 @@
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 
+
+
 @mixin set-button {
   border: 1px solid #000;
   border-radius: 5px;
 }
+//////////////////////////////////////////
+
+
+//////////////////////////////////////////
+//home과 today에 있는 맨 위 커다란 배너 조절
+
+@mixin set-main-banners-layout {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+@mixin set-main-banners-bg-size {
+  width: 98%;
+  padding: 15px; 
+}
+
+//////////////////////////////////////////

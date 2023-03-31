@@ -139,22 +139,22 @@ const Sidebar: React.FC = () => {
                         <img src={Blog} alt="blog" />
                     </div>
                 </div>
-                {/* ---------------- */}
-                {/* ---- buttons ---- */}
-                {/* ---------------- */}
-                <div className="sidebar--button--container">
-                    <div className="sidebar-button">
-                        <button className="ticket">
-                            <img src={Ticket} alt="buy-ticket" />
-                            <span>{Sidetext[10]}</span>
-                        </button>
-                        <button className="event-button">
-                            <span>{Sidetext[11]}</span>
-                        </button>
-                    </div>
+
+            </div>
+            {/* ---------------- */}
+            {/* ---- buttons ---- */}
+            {/* ---------------- */}
+            <div className="sidebar--button--container">
+                <div className="sidebar-button">
+                    <button className="ticket">
+                        <img src={Ticket} alt="buy-ticket" />
+                        <span>{Sidetext[10]}</span>
+                    </button>
+                    <button className="event-button">
+                        <span>{Sidetext[11]}</span>
+                    </button>
                 </div>
             </div>
-
         </div>
     )
 }
