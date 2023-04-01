@@ -9,6 +9,7 @@
 
 .header {
   display: flex;
+  justify-content: space-between;
   position: relative;
   grid-area: header;
   background-color: $light-main-color;
@@ -27,15 +28,22 @@
 }
 
 
-
 // 헤더의 맨 오른쪽 
 /*-----------------*/
 
 .header-right {
-  display:flex;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 200px;
-  cursor: pointer;
+  display: flex;
+}
+
+
+.setting-container {
+  height: 100%;
+  width: 20px;
+  margin-right: 20px;
+  & .setting {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+  }
 }

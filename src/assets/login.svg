@@ -1,0 +1,12 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="35" cy="35" r="35" fill="#C0C0C0"/>
+<mask id="mask0_321_572" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="66" height="66">
+<ellipse cx="35" cy="35.1666" rx="32.6667" ry="32.8334" fill="#F0F0F0"/>
+</mask>
+<g mask="url(#mask0_321_572)">
+<path d="M13.2222 67.5551V64.5048C13.2222 52.7123 22.7334 43.1526 34.466 43.1526C46.1987 43.1526 55.7098 52.7123 55.7098 64.5048V67.5551" fill="#DEDEDE"/>
+<path d="M13.2222 67.5551V64.5048C13.2222 52.7123 22.7334 43.1526 34.466 43.1526C46.1987 43.1526 55.7098 52.7123 55.7098 64.5048V67.5551" stroke="#DEDEDE" stroke-width="4.81936" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.4659 43.1526C41.1702 43.1526 46.6053 37.6897 46.6053 30.9513C46.6053 24.2127 41.1702 18.75 34.4659 18.75C27.7616 18.75 22.3266 24.2127 22.3266 30.9513C22.3266 37.6897 27.7616 43.1526 34.4659 43.1526Z" fill="#DEDEDE" stroke="#DEDEDE" stroke-width="4.81936" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.5 67.5C33.1667 67.6667 40.5 67.9 40.5 67.5" stroke="#DEDEDE"/>
+</g>
+</svg>
