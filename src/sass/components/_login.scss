@@ -2,20 +2,22 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 120px;
+    width: 150px;
     margin-left: 15px;
     margin-right: 35px;
+    cursor: pointer;
 
     & #profile {
         width: 50px;
         margin: 10px;
     }
 
-    & p {
+    & p:nth-child(2) {
         font-size: 1vw;
         letter-spacing: 3px;
         width: 60px;
         text-align: center;
-    
+        margin-right: 5px;
+
     }
 }

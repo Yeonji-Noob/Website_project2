@@ -2,15 +2,17 @@
     position: relative;
     width: 65px;
     height: 100%;
+    cursor: pointer;
 }
 .toggle-bg {
-    position: absolute;
+    position: relative;
     width: 65px;
     height: 35px;
     background-color: #e9e9e9;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.3) 1px 3px 5px inset;
     @include center-alignment;
+    transition: all 500ms;
     cursor: pointer;
     z-index: 20;
 
@@ -31,7 +33,3 @@
 }
 
 /////////////////////////////////
-.toggle-move {
-    margin-left: 38px;
-    background-color: #474747;
-}

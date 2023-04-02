@@ -18,16 +18,36 @@
 /*---------------------------*/
 /*------components 폴더------*/
 /*---------------------------*/
-@import 'components/musicplay';
-@import 'components/buttons';
-@import 'components/searchinput';
-@import 'components/switch';
+
+/*home-page-component*/
 @import 'components/home-topbanner';
 @import 'components/albums';
+
+/*today-page-component*/
 @import 'components/today-topbanner';
+
+/*chart-page-component*/
 @import 'components/chart-ranking';
+
+
+
+
+
+/*--all-page-component--*/
+//header
 @import 'components/toggle';
 @import 'components/login';
+//side-bar
+@import 'components/searchinput';
+//music-bar
+@import 'components/musicplay';
+
+
+
+//--all buttons
+@import 'components/buttons';
+
+
 
 /*---------------------------*/
 /*---------layout 폴더-------*/

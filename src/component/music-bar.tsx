@@ -1,11 +1,11 @@
 import { ReactComponent as Heartbutton } from "../assets/player_heart.svg"
-import Lylics from "../assets/lyrics.svg"
-import Etc from "../assets/etc.svg"
-import Random from "../assets/randomplay.svg"
-import Reverse from "../assets/reverse.svg"
-import Play from "../assets/playbutton.png"
-import Forward from "../assets/forward.svg"
-import Repeat from "../assets/repeatplay.svg"
+import { ReactComponent as Lylics } from "../assets/lyrics.svg"
+import { ReactComponent as Etc } from "../assets/etc.svg"
+import { ReactComponent as Random } from "../assets/randomplay.svg"
+import { ReactComponent as Reverse } from "../assets/reverse.svg"
+import { ReactComponent as Play } from "../assets/playlistbutton.svg"
+import { ReactComponent as Forward } from "../assets/forward.svg"
+import { ReactComponent as Repeat } from "../assets/repeatplay.svg"
 // import Parse from "../assets/parse.png"
 // import { useState } from "react"
 // import Heart from "react-heart"
@@ -21,19 +21,16 @@ const MusicBar: React.FC = () => {
             <p>20:69</p>
         </div>
         <figure className="left-icon">
-            {/* <div style={{ width: "2rem" }}>
-                <Heart isActive={active} onClick={() => setActive(!active)} activeColor="green" inactiveColor="blue" animationTrigger="hover" animationScale={1.5} />
-            </div> */}
-            <Heartbutton/>
-            <img src={Lylics} alt="lylics" />
-            <img src={Etc} alt="etc" />
+            <Heartbutton />
+            <Lylics />
+            <Etc />
         </figure>
         <figure className="music-play-button">
-            <img src={Random} alt="random" />
-            <img src={Reverse} alt="reverse" />
-            <img src={Play} alt="play" />
-            <img src={Forward} alt="forward" />
-            <img src={Repeat} alt="repeat" />
+            <Random id="music-play-button-random"/>
+            <Reverse id="music-play-button-reverse" />
+            <Play id="play"/>
+            <Forward  id="music-play-button-forward"/>
+            <Repeat id="music-play-button-repeat" />
         </figure>
         <div className="blur"></div>
     </div>
