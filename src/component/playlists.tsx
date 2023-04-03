@@ -46,7 +46,7 @@ export let HomePlayLists = (): React.ReactElement => {
         <div className="home-album-container">
             {playLists.map(info => {
                 return(
-                    <div className="album-info-flexbox">
+                    <div className="album-info-flexbox" key={info.key}>
                         <img src={require(`../assets/${info.cover}.png`)} alt="playlists" className="home-album" />
                         <AlbumsInfo2 key={info.key} title={info.title} />
                     </div>

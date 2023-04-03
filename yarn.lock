@@ -2166,6 +2166,14 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
+"@types/react-smooth-scrollbar@^8.0.4":
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react-smooth-scrollbar/-/react-smooth-scrollbar-8.0.4.tgz#9d11552fd1a0bb20ad43c17ed3aab73e9280e1a1"
+  integrity sha512-/GgEIw2ZS4GKOYdvdd7wJRhBajqOq7nSPEelY4OJ9bSwE1Elq3KUm+e0P3JYr/lZTLdZ8OpIm++cLlwDvEP8ag==
+  dependencies:
+    "@types/react" "*"
+    smooth-scrollbar "^8.2.5"
+
 "@types/react@*", "@types/react@^18.0.0":
   version "18.0.28"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.28.tgz#accaeb8b86f4908057ad629a26635fe641480065"
@@ -8422,6 +8430,11 @@ react-scripts@^5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-smooth-scrollbar@^8.0.6:
+  version "8.0.6"
+  resolved "https://registry.yarnpkg.com/react-smooth-scrollbar/-/react-smooth-scrollbar-8.0.6.tgz#179072e6a547b3af589ea303c50fd86366275edc"
+  integrity sha512-yWiIC4L8DwfIRkLL+PdXq5rysEm6trxHzRk1Rx82bzuu2aWDcHhT+l1vXH/73Re/zHmGjBgrxts/wIrwC6yYJA==
+
 react@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -8977,6 +8990,14 @@ smooth-scrollbar-react@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/smooth-scrollbar-react/-/smooth-scrollbar-react-2.4.1.tgz#e4da703e5ec78b64584831fc589645ccd45dbe5d"
   integrity sha512-9UuVZtQO1V2oeWb1n13ZgXcZ0nM79Tqtgov/8xUeZUWicTIg8xO+tHzhfBrE/3DlvGEQ+keFDX96UGTzICoNSg==
+
+smooth-scrollbar@^8.2.5:
+  version "8.8.3"
+  resolved "https://registry.yarnpkg.com/smooth-scrollbar/-/smooth-scrollbar-8.8.3.tgz#3c40186d489f8a0fb5dd868b83530f7e9b596f47"
+  integrity sha512-1/mTQx0PixUP9cvPNO+41imKPvfsLvDuNOLX8kOzXugibFXXH9L5Nc5DcDzdJWc4Qw2w3ROZZ152dCAJ4Sd+zw==
+  dependencies:
+    core-js "^3.6.4"
+    tslib "^1.10.0"
 
 smooth-scrollbar@^8.8.1:
   version "8.8.1"

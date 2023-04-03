@@ -9,6 +9,8 @@ import { HomePlayLists } from "component/playlists"
 import { HomeGenreLists } from "component/musicgenres"
 
 
+
+
 //component name 첫글자는 항상 대문자로
 //안그러면 TS(2339)에러 날 수 있음
 

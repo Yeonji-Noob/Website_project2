@@ -43,10 +43,11 @@ export let HomeGenreLists = (): React.ReactElement => {
     ]
 
     return (
-        <div className="home-album-container">
+        <div className="home-album-container" >
             {genres.map(info => {
                 return(
-                    <div className="album-info-flexbox">
+                    // ...감싸는 div에도 key를 달아줘야 콘솔창에서 key 관련 에러가 안뜬다
+                    <div className="album-info-flexbox"  key={info.key}>
                         <img src={require(`../assets/${info.cover}.png`)} alt="music-genres" className="home-album" />
                         <AlbumsInfo3 key={info.key} title={info.title} />
                     </div>
