@@ -1,4 +1,5 @@
 const ChartRanking = () => {
+
     return (
         <div className="chart-album-flax">
             <div className="chart-album-cover"></div>
@@ -7,7 +8,6 @@ const ChartRanking = () => {
                 <p>song title</p>
                 <p>composer</p>
             </div>
-
         </div>
     );
 };

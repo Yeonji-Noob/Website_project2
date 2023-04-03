@@ -113,6 +113,10 @@
     width: 3vw;
     z-index: 10;
     transition: all 500ms;
+
+    & rect:hover {
+        fill: #fff;
+    }
 }
 
 .playlist-etc {
@@ -122,4 +126,37 @@
     z-index: 10;
     width: 2vw;
     transition: all 500ms;
+}
+
+//today의 button
+.today-button-container {
+    position: absolute;
+    bottom: 0.6vw;
+    left: 4vw;
+
+    #today-play {
+        width: 12vw;
+        height: auto;
+        margin-right: 30px;
+        filter: drop-shadow(0px 20px 11px #00000081);
+        transition: all 500ms;
+
+        & rect:hover {
+            fill: #3029ff;
+            cursor: pointer;
+        }
+    }
+
+    #today-shuffle {
+        position: absolute;
+        top: -1px;
+        width: 15vw;
+        height: auto;
+        filter: drop-shadow(0px 20px 11px #00000081);
+
+        & rect:hover {
+            fill: #c2fcdf;
+            cursor: pointer;
+        }
+    }
 }

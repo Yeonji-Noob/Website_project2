@@ -1,6 +1,4 @@
 import AlbumsInfo from "./home-albuminfo";
-// import { HoverButtons } from "./home-playlistbuttons";
-// import React, {useState} from 'react';
 
 
 

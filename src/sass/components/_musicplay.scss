@@ -4,10 +4,9 @@
 .music-play-button {
     position: relative;
     display: flex;
-    width: 155px;
-    justify-content: center;
-    @include center-alignment;
-    left: 220px;
+    padding-top: 10px;
+
+    left: 150px;
   
     & > *  {
       position: relative;
@@ -18,24 +17,21 @@
 
 
     & :not(#play) {
-      top: 15px;
+      top: 20px;
     }
 
   
     & #music-play-button-random {
       width: 17px;
-      top: 16px;
+      top: 21px;
     }
   
     & #music-play-button-reverse {
     }
   
     & #play {
-      fill-opacity: 0.5;
-      transition: all 5000ms;
-
+      
       & :hover {
-        fill-opacity: 1;
       }
     }
   
@@ -45,14 +41,14 @@
   
     & #music-play-button-repeat {
   width: 17px;
-  top: 16px;
+  top: 21px;
     }
   }
   
   .blur {
     position: relative;
-    top: 25px;
-    left: -28px;
+    top: 26px;
+    left: -30px;
     width: 100px;
     height: 48px;
     background-color: $main-color;

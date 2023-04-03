@@ -1,7 +1,12 @@
 import { useState } from "react";
 
 
-const ToggleButton = () => {
+
+/**
+ * 
+ * @returns header 맨 오른쪽에 있는 toggle switch의 state 변경 함수
+ */
+const ToggleButton /*여기type지정하기*/ = () => {
 
     const [light, setDark] = useState<boolean>(true)
 
@@ -10,7 +15,7 @@ const ToggleButton = () => {
             <div className="toggle-bg" onClick={() => setDark(!light)}
                 style={{ backgroundColor: light ? '#e9e9e9' : '#888888' }}>
                 <button className="toggle-circle-button"
-                    style={{ backgroundColor: light ? 'white' : 'black', marginLeft: light ? '-15px' : '15px', }}></button>
+                    style={{ backgroundColor: light ? 'white' : 'black', marginLeft: light ? '-17px' : '17px', }}></button>
             </div>
         </div>
     );

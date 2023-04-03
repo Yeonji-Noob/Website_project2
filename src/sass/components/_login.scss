@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 150px;
+    width: 170px;
     margin-left: 15px;
     margin-right: 35px;
     cursor: pointer;
@@ -13,11 +13,15 @@
     }
 
     & p:nth-child(2) {
-        font-size: 1vw;
+        font-size: 0.8vw;
         letter-spacing: 3px;
         width: 60px;
         text-align: center;
-        margin-right: 5px;
+        margin: 5px;
 
+    }
+
+    & #login-chevron {
+        margin: 10px;
     }
 }
