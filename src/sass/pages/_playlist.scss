@@ -19,8 +19,9 @@
 
 .playlist-albums-container {
     display: flex;
-    margin-left: 70px;
+    margin-left: 3vw;
     width: 209px;
+    margin-bottom: 30px;
 
     // & .playlist-albums {
     // }
@@ -30,10 +31,10 @@
 
 
 .playlist-box {
-    margin-right: 50px;
+    margin-right: 2vw;
 
     & img {
-        width: 260px;
+        width: 13vw;
 
     }
 
@@ -41,8 +42,9 @@
         display: block;
         position: relative;
         text-align: center;
-        font-size: 23px;
+        font-size: 1.5vw;
         font-weight: 600;
         letter-spacing: 3px;
+        font-family: 'Pretendard';       
     }
 }
