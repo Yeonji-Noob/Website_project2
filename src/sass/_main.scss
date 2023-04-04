@@ -1,79 +1,67 @@
 /*sass 가이드라인 중 7-1패턴에 따라 폴더구성을 하였습니다.*/
 
-
 /*---------------------------*/
 /*-------abstracts 폴더-------*/
 /*---------------------------*/
-@import 'abstracts/mixins' ;
-@import 'abstracts/variables' ;
-
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
 /*---------------------------*/
 /*---------base 폴더---------*/
 /*---------------------------*/
-@import 'base/typo' ;
-@import 'base/reset' ;
-
+@import "base/typo";
+@import "base/reset";
 
 /*---------------------------*/
 /*------components 폴더------*/
 /*---------------------------*/
 
 /*home-page-component*/
-@import 'components/home-topbanner';
-@import 'components/albums';
+@import "components/home-topbanner";
+@import "components/albums";
 
 /*today-page-component*/
-@import 'components/today-topbanner';
+@import "components/today-topbanner";
 
 /*chart-page-component*/
-@import 'components/chart-ranking';
-
-
-
-
+@import "components/chart-ranking";
 
 /*--all-page-component--*/
 //header
-@import 'components/toggle';
-@import 'components/login';
+@import "components/toggle";
+@import "components/login";
 //side-bar
-@import 'components/searchinput';
+@import "components/searchinput";
 //music-bar
-@import 'components/musicplay';
-
-
+@import "components/musicplay";
 
 //--all buttons
-@import 'components/buttons';
-
-
+@import "components/buttons";
 
 /*---------------------------*/
 /*---------layout 폴더-------*/
 /*---------------------------*/
-@import 'layout/grid' ;
-@import 'layout/header' ;
-@import 'layout/sidebar' ;
-@import 'layout/content' ;
-@import 'layout/musicbar' ;
-@import 'layout/footer' ;
+@import "layout/grid";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/content";
+@import "layout/musicbar";
+@import "layout/footer";
 
 /*---------------------------*/
 /*---------pages 폴더---------*/
 /*---------------------------*/
-@import 'pages/home' ;
-@import 'pages/today' ;
-@import 'pages/chart' ;
-@import 'pages/playlist' ;
-@import 'pages/musicvideo' ;
-
+@import "pages/home";
+@import "pages/today";
+@import "pages/chart";
+@import "pages/playlist";
+@import "pages/musicvideo";
 
 /*---------------------------*/
 /*---------themes 폴더-------*/
 /*---------------------------*/
 
-
 /*---------------------------*/
 /*---------venders 폴더-------*/
 /*---------------------------*/
+@import "venders/smooth-scrollbar";

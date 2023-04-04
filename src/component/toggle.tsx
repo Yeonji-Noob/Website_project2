@@ -15,7 +15,7 @@ const ToggleButton /*여기type지정하기*/ = () => {
             <div className="toggle-bg" onClick={() => setDark(!light)}
                 style={{ backgroundColor: light ? '#e9e9e9' : '#888888' }}>
                 <button className="toggle-circle-button"
-                    style={{ backgroundColor: light ? 'white' : 'black', marginLeft: light ? '-17px' : '17px', }}></button>
+                    style={{ backgroundColor: light ? 'white' : 'black', marginLeft: light ? '-17px' : '17px', }} aria-labelledby="labeldiv"></button>
             </div>
         </div>
     );

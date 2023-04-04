@@ -4,10 +4,11 @@ import Facebook from "../assets/facebook.svg"
 import Twitter from "../assets/twitter.svg"
 import Blog from "../assets/blog.svg"
 import { Link } from "react-router-dom"
-import Scrollbar from 'react-smooth-scrollbar'
-// import { useState } from "react"
+import Scrollbar from "react-smooth-scrollbar";
+import { useRef } from "react"
+// import OverscrollPlugin, { OverscrollEffect } from "smooth-scrollbar/plugins/overscroll"
+// import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
 
-// import OverscrollPlugin from 'smooth-scrollbar/plugins/overflow';
 
 const Sidebar: React.FC = () => {
 
@@ -16,6 +17,7 @@ const Sidebar: React.FC = () => {
   // const [currentSelect, setCurrentSelect] = useState<boolean>(true)
 
 
+  const scrollbar = useRef(null);
 
 
   return (
@@ -23,11 +25,15 @@ const Sidebar: React.FC = () => {
 
       <div className="search-container">
         <img className="search-icon" src={Search} alt="seach-icon" />
-        <input type="search" />
+        <input type="search" aria-label="Search"/>
       </div>
 
       {/* smooth scrollbar 라이브러리 사용 */}
-      <Scrollbar damping={0.05} thumbMinSize={20} renderByPixels={true} continuousScrolling={true} >
+      < Scrollbar ref={scrollbar} damping={0.09} thumbMinSize={10} plugins={{
+        overscroll: {
+          effect: "bounce"
+        }
+      }}>
         <div className="sidebar-contents">
 
           <div className="scroll-content">
@@ -146,7 +152,8 @@ const Sidebar: React.FC = () => {
           </div>
 
         </div>
-      </Scrollbar>
+      </ Scrollbar>
+
       {/* ---------------- */}
       {/* ---- buttons ---- */}
       {/* ---------------- */}

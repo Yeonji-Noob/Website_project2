@@ -18,17 +18,30 @@
 }
 
 .playlist-albums-container {
-    margin-left: 40px;
+    display: flex;
+    margin-left: 70px;
     width: 209px;
 
     // & .playlist-albums {
     // }
 
+
+}
+
+
+.playlist-box {
+    margin-right: 50px;
+
+    & img {
+        width: 260px;
+
+    }
+
     & p {
         display: block;
         position: relative;
         text-align: center;
-        font-size: 20px;
+        font-size: 23px;
         font-weight: 600;
         letter-spacing: 3px;
     }

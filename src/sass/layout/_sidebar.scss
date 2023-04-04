@@ -11,23 +11,19 @@
   @include set-container-style;
 }
 
-.scrollbar-track-x {
-  width: 0;
-}
 
 .scroll-content {
   height: 550px;
   width: 230px;
-  
 }
 
 .sidebar-contents {
   position: relative;
-  height: 72vh;
+  height: 502px;
   width: 230px;
   left: -5px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x:hidden;
+  overflow-y:hidden;
 
   & p {
     position: relative;
@@ -157,9 +153,8 @@ hr {
 
   & .scroll-content {
     width: 500px;
-    height: 500px;
     display: block;
-    margin-top: 1vh;
+    margin-top: 2vh;
     padding-bottom: 30px;
     background-color: #e5e5e5;
   }

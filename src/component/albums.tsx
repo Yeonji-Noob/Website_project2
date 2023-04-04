@@ -3,7 +3,7 @@ import AlbumsInfo from "./home-albuminfo";
 
 
 // home-AlbumsInfo 컴포넌트들의 부모 컴포넌트
-export let Albums = (): React.ReactElement => {
+export const Albums = (): React.ReactElement => {
 
 
 

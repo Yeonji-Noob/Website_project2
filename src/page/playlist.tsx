@@ -8,15 +8,12 @@ const PlayList = () => {
 
 
 
-  return (
-    <div>
-      {playListText.map(text => {
 
         return (
           <>
 
           <div className="playlist-textbox">
-            <h1 className="playlist-h1"># {text} 플레이리스트</h1>
+            <h1 className="playlist-h1"># {playListText[0]} 플레이리스트</h1>
             <Chevron id="playlist-chevron" />
           </div>
 
@@ -24,13 +21,32 @@ const PlayList = () => {
             {/* 앨범자켓이 들어갈 곳입니다 */}
             <PlayListAlbums/>
           </div>
-          </>
-        )
 
-      })}
-      
-    </div>
-  );
-};
+          <div className="playlist-textbox">
+            <h1 className="playlist-h1"># {playListText[1]} 플레이리스트</h1>
+            <Chevron id="playlist-chevron" />
+          </div>
+
+          <div>
+            {/* 앨범자켓이 들어갈 곳입니다 */}
+            <PlayListAlbums/>
+          </div>
+
+          <div className="playlist-textbox">
+            <h1 className="playlist-h1"># {playListText[2]} 플레이리스트</h1>
+            <Chevron id="playlist-chevron" />
+          </div>
+
+          <div>
+            {/* 앨범자켓이 들어갈 곳입니다 */}
+            <PlayListAlbums/>
+          </div>
+
+
+          </>
+        );
+
+
+}
 
 export default PlayList;
