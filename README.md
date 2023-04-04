@@ -7,7 +7,7 @@
 
 + 사이트 선정은 soribada 음악 스트리밍 사이트로 하였습니다.
 
-+ 제가 만든 [markup-guide](https://github.com/Yeonji-Noob/markup-guide) 를 기준으로 프로젝트를 관리하고 있습니다.
++ 제가 만든 [Project-development-guide](https://github.com/Yeonji-Noob/markup-guide) 를 기준으로 프로젝트를 관리하고 있습니다.
 
 ---
 
