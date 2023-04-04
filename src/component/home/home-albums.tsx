@@ -1,9 +1,9 @@
-import AlbumsInfo from "./home-albuminfo";
+import AlbumsInfo from "./home--album_info";
 
 
 
-// home-AlbumsInfo 컴포넌트들의 부모 컴포넌트
-export const Albums = (): React.ReactElement => {
+// home-AlbumsInfo 컴포넌트의 부모 컴포넌트
+export const HomeAlbums = (): React.ReactElement => {
 
 
 
@@ -33,31 +33,31 @@ export const Albums = (): React.ReactElement => {
             key: 0,
             title: '계몽',
             artist: '쏜애플(Thornapple)',
-            cover: 'thornapple'
+            cover: 'home-thornapple'
         },
         {
             key: 1,
             title: '미아',
             artist: '20:69',
-            cover: '2069'
+            cover: 'home-2069'
         },
         {
             key: 2,
             title: 'INAZMA',
             artist: 'NOMELON NOLEMON',
-            cover: 'nomelon-nolemon'
+            cover: 'home-nomelon_nolemon'
         },
         {
             key: 3,
             title: '실리카겔',
             artist: '실리카겔',
-            cover: 'silica-gel'
+            cover: 'home-silica_gel'
         },
         {
             key: 4,
             title: 'Ingredients',
             artist: 'Chilldspot',
-            cover: 'chilldspot'
+            cover: 'home-chilldspot'
         },
 
     ];
@@ -75,7 +75,7 @@ export const Albums = (): React.ReactElement => {
 
                 return (
                     <div key={info.key} className="album-info-flexbox">
-                        <img src={require(`../assets/${info.cover}.jpg`)} alt="album-cover" className="home-album" />
+                        <img src={require(`../../assets/home/${info.cover}.jpg`)} alt="album-cover" className="home-album" />
                         <AlbumsInfo key={info.key} title={info.title} artist={info.artist} />
                     </div>
                 )

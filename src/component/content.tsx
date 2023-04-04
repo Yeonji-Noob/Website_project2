@@ -11,7 +11,7 @@ import MusicVideo from "page/musicvideo";
 // TS2307: Cannot find module '../page' or its corresponding type declarations. 오류가 떠서 잠시 보류함
 
 
-import Footer from "../component/footer"
+import Footer from "./__footer/footer"
 import { Route, Routes } from "react-router-dom";
 // import Scrollbar from 'react-smooth-scrollbar'
 

@@ -1,6 +1,6 @@
-import AlbumsInfo2 from "./home-albuminfo2";
+import AlbumsInfo2 from "./home--album_info2";
 
-
+// home-AlbumsInfo2 컴포넌트의 부모 컴포넌트
 export let HomePlayLists = (): React.ReactElement => {
 
 
@@ -16,27 +16,27 @@ export let HomePlayLists = (): React.ReactElement => {
         {
             key: 5,
             title: 'Chill & Relax',
-            cover: 'chill_n_relax_playlist'
+            cover: 'home-chill_n_relax'
         },
         {
             key: 6,
             title: 'House Music',
-            cover: 'house_music_playlist'
+            cover: 'home-house_music'
 
         }, {
             key: 7,
             title: '행복을 찾아서',
-            cover: 'happy_playlist'
+            cover: 'home-happy'
 
         }, {
             key: 8,
             title: '몽글몽글',
-            cover: 'healing_playlist'
+            cover: 'home-healing'
 
         }, {
             key: 9,
             title: '갬성힙합',
-            cover: 'emo_rap_playlist'
+            cover: 'home-emo_rap'
 
         }
 
@@ -47,7 +47,7 @@ export let HomePlayLists = (): React.ReactElement => {
             {playLists.map(info => {
                 return(
                     <div className="album-info-flexbox" key={info.key}>
-                        <img src={require(`../assets/${info.cover}.png`)} alt="playlists" className="home-album" />
+                        <img src={require(`../../assets/home/${info.cover}.png`)} alt="playlists" className="home-album" />
                         <AlbumsInfo2 key={info.key} title={info.title} />
                     </div>
                 )

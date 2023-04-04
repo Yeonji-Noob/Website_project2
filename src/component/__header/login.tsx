@@ -1,5 +1,5 @@
-import { ReactComponent as Profile } from '../assets/login.svg'
-import { ReactComponent as LoginChevron } from "../assets/login_chevron.svg"
+import { ReactComponent as Profile } from '../../assets/__header/header-login.svg'
+import { ReactComponent as LoginChevron } from "../../assets/__header/header-login_chevron.svg"
 
 const Login = () => {
     return (

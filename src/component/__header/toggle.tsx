@@ -1,12 +1,10 @@
 import { useState } from "react";
 
-
-
 /**
  * 
  * @returns header 맨 오른쪽에 있는 toggle switch의 state 변경 함수
  */
-const ToggleButton /*여기type지정하기*/ = () => {
+const ToggleButton: React.FC = () => {
 
     const [light, setDark] = useState<boolean>(true)
 

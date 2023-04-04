@@ -1,13 +1,12 @@
-import { ReactComponent as Lylics } from "../assets/lyrics.svg"
-import { ReactComponent as Etc } from "../assets/etc.svg"
-import { ReactComponent as Random } from "../assets/randomplay.svg"
-import { ReactComponent as Reverse } from "../assets/reverse.svg"
-import { ReactComponent as Play } from "../assets/playbutton.svg"
-import { ReactComponent as Forward } from "../assets/forward.svg"
-import { ReactComponent as Repeat } from "../assets/repeatplay.svg"
+import { ReactComponent as Lylics } from "../../assets/__musicbar/musicbar-lyrics.svg"
+import { ReactComponent as Etc } from "../../assets/__musicbar/musicbar-etc.svg"
+import { ReactComponent as Random } from "../../assets/__musicbar/musicbar-random_play.svg"
+import { ReactComponent as Reverse } from "../../assets/__musicbar/musicbar-reverse.svg"
+import { ReactComponent as Play } from "../../assets/__musicbar/musicbar-play_button.svg"
+import { ReactComponent as Forward } from "../../assets/__musicbar/musicbar-forward.svg"
+import { ReactComponent as Repeat } from "../../assets/__musicbar/musicbar-repeat_play.svg"
 
 import {useState} from "react"
-import Heart from "react-heart"
 
 const MusicBar: React.FC = () => {
 

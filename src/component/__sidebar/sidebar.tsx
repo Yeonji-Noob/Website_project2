@@ -1,13 +1,13 @@
-import Ticket from "../assets/buyticket.svg"
-import Search from "../assets/seachimg.svg"
-import Facebook from "../assets/facebook.svg"
-import Twitter from "../assets/twitter.svg"
-import Blog from "../assets/blog.svg"
+import Ticket from "../../assets/__sidebar/sidebar-buy_ticket.svg"
+import Search from "../../assets/__sidebar/sidebar-seach_img.svg"
+import Facebook from "../../assets/__sidebar/sidebar-facebook.svg"
+import Twitter from "../../assets/__sidebar/sidebar-twitter.svg"
+import Blog from "../../assets/__sidebar/sidebar-blog.svg"
+
+
 import { Link } from "react-router-dom"
 import Scrollbar from "react-smooth-scrollbar";
 import { useRef } from "react"
-// import OverscrollPlugin, { OverscrollEffect } from "smooth-scrollbar/plugins/overscroll"
-// import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
 
 
 const Sidebar: React.FC = () => {
@@ -29,11 +29,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       {/* smooth scrollbar 라이브러리 사용 */}
-      < Scrollbar ref={scrollbar} damping={0.09} thumbMinSize={10} plugins={{
-        overscroll: {
-          effect: "bounce"
-        }
-      }}>
+      < Scrollbar ref={scrollbar} damping={0.09} thumbMinSize={10} >
         <div className="sidebar-contents">
 
           <div className="scroll-content">

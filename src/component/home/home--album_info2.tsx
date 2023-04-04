@@ -1,6 +1,6 @@
-import { HoverButtons } from "./home-playlistbuttons";
+import { HoverButtons } from "./home---playlist_buttons";
 import { useState } from "react";
-// albums의 자식 컴포넌트 입니다 (#추천플레이리스트)
+// playlists의 자식 컴포넌트 입니다 (#추천플레이리스트)
 interface AlbumInfoProps {
     // cover: string
     title: string
@@ -10,13 +10,13 @@ interface AlbumInfoProps {
 
 const AlbumsInfo2 = ({ title }: AlbumInfoProps) => {
 
-    const [isHovering, setisHovering] = useState<boolean>(false);
+    const [isHovering, setIsHovering] = useState<boolean>(false);
 
     return (
         <>
             <div className="hover-area"
-                onMouseOver={() => setisHovering(true)}
-                onMouseOut={() => setisHovering(false)}>
+                onMouseOver={() => setIsHovering(true)}
+                onMouseOut={() => setIsHovering(false)}>
                 {isHovering ? (<HoverButtons />) : ("")}
             </div>
             <div className="album-info">

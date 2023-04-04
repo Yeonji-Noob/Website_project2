@@ -1,22 +1,24 @@
-import Mainimg from "../assets/playlistbox.png"
-import { ReactComponent as Play } from "../assets/playlistbutton.svg"
-import { ReactComponent as Shared } from "../assets/shared.svg"
-import { ReactComponent as Add } from "../assets/addmusic.svg"
-import Album4 from "../assets/album.svg"
+// ======image import====== //
+import MainImg from "../assets/home/home-playlistbox.png"
+import { ReactComponent as Play } from "../assets/home/home-playlist_button.svg"
+import { ReactComponent as Shared } from "../assets/home/home-shared.svg"
+import { ReactComponent as Add } from "../assets/home/home-addmusic.svg"
+import Album4 from "../assets/home/home-album.svg"
 
-import { Albums } from "component/albums"
-import { HomePlayLists } from "component/playlists"
-import { HomeGenreLists } from "component/musicgenres"
+
+// ======component import====== //
+import { HomeAlbums } from "../component/home/home-albums"
+import { HomePlayLists } from "../component/home/home-playlists"
+import { HomeGenreLists } from "../component/home/home-music_genres"
 
 
 
 
 //component name 첫글자는 항상 대문자로
 //안그러면 TS(2339)에러 날 수 있음
-
 const Home: React.FC = () => {
 
-    //map 메서드를 사용해서 반복되는 부분을 줄임
+    //map 함수를 사용해서 반복되는 부분을 줄임
     let homeText = ['추천앨범', '추천플레이리스트', '장르별추천'];
 
 
@@ -32,7 +34,7 @@ const Home: React.FC = () => {
                     <Shared id="home-shared" />
                     <Add id="home-add" />
                 </div>
-                <img className="home-img-box" src={Mainimg} alt="imgbox" />
+                <img className="home-img-box" src={MainImg} alt="imgbox" />
                 <img className="albums-image" src={Album4} alt="Albums-home" />
             </div>
 
@@ -40,7 +42,7 @@ const Home: React.FC = () => {
 
             <div className="home--contents">
                 <p className="home-text"># {homeText[0]}</p>
-                <Albums />
+                <HomeAlbums />
             </div>
 
             <div className="home--contents">

@@ -1,4 +1,4 @@
-import { HoverButtons } from "./home-playlistbuttons";
+import { HoverButtons } from "./home---playlist_buttons";
 import { useState } from "react";
 // albums의 자식 컴포넌트 입니다
 interface AlbumInfoProps {

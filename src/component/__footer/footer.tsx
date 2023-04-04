@@ -5,22 +5,18 @@
 
 // * as를 한번 적용해봤으나 밑줄이 떴었음 이유는
 // 이미지 파일은 모듈로 사용할 수 없기 때문에 후자를 사용함
+import Quality from "../../assets/__footer/footer-quality_certification.png"
+import MusicCopyright from "../../assets/__footer/footer-music_copyright.png"
+import Protection from "../../assets/__footer/footer-protection.png"
+import Awards from "../../assets/__footer/footer-awards.png"
+import Kisa from "../../assets/__footer/footer-kisa.png"
 
-
-import Quality from "../assets/footer_quality_certification.png"
-import MusicCopyright from "../assets/footer_music_copyright.png"
-import Protection from "../assets/footer_protection.png"
-import Awards from "../assets/footer_awards.png"
-import Kisa from "../assets/footer_kisa.png"
-
-interface FooterProps {
-}
 
 /**
  * 
  * @returns {string} footer text
  */
-const Footer: React.FC<FooterProps> = () => (
+const Footer: React.FC = () => (
 
     <footer>
         {/* -----상단 메뉴----- */}
@@ -34,8 +30,12 @@ const Footer: React.FC<FooterProps> = () => (
             <p>저작권보호센터</p>
             <p>음원 유통/배급 문의</p>
         </span>
+
+
+
         {/* -----하단내용----- */}
         <div className="footer--contents">
+
             <div className="footer-text">
                 <p>(주)소리바다 대표이사 오재명, 최성일</p>
                 <p>주소 : 서울특별시 강남구 도산대로 217, 3층(신사동,강남빌딩)</p>
@@ -45,18 +45,24 @@ const Footer: React.FC<FooterProps> = () => (
                 <p>호스팅 제공자: (주)소리바다</p>
                 <p>&copy; soribada.lnc. All rights reserved.</p>
             </div>
+
+
             <div className="customer-service">
                 <p>고객센터 : 1577-7334</p>
                 <p>FAQ 바로가기</p>
                 <p className="chrome">본 사이트는 chrome 브라우저에 최적화되어있습니다.</p>
             </div>
+
+
             <div className="certificate">
                 <img src ={Quality} alt="사이트 품질인증" />
-                <img src={MusicCopyright} alt="음악저작권 이용허락인증"/>
-                <img src={Protection} alt="한국저작권보호원" /> 
-                <img src={Awards} alt="2014 스마트 앱 어워즈 기능서비스부문 통합대상" /> 
-                <img src={Kisa} alt="국내 정보보호 표준인증 KISA ISMS획득" />
+                <img src ={MusicCopyright} alt="음악저작권 이용허락인증"/>
+                <img src ={Protection} alt="한국저작권보호원" /> 
+                <img src ={Awards} alt="2014 스마트 앱 어워즈 기능서비스부문 통합대상" /> 
+                <img src ={Kisa} alt="국내 정보보호 표준인증 KISA ISMS획득" />
             </div>
+
+
         </div>
     </footer>
 
