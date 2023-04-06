@@ -4,7 +4,7 @@
   position: relative;
   grid-area: sidebar;
   background-color: #e5e5e5;
-  width: 230px;
+  width: $sidebar-width;
   height: 101%;
   padding-top: 0px;
   overflow: hidden;
@@ -14,16 +14,15 @@
 
 .scroll-content {
   height: 550px;
-  width: 230px;
+  width: $sidebar-width;
 }
 
 .sidebar-contents {
   position: relative;
   height: 502px;
-  width: 230px;
+  width: $sidebar-width;
   left: -5px;
-  overflow-x:hidden;
-  overflow-y:hidden;
+  overflow:hidden;
 
   & p {
     position: relative;
@@ -109,27 +108,21 @@
 
   & .sns-icon {
     position: relative;
-    left: 1.4vw;
+    width: 140px;
     padding-bottom: 15px;
     margin-bottom: 2vw;
     left: 54px;
     bottom: 10px;
+    cursor: pointer;
 
     & img {
       padding: 9px;
       margin: 0 auto;
-      transition: all 500ms;
     }
 
     & img:last-child {
       position: relative;
       top: -4px;
-    }
-
-    & img:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-      transition: all 0.2s linear 0.2s;
     }
   }
 }

@@ -22,7 +22,7 @@
 
   & .header-logo {
     height: 103px;
-    margin-left: 75px;
+    margin-left: $header-margin*8;
   }
 
 }
@@ -39,11 +39,12 @@
 .setting-container {
   height: 100%;
   width: 20px;
-  margin-right: 20px;
+  margin-right: $header-margin*3;
+  
   & .setting {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    @include vertical-center;
     width: 20px;
+    cursor: pointer;
   }
 }

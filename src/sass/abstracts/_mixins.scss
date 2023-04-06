@@ -1,9 +1,25 @@
+///////////////////////////////
+///////////중앙정렬////////////
+//////////////////////////////
 @mixin center-alignment {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+//세로
+@mixin vertical-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//가로
+@mixin horizontal-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/////////////////////////////////
 /////////////////////////////////
 @mixin set-container-style {
   border-radius: 10px;
@@ -16,7 +32,7 @@
   border-radius: 5px;
 }
 //////////////////////////////////////////
-
+/////////////////////////////////
 
 //////////////////////////////////////////
 //home과 today에 있는 맨 위 커다란 배너 조절
@@ -33,3 +49,43 @@
 }
 
 //////////////////////////////////////////
+//////////////////////////////////////////
+
+// 각 플레이리스트의 큰 제목들
+@mixin set-main-playlist-text {
+  margin: 25px 0 25px 25px;
+  font-size: 2em;
+  letter-spacing: 4px;
+  font-weight: 700;
+  user-select: none;
+  font-family: "Pretendard";
+}
+
+//toggle switch에서 겹치는 공통 속성
+@mixin set-toggle-common-property {
+  transition: all 500ms;
+  cursor: pointer;
+  z-index: 20;
+}
+// css에서의 속성은  property, html에서의 속성은 attribute라고 한다. 
+
+
+///////////////////////////////////
+/////////album img size////////////
+
+@mixin set-album-size {
+  width: 14vw;
+  height: 14vw;
+}
+
+
+//////////////////////////////////
+
+@mixin set-album-title {
+  font-size: $album-title-font-size;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: "Pretendard";
+  user-select: none;
+  cursor: pointer;
+}

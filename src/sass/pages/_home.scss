@@ -5,15 +5,7 @@
 
     // home #큰제목들
     & .home-text {
-        position: relative;
-        top: 10px;
-        left: 10px;
-        margin-top: 5px;
-        margin-bottom: 25px;
-        margin-left: 15px;
-        font-size: 2em;
-        font-weight: 700;
-        user-select: none;
+        @include set-main-playlist-text;
     }
 }
 

@@ -2,49 +2,77 @@
     display: flex;
     cursor: pointer;
     user-select: none;
-    margin-bottom: 30px;
 
     & .playlist-h1 {
-        margin-top: 30px;
-        margin-left: 40px;
-        font-family: "Pretendard";
-        letter-spacing: 5px;
+        @include set-main-playlist-text;
     }
 
     & #playlist-chevron {
-        margin-top: 38px;
+        margin-top: 33px;
         margin-left: 20px;
     }
 }
 
 .playlist-albums-container {
     display: flex;
-    margin-left: 3vw;
+    margin-left: 2vw;
     width: 209px;
     margin-bottom: 30px;
 
     // & .playlist-albums {
     // }
-
-
 }
 
-
 .playlist-box {
+    position: relative;
+    @include set-album-size;
     margin-right: 2vw;
+    margin-bottom: 1vw;
+    transition: all 500ms;
 
-    & img {
-        width: 13vw;
-
+    & .playlist--album-img {
+    @include set-album-size;
     }
 
     & p {
         display: block;
         position: relative;
         text-align: center;
-        font-size: 1.5vw;
-        font-weight: 600;
-        letter-spacing: 3px;
-        font-family: 'Pretendard';       
+        @include set-album-title;
     }
+}
+
+.playlist--album-hover {
+    position: absolute;
+    left: 4px;
+    width: 13.5vw;
+    height: 13.5vw;
+    transition: all 500ms;
+
+    &:hover {
+        background-color: #36363673;
+        cursor: pointer;
+    }
+}
+
+.playlist-button2 {
+    position: absolute;
+    top: 10vw;
+    left: 1vw;
+    width: 3vw;
+    z-index: 10;
+    transition: all 500ms;
+
+    & rect:hover {
+        fill: #fff;
+    }
+}
+
+.playlist-etc2 {
+    position: absolute;
+    top: 11vw;
+    right: 1.5vw;
+    z-index: 10;
+    width: 2vw;
+    transition: all 500ms;
 }

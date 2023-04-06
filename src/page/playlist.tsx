@@ -1,5 +1,7 @@
 import { ReactComponent as Chevron } from "../assets/playlist/playlist-chevron.svg";
 import PlayListAlbums from "component/playlist/playlist-albums";
+import PlayListAlbums2 from "component/playlist/playlist-albums2";
+import PlayListAlbums3 from "component/playlist/playlist-albums3";
 
 const PlayList = () => {
 
@@ -28,8 +30,8 @@ const PlayList = () => {
           </div>
 
           <div>
-            {/* 앨범자켓이 들어갈 곳입니다2 - 임시 컴포넌트 넣어놓음*/}
-            <PlayListAlbums/>
+            {/* 앨범자켓이 들어갈 곳입니다2*/}
+            <PlayListAlbums2/>
           </div>
 
 
@@ -43,7 +45,7 @@ const PlayList = () => {
 
           <div>
             {/* 앨범자켓이 들어갈 곳입니다3 - 임시 컴포넌트 넣어놓음*/}
-            <PlayListAlbums/>
+            <PlayListAlbums3/>
           </div>
           </>
         );

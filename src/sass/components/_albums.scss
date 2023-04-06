@@ -14,17 +14,9 @@
 
     .home-album {
         position: relative;
-        width: 14vw;
-        height: 14vw;
+        @include set-album-size;
 
     }
-
-    // & :hover {
-    //     filter: brightness(0.5);
-    //     cursor: pointer;
-    // }
-
-
 
 
     //앨범 정보
@@ -37,13 +29,14 @@
         & p {
             text-align: center;
             line-height: 25px;
+            user-select: none;
+            cursor: pointer;
         }
 
         //앨범
         & p:first-child {
-            font-weight: 800;
-            font-size: 1.1vw;
-            letter-spacing: 3px;
+            @include set-album-title;
+
         }
         //아티스트
         & .album-info-artist {
@@ -55,18 +48,11 @@
     }
 }
 
-// 추천 플레이리스트, 장르별 추천 앨범들 내용 text
-.title-bold {
-    font-weight: 300;
-    font-size: 18px;
-    letter-spacing: 3px;
-}
-
 .hover-area {
     position: absolute;
-    width: 14vw;
-    height: 14vw;
+    @include set-album-size;
     transition: all 500ms;
+
 
     &:hover {
         background-color: #36363673;

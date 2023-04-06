@@ -1,11 +1,33 @@
-// layout variable 
+// layout variable /////////////
 $border-radius: 10px;
 $box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+///////////////////////////////
+
+
+
+
+//main colors ////////////////
 $light-main-color: #fff;
+$dark-main-color:#000;
+
 $main-color: #231edc;
+$main-color-hover:#3029ff;
+
+
+$main-color2: #aff7d4;
+$main-color2-hover:#c2fcdf;
+//////////////////////////////
+
+
+
 $footer-padding : 20px;
 
+$sidebar-width : 230px;
 
 // font variable
 
+$album-title-font-size: 1.1vw; 
 
+
+//header components margin variable
+$header-margin: 10px; 

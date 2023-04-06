@@ -1,27 +1,28 @@
+
+
 .login-container {
     position: relative;
     display: flex;
     align-items: center;
     width: 170px;
-    margin-left: 15px;
-    margin-right: 35px;
+    margin: 0 35px 0 15px;
     cursor: pointer;
 
     & #profile {
         width: 50px;
-        margin: 10px;
+        margin: $header-margin;
     }
 
     & p:nth-child(2) {
-        font-size: 1vw;
+        font-size: 1em;
         letter-spacing: 3px;
         width: 60px;
         text-align: center;
-        margin: 5px;
+        margin: $header-margin;
 
     }
 
     & #login-chevron {
-        margin: 10px;
+        margin: $header-margin;
     }
 }

@@ -1,4 +1,4 @@
-import AlbumsInfo3 from "./home--album_info3";
+import AlbumsInfo2 from "./home--album_info2";
 
 // home-AlbumsInfo3 컴포넌트의 부모 컴포넌트
 export const HomeGenreLists = () => {
@@ -51,7 +51,7 @@ export const HomeGenreLists = () => {
                     // ...감싸는 div에도 key를 달아줘야 콘솔창에서 key관련 에러가 안뜬다
                     <div className="album-info-flexbox"  key={info.key}>
                         <img src={require(`../../assets/home/${info.cover}.png`)} alt="music-genres" className="home-album" />
-                        <AlbumsInfo3 key={info.key} title={info.title} />
+                        <AlbumsInfo2 key={info.key} title={info.title} />
                     </div>
                 )
             })}

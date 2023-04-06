@@ -1,3 +1,5 @@
+import AlbumHover from "./playlist--album_hover"
+
 const PlayListAlbums: React.FC = () => {
 
 
@@ -50,7 +52,8 @@ const PlayListAlbums: React.FC = () => {
 
                 return (
                     <div key={info.key} className="playlist-box">
-                        <img src={require(`../../assets/playlist/${info.png}.png`)} alt="album-cover" />
+                        <AlbumHover/>
+                        <img src={require(`../../assets/playlist/${info.png}.png`)} alt="album-cover" className="playlist--album-img" />
                         <p>{info.playlist}</p>
                     </div>
                 )
