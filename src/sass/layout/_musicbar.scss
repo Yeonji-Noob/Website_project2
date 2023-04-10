@@ -5,7 +5,7 @@
   position: fixed;
   grid-area: footer;
   bottom: 8px;
-  background-color: #e5e5e5;
+  background-color: $light-sub-color;
   width: 99%;
   height: 100px;
   @include set-container-style;

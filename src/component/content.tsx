@@ -4,7 +4,7 @@ import Chart from "page/chart";
 import PlayList from "page/playlist";
 import MusicVideo from "page/musicvideo";
 
-// import { Home, TodaysMusic, Chart, PlayList, MusicVideo } from "../page";
+// import { home, todaysMusic, chart, playList, musicVideo } from "../page";
 
 // import를 하나로 합치려 했으나,
 // 경로 지정에서 
@@ -23,7 +23,7 @@ const Content: React.FC = () => (
             <Route path="/" element={<Home/>}></Route>
             <Route path="/home" element={<Home/>}></Route>
             <Route path="/today" element={<TodaysMusic/>}></Route>
-            <Route path="/Chart" element={<Chart/>}></Route>
+            <Route path="/chart" element={<Chart/>}></Route>
             <Route path="/playlist" element={<PlayList/>}></Route>
             <Route path="/musicvideo" element={<MusicVideo/>}></Route>
 
