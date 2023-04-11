@@ -4,9 +4,31 @@
     transition: all 500ms;
 }
 
+#dark-mode2 {
+    background-color: $dark-sub-color;
+    color: #fff;
+    transition: all 500ms;
+}
 
 #dark-png {
 
     -webkit-filter: brightness(0) invert(1); 
     filter: brightness(0) invert(1);
+}
+
+
+
+#dark-mode-sidebar {
+    background-color: $dark-main-color;
+    transition: all 500ms;
+
+    & p  {
+        color: $light-main-color;
+    }
+
+    & p .sidetext {
+        color: $light-main-color;
+    }
+
+
 }

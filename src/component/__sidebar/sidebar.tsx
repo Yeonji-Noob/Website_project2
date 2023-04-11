@@ -36,7 +36,7 @@ const Sidebar: React.FC = () => {
       < Scrollbar ref={scrollbar} damping={0.09} thumbMinSize={10} >
         <div className="sidebar-contents"  >
 
-          <div className="scroll-content" id={light ? 'light-mode2' : 'dark-mode'}>
+          <div className="scroll-content" id={light ? 'light-mode-sidebar' : 'dark-mode-sidebar'}>
 
             {/* ---------------- */}
             {/* ---첫번째 섹션--- */}

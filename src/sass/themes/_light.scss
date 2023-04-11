@@ -15,3 +15,11 @@
     filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
 }
 
+#light-mode-sidebar {
+    background-color: $light-sub-color;
+    transition: all 500ms;
+
+    & p {
+        color: #000;
+    }
+}

@@ -141,17 +141,4 @@ hr {
   height: 1px;
 }
 
-/*-----sidebar의 스크롤-----*/
-.sidebar-contents {
-  overflow-x: hidden;
-  width: 236px;
-
-  & .scroll-content {
-    width: 500px;
-    display: block;
-    margin-top: 2vh;
-    padding-bottom: 30px;
-    background-color: #e5e5e5;
-  }
-}
 

@@ -13,24 +13,30 @@ import MusicVideo from "page/musicvideo";
 
 import Footer from "./__footer/footer"
 import { Route, Routes } from "react-router-dom";
+import { useToggleStore } from './__header/toggle';
 // import Scrollbar from 'react-smooth-scrollbar'
 
 // 페이지들 집어넣는 공간
-const Content: React.FC = () => (
-    <div className="content">
-        <Routes>
+const Content = () => {
 
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="/home" element={<Home/>}></Route>
-            <Route path="/today" element={<TodaysMusic/>}></Route>
-            <Route path="/chart" element={<Chart/>}></Route>
-            <Route path="/playlist" element={<PlayList/>}></Route>
-            <Route path="/musicvideo" element={<MusicVideo/>}></Route>
 
-        </Routes>
+    const light = useToggleStore((state: { light: boolean }) => state.light);
 
-        <Footer/>
-    </div>
-)
+    return (
+        <div className="content" id={light ? 'light-mode' : 'dark-mode2'}>
+            <Routes>
 
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/home" element={<Home />}></Route>
+                <Route path="/today" element={<TodaysMusic />}></Route>
+                <Route path="/chart" element={<Chart />}></Route>
+                <Route path="/playlist" element={<PlayList />}></Route>
+                <Route path="/musicvideo" element={<MusicVideo />}></Route>
+
+            </Routes>
+
+            <Footer />
+        </div>
+    );
+}
 export default Content;

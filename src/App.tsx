@@ -6,15 +6,17 @@ import Content from './component/content';
 
 import { BrowserRouter } from 'react-router-dom';
 
+import { useToggleStore } from './component/__header/toggle'
 
 // react.FC로 타입 지정
 const App: React.FC = () => {
 
 
+  const light = useToggleStore((state: { light: boolean }) => state.light);
 
   return (
     <BrowserRouter>
-    <div className="App">
+    <div className="App" id={light ? '' : 'dark-mode2'}>
       <div className="container">
         <Header />
         <Sidebar />
