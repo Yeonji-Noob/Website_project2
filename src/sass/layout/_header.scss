@@ -21,8 +21,10 @@
   // 소리바다 로고 
 
   & .header-logo {
-    height: 103px;
-    margin-left: $header-margin*8;
+    position: relative;
+    top: 28px;
+    height: 45px;
+    margin-left: $header-margin*7;
   }
 
 }

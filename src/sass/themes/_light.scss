@@ -1,4 +1,17 @@
-.light-mode {
-
+#light-mode {
     background-color: $light-main-color;
+    color: #000;
+    transition: all 500ms;
+
 }
+
+#light-mode2 {
+    background-color: $light-sub-color;
+    color: #000;
+    transition: all 500ms;
+}
+
+#light-png {
+    filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
+}
+

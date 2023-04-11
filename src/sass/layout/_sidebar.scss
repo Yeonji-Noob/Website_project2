@@ -15,6 +15,7 @@
 .scroll-content {
   height: 550px;
   width: $sidebar-width;
+  color: #000;
 }
 
 .sidebar-contents {
@@ -23,6 +24,7 @@
   width: $sidebar-width;
   left: -5px;
   overflow:hidden;
+  color: #000;
 
   & p {
     position: relative;

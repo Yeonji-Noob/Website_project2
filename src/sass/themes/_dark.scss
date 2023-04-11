@@ -1,3 +1,12 @@
-.dark-mode {
+#dark-mode {
     background-color: $dark-main-color;
+    color: #fff;
+    transition: all 500ms;
+}
+
+
+#dark-png {
+
+    -webkit-filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
 }

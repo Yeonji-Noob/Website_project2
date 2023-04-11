@@ -1,12 +1,35 @@
-import { useState } from "react";
+// import { useState } from "react";
+import { create } from "zustand"
+
+
+
+// interface toggleStateProps {
+//     handleToggle: () => void;
+// }
+
+interface ToggleStore {
+    light: boolean;
+    setDark: (value: boolean) => void;
+}
+
+
+// zustand store
+export const useToggleStore = create<ToggleStore>(set => ({
+    light: true, //초기값 설정
+    setDark: value => set(()=>({light: value})), //상태업뎃
+}));
+
 
 /**
  * 
  * @returns header 맨 오른쪽에 있는 toggle switch의 state 변경 함수
  */
-const ToggleButton: React.FC = () => {
+const ToggleButton = () => {
 
-    const [light, setDark] = useState<boolean>(true)
+    // const [light, setDark] = useState<boolean>(true)
+
+    const light = useToggleStore((state) => state.light);
+    const setDark = useToggleStore((state) => state.setDark);
 
     return (
         <div className="toggle-container">
