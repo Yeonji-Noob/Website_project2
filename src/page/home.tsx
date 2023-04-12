@@ -5,7 +5,8 @@ import { HomeAlbums } from "../component/home/home-albums"
 import { HomePlayLists } from "../component/home/home-playlists"
 import { HomeGenreLists } from "../component/home/home-music_genres"
 
-
+// ======svg import====== //
+import {ReactComponent as Interview } from "../assets/home/home-artist_interview.svg";
 
 
 //component name 첫글자는 항상 대문자로
@@ -36,9 +37,9 @@ const Home: React.FC = () => {
                 <HomeGenreLists />
             </div>
 
-            <p>Artist News</p>
-            <div className="home-news">
-
+            
+            <div className="home-interview">
+                <Interview />
             </div>
         </div>
     )
