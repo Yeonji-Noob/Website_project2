@@ -1,7 +1,7 @@
 import './sass/_main.scss';
 import Header from './component/__header/header';
 import Sidebar from './component/__sidebar/sidebar';
-import MusicBar from './component/__musicbar/music-bar';
+import MusicBar from './component/__musicbar/musicbar';
 import Content from './component/content';
 
 import { BrowserRouter } from 'react-router-dom';

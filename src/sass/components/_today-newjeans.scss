@@ -1,7 +1,7 @@
 .today-check_box_select_all_box {
     display: flex;
     margin-top: 50px;
-    margin-left: 40px;
+    margin-left: 30px;
     align-items: center;
 
     & .today-check_box_select_all {
@@ -17,7 +17,7 @@
     }
 
     & label {
-        margin-left: 40px;
+        margin-left: 30px;
         font-size: 24px;
         font-weight: 600;
     }
@@ -27,8 +27,9 @@
 .today-NewJeans_select_box {
     display: flex;
     margin-top: 60px;
-    margin-left: 40px;
+    margin-left: 30px;
     align-items: center;
+    width: 1270px;
 
     & .today-NewJeans_check_box {
         appearance: none;
@@ -62,6 +63,7 @@
 
     & h3 {
         display: block;
+        width: 60px;
         margin-right: 10vw;
         font-size: 26px;
         font-weight: 200;
@@ -70,8 +72,10 @@
     }
 
     .today-album_text {
-        width: 13.5417vw;
+        display: block;
+        width: 9vw;
         font-size: 1.3542vw;
+        margin: 0 auto;
     }
     
 }

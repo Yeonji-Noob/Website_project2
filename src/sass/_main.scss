@@ -31,14 +31,18 @@
 
 
 /*--all-page-component--*/
+
 //header
 @import "components/toggle";
 @import "components/login";
+
 //side-bar
 @import "components/searchinput";
+
 //music-bar
 @import "components/musicplay";
 @import "components/musicbar-slider";
+@import "components/musicbar-volume";
 
 //--all buttons
 @import "components/buttons";

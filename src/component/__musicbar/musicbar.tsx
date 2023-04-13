@@ -5,6 +5,12 @@ import { ReactComponent as Reverse } from "../../assets/__musicbar/musicbar-reve
 import { ReactComponent as Play } from "../../assets/__musicbar/musicbar-play_button.svg"
 import { ReactComponent as Forward } from "../../assets/__musicbar/musicbar-forward.svg"
 import { ReactComponent as Repeat } from "../../assets/__musicbar/musicbar-repeat_play.svg"
+import { ReactComponent as Volume } from "../../assets/__musicbar/musicbar-volume.svg"
+import { ReactComponent as Musiclist } from "../../assets/__musicbar/musicbar-music_list.svg";
+
+
+import MusicSlider from "./musicbar-slider"
+import MusicVolume from "./musicbar-volume"
 
 import { useState } from "react"
 
@@ -14,12 +20,15 @@ const MusicBar: React.FC = () => {
 
     const [heart, setHeart] = useState<boolean>(true);
 
+
     const light = useToggleStore((state: { light: boolean }) => state.light);
 
     return (
 
         <div className="music-bar" id={light ? 'light-mode' : 'dark-mode'}>
+            <div className="musicbar-album_frame_container">
             <div className="album-frame"></div>
+            </div>
             <div className="song-by">
                 <p>Pathos</p>
                 <p>20:69</p>
@@ -38,11 +47,15 @@ const MusicBar: React.FC = () => {
                 <Play id="play" />
                 <Forward id="music-play-button-forward" />
                 <Repeat id="music-play-button-repeat" />
+                <div className="blur"></div>
             </figure>
-            <div className="blur"></div>
-            <div className="musicbar-slider_container">
-                <input type="range" step={0.01} className="musicbar-slider" />
-            </div>
+
+
+            <MusicSlider />
+            <Volume className="musicbar-volume_icon" />
+            <MusicVolume />
+
+            <Musiclist/>
         </div>
 
     )
