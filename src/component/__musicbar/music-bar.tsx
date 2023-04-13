@@ -40,6 +40,9 @@ const MusicBar: React.FC = () => {
                 <Repeat id="music-play-button-repeat" />
             </figure>
             <div className="blur"></div>
+            <div className="musicbar-slider_container">
+                <input type="range" step={0.01} className="musicbar-slider" />
+            </div>
         </div>
 
     )
