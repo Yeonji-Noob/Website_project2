@@ -1,0 +1,40 @@
+/*-------------------------*/
+/*---- ↻  ◁  ▶ ▷  ↺ ----*/
+/*-------------------------*/
+.music-play-button {
+  position: relative;
+  display: flex;
+  width: 180px;
+  margin: auto $common-margin*2;
+  justify-content: space-between;
+
+  & > * {
+    position: relative;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  & :not(#play) {
+    top: $button-top - 2;
+  }
+
+  & #music-play-button-random {
+    @include set-random_n_repeat;
+  }
+
+  & #music-play-button-repeat {
+    @include set-random_n_repeat;
+  }
+
+  .blur {
+    position: absolute;
+    margin-top: -12px;
+    left: 30px;
+    width: 112px;
+    height: 55px;
+    background-color: $main-color;
+    z-index: -5;
+    border-radius: 50%;
+    filter: blur(20px);
+  }
+}

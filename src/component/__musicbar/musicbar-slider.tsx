@@ -1,6 +1,6 @@
 
 
-const MusicSlider = () => {
+export const MusicSlider = () => {
 
     return (
         <div className="musicbar-slider_container">
@@ -12,5 +12,3 @@ const MusicSlider = () => {
     );
 
 }
-
-export default MusicSlider;

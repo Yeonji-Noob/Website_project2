@@ -9,10 +9,11 @@
   @include set-container-style;
 
 
+  // width랑 height 60px 믹스인이나 변수처리하기 
     & .album-frame {
       position: relative;
       top: 18px;
-      margin-left: 20px;
+      margin: 0 $common-margin 0 $common-margin*2;
       width: 60px;
       height: 60px;
       border: 2px $main-color solid;
@@ -23,12 +24,11 @@
   & .song-by {
     position: relative;
     width: 90px;
-    left: 20px;
-    padding-top: 30px;
     user-select: none;
-
+    margin: auto $common-margin/2 ;
     & p {
-      font-size: 15px;
+      font-size: 14px;
+      text-align: center;
     }
     & p:first-child {
       font-weight: 600;
@@ -37,21 +37,15 @@
 }
 
 .left-icon {
+  display: flex;
+  flex: 0 0 90px;
   position: relative;
-  margin-top: 55px;
-  transform: translateY(-50%);
-  width: 110px;
-  align-items: center;
-  & img {
-    width: 16px;
-    height: 16px;
-    margin-right: 20px;
-    cursor: pointer;
-  }
+  width: 90px;
+  margin: auto $common-margin;
+  justify-content: space-between;
   & svg {
     width: 16px;
     height: 16px;
-    margin-right: 20px;
     cursor: pointer;
   }
 }

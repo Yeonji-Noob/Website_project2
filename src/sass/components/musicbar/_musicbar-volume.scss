@@ -1,0 +1,42 @@
+.musicbar-volume_comtanier {
+    position: relative;
+    width: $volume-width;
+    height: 100px;
+    margin: auto $common-margin auto 10px ;
+
+    & .musicbar-volume_slider {
+        @include set-volume-slider;
+        z-index: 4;
+        @include vertical-center;
+    }
+
+    & .musicbar-volume_track {
+        @include set-volume-slider;
+        background-color: #8482e1;
+        border-radius: 10px;
+        @include vertical-center;
+    }
+}
+
+
+
+.musicbar-volume_comtanier:hover input[type="range"]::-webkit-slider-thumb {
+    @include set-slider-thumb;
+}
+
+
+.musicbar-volume_icon {
+    @include volume-n-music_list-icon;
+    margin: auto 5px auto $common-margin;
+}
+
+
+.musicbar-music_list_container {
+    display: flex;
+    @include volume-n-music_list-icon;
+    height: 90px;
+    margin: auto $common-margin*2;
+    align-items: center;
+    margin-top: 8px;
+    cursor: pointer;
+}

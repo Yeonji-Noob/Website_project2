@@ -26,7 +26,6 @@
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 
-
 @mixin set-button {
   border: 1px solid #000;
   border-radius: 5px;
@@ -45,7 +44,7 @@
 
 @mixin set-main-banners-bg-size {
   width: 98%;
-  padding: 15px; 
+  padding: 15px;
 }
 
 //////////////////////////////////////////
@@ -67,8 +66,7 @@
   cursor: pointer;
   z-index: 20;
 }
-// css에서의 속성은  property, html에서의 속성은 attribute라고 한다. 
-
+// **css에서의 속성은  property, html에서의 속성은 attribute라고 한다.
 
 ///////////////////////////////////
 /////////album img size////////////
@@ -77,7 +75,6 @@
   width: 14vw;
   height: 14vw;
 }
-
 
 //////////////////////////////////
 
@@ -88,4 +85,45 @@
   font-family: "Pretendard";
   user-select: none;
   cursor: pointer;
+}
+
+// musicbar //
+
+@mixin set-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $main-color;
+  border-radius: 50%;
+  background: #ffffff8a;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+@mixin set-music-time {
+  position: absolute;
+  top: 42px;
+}
+
+@mixin set-slider-range {
+  position: absolute;
+  width: 700px;
+  height: 8px;
+  border-radius: 10px;
+  top: 46px;
+}
+
+@mixin set-random_n_repeat {
+  width: 14px;
+  top: $button-top;
+}
+
+@mixin set-volume-slider {
+  position: absolute;
+  width: $volume-width;
+  height: 8px;
+}
+
+//volume & musiclist icon style
+@mixin volume-n-music_list-icon {
+  position: relative;
+  width: 30px;
 }

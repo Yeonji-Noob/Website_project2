@@ -1,7 +1,7 @@
 .today-check_box_select_all_box {
     display: flex;
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 50px;
     align-items: center;
 
     & .today-check_box_select_all {
@@ -27,9 +27,9 @@
 .today-NewJeans_select_box {
     display: flex;
     margin-top: 60px;
-    margin-left: 30px;
+    margin-left: 20px;
     align-items: center;
-    width: 1270px;
+    width: 100%;
 
     & .today-NewJeans_check_box {
         appearance: none;
@@ -40,16 +40,17 @@
         height: 28px;
         border: 2px solid #808080;
         border-radius: 0.15em;
-        margin-right: 2.0833vw;
+        margin-left: 30px;
+        margin-right: 2vw;
         
     }
 
     & .coverimg {
         position: relative;
-        width: 100px;
+        width: 5.2083vw;
         height: 5.2083vw;
         border: 4px solid $main-color;
-        margin-right: 4.1667vw;
+        margin-right: 4vw;
     }
 
     & .today-NewJeans_title {
@@ -63,7 +64,7 @@
 
     & h3 {
         display: block;
-        width: 60px;
+        width: 10px;
         margin-right: 10vw;
         font-size: 26px;
         font-weight: 200;
@@ -80,3 +81,6 @@
     
 }
 
+.today-kebab_container {
+width: 100px;
+}

@@ -39,10 +39,10 @@
 //side-bar
 @import "components/searchinput";
 
-//music-bar
-@import "components/musicplay";
-@import "components/musicbar-slider";
-@import "components/musicbar-volume";
+//music-bar//
+@import "components/musicbar/musicbar-musicplay";
+@import "components/musicbar/musicbar-slider";
+@import "components/musicbar/musicbar-volume";
 
 //--all buttons
 @import "components/buttons";
