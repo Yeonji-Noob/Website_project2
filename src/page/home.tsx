@@ -1,9 +1,5 @@
-import { MainBanner } from "component/home/home-main_banner"
-
 // ======component import====== //
-import { HomeAlbums } from "../component/home/home-albums"
-import { HomePlayLists } from "../component/home/home-playlists"
-import { HomeGenreLists } from "../component/home/home-music_genres"
+import { HomeAlbums, HomePlayLists, HomeGenreLists, MainBanner} from "../component/home/"
 
 // ======svg import====== //
 import {ReactComponent as Interview } from "../assets/home/home-artist_interview.svg";

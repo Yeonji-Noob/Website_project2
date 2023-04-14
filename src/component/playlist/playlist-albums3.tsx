@@ -1,6 +1,6 @@
 import AlbumHover from "./playlist--album_hover"
 
-const PlayListAlbums3 = () => {
+export const PlayListAlbums3 = () => {
 
     interface PlayAlbumListProps3 {
         key: number;
@@ -58,5 +58,3 @@ const PlayListAlbums3 = () => {
 
 
 }
-
-export default PlayListAlbums3;

@@ -1,4 +1,4 @@
-const ChartRanking: React.FC = () => {
+export const ChartRanking: React.FC = () => {
 
 
 
@@ -13,5 +13,3 @@ const ChartRanking: React.FC = () => {
         </div>
     );
 };
-
-export default ChartRanking;

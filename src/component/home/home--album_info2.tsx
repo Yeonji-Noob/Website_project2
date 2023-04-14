@@ -1,4 +1,4 @@
-import { HoverButtons } from "./home---playlist_buttons";
+import { HoverButtons } from "./";
 import { useState } from "react";
 // playlists와 genres의 자식 컴포넌트 입니다 (#추천플레이리스트)
 

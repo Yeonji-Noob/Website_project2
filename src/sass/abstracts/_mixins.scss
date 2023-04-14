@@ -98,14 +98,10 @@
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-@mixin set-music-time {
-  position: absolute;
-  top: 42px;
-}
 
 @mixin set-slider-range {
   position: absolute;
-  width: 700px;
+  width: 36vw;
   height: 8px;
   border-radius: 10px;
   top: 46px;

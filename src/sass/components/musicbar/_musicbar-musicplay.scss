@@ -4,6 +4,7 @@
 .music-play-button {
   position: relative;
   display: flex;
+  flex: 0 0 180px;
   width: 180px;
   margin: auto $common-margin*2;
   justify-content: space-between;

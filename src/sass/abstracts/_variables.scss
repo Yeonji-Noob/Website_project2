@@ -42,7 +42,7 @@ $header-margin: 10px;
 ////////////////////////////
 
 // music bar margin
-$common-margin : 20px;
+$common-margin : 1.0526vw;
 
 // music play buttons top
 $button-top : 20px;
@@ -51,5 +51,7 @@ $button-top : 20px;
 $slider-range-margin : 45px;
 
 //volume width
-$volume-width : 200px;
+$volume-width : 10vw;
 
+// music time top
+$music-time-top : 42px;

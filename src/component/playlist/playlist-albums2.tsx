@@ -1,6 +1,6 @@
 import AlbumHover from "./playlist--album_hover"
 
-const playListAlbums2: React.FC = () => {
+export const PlayListAlbums2: React.FC = () => {
 
 
     interface PlayAlbumListProps2 {
@@ -61,6 +61,3 @@ const playListAlbums2: React.FC = () => {
     );
 
 }
-
-
-export default playListAlbums2;

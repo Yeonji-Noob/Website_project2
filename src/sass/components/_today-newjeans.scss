@@ -13,7 +13,7 @@
         height: 28px;
         border: 2px solid #808080;
         border-radius: 0.15em;
-        
+        cursor: pointer;
     }
 
     & label {
@@ -42,15 +42,24 @@
         border-radius: 0.15em;
         margin-left: 30px;
         margin-right: 2vw;
+        cursor: pointer;
         
+        &:checked {
+
+        }
     }
 
-    & .coverimg {
+    & .today-cover_img_container {
         position: relative;
         width: 5.2083vw;
         height: 5.2083vw;
         border: 4px solid $main-color;
         margin-right: 4vw;
+
+        & .today-NewJeans_cover_img {
+            width: 5.2083vw;
+            height: 5.2083vw;
+        }
     }
 
     & .today-NewJeans_title {

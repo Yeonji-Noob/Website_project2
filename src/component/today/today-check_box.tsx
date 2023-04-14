@@ -1,32 +1,21 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-interface CheckBoxsProps {
-    children: string;
-    disabled: boolean;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    // 이벤트 type 지정할때 기니까 항상 주의하기
-}
 
-const Checkbox = ({ children, disabled }: CheckBoxsProps) => {
 
-    const [isChecked, setIsChecked] = useState(false)
 
-    const Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setIsChecked(e.target.checked);
-    }
 
+export const CheckBox = () => {
+
+
+    // const [checkedItem, setCheckedItem] = useState(new Set())
+
+
+    // const checkedItemHandler = () => {
+
+    // }
 
     return (
-        <label>
-            <input type="checkbox"
-                disabled={disabled}
-                checked={isChecked}
-                onChange={Change}
-            />
-            {children}
-        </label>
+        <input className="today-NewJeans_check_box" type="checkbox" name="checkbox" checked/>
     );
 
 }
-
-export default Checkbox;

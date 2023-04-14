@@ -1,15 +1,17 @@
 .musicbar-slider_container {
     width: 800px;
     height: 100px;
-    margin: auto $common-margin*2;
+    margin: auto $common-margin;
 
     & .musicbar-time {
-        @include set-music-time;
+        position:absolute;
+        top: $music-time-top;
     }
 
     & .musicbar-time:last-child {
-        @include set-music-time;
-        margin-left: 760px;
+        position: relative;
+        top: $music-time-top;
+        margin-left: 39.8vw;
     }
 
     & .musicbar-slider {
