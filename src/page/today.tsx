@@ -9,23 +9,11 @@ import { TodayNewJeans } from "component/today/today-newjeans";
 
 const TodaysMusic = () => {
 
-
-
   return (
-    <>
     <div className="today">
       <TodayBanner />
-
-      <div className="today-check_box_select_all_box">
-        <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all'
-          onChange={() => { }} />
-        <label htmlFor="btn1">총 7곡</label>
-      </div>
-    
       <TodayNewJeans/>
-
     </div>
-    </>
   );
 };
 
