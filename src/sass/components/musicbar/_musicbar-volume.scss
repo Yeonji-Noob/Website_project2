@@ -25,6 +25,30 @@
 }
 
 
+// 볼륨 슬라이더 thumb
+.musicbar-volume_slider_thumb {
+    position: absolute;
+    top: 39px;
+    width: 19px;
+    height: 19px;
+    border: 1px solid $main-color;
+    border-radius: 50%;
+    background: #ffffff8a;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.musicbar-volume_slide {
+    position: absolute;
+    width: $volume-width;
+    background-color: $main-color;
+    @include set-volume-slider;
+    z-index: 5;
+    @include vertical-center;
+    border-radius: 20px;
+}
+
+
 .musicbar-volume_icon {
     @include volume-n-music_list-icon;
     margin: auto 5px auto $common-margin;

@@ -3,11 +3,13 @@ import { useToggleStore } from '../__header/toggle';
 
 //-- import components --//
 import { MusicSlider, MusicVolume, LeftIcons, MusicPlayButtons, MusicListIcon, AlbumFrame, MusicInfo } from "./";
+// import {useState} from "react";
 
-
-const MusicBar: React.FC = () => {
+const MusicBar = () => {
 
     const light = useToggleStore((state: { light: boolean }) => state.light);
+
+
 
     return (
 
