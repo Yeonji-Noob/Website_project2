@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { SelectBox } from ".";
+import { SelectBox, CheckBox } from ".";
 
 
 export const TodayNewJeans = (): React.ReactElement => {
 
 
     const [checkItems, setCheckItems] = useState<Number[]>([]);
-
-
 
 
     interface AlbumListProps {
@@ -48,6 +46,7 @@ export const TodayNewJeans = (): React.ReactElement => {
             // 단일 선택 해제 시 체크된 아이템을 제외한 배열 (필터)
             setCheckItems(checkItems.filter((el) => el !== id));
         }
+
     };
 
     // 체크박스 전체 선택
@@ -62,6 +61,8 @@ export const TodayNewJeans = (): React.ReactElement => {
             // 전체 선택 해제 시 checkItems 를 빈 배열로 상태 업데이트
             setCheckItems([]);
         }
+
+   
     }
 
 
@@ -73,15 +74,15 @@ export const TodayNewJeans = (): React.ReactElement => {
                     checked={checkItems.length === NewJeansList.length ? true : false} />
                 <label htmlFor="btn1">총 7곡</label>
             </div>
+
+
             {NewJeansList.map((info) => {
                 return (
                     <div className="today-newJeans_check_box_container">
-                        <label>
                         <input className="today-NewJeans_check_box" type="checkbox" name={`select-${info.id}`}
                         onChange={(e) => HandleSingleCheck({checked: e.target.checked, id: info.id})} 
                         checked={checkItems.includes(info.id) ? true : false}
                         />
-                        </label>
                         <SelectBox cover={info.cover} title={info.title} artist={info.artist} album={info.album} key={info.id} />
                     </div>
                 );

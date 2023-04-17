@@ -9,7 +9,6 @@ interface AlbumListProps {
 }
 
 
-// 체크박스에 체크를 하면 배열에 아이템을 담을 것
 
 export const SelectBox = ({cover, title, artist, album, key}:AlbumListProps ) => {
 
