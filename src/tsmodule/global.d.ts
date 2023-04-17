@@ -21,6 +21,11 @@ declare module "*.jpg" {
   export default value;
 }
 
+declare module "*.mp3" {
+  const value: any;
+  export default value;
+}
+
 declare module 'react-heart' {
   const Heart: any;
   export default Heart;

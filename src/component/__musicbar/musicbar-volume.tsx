@@ -2,11 +2,9 @@ import { Volume } from "./"
 import { useState, useRef } from "react";
 import type { RefObject } from 'react';
 
-
-
 export const MusicVolume = () => {
 
- 
+
     // (4/17)
     //1. 볼륨 조절 상태는 input의 value값으로 조절이 가능함
     //2. input을 커스텀 한 상태라서, slider-thumb를 움직여도 value값 상태가 나타나지 않았음(...!)
@@ -44,7 +42,8 @@ export const MusicVolume = () => {
                 <div className="musicbar-volume_slide" style={{width: volumeWidth}}></div>
                 {/* 이벤트는 onChange와 onInput의 선택지가 있었는데, 실시간 반영하는 onInput으로 채택하였다. */}
                 <input ref={inputRef} type="range" min={0} max={100} step={0.5} className="musicbar-volume_slider" 
-                onInput={handleVolumeChange}/>
+                onInput={handleVolumeChange}
+                defaultValue={50}/>
                 <div className="musicbar-volume_track"></div>
             </div>
         </>
