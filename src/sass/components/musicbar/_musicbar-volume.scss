@@ -5,6 +5,7 @@
     margin: auto $common-margin auto 10px ;
 
     & .musicbar-volume_slider {
+        -webkit-appearance: none;
         @include set-volume-slider;
         z-index: 4;
         @include vertical-center;
@@ -22,28 +23,31 @@
 
 .musicbar-volume_comtanier:hover input[type="range"]::-webkit-slider-thumb {
     @include set-slider-thumb;
+    position: relative;
+    z-index: 10;
 }
 
 
 // 볼륨 슬라이더 thumb
-.musicbar-volume_slider_thumb {
-    position: absolute;
-    top: 39px;
-    width: 19px;
-    height: 19px;
-    border: 1px solid $main-color;
-    border-radius: 50%;
-    background: #ffffff8a;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
-    z-index: 5;
-}
+// .musicbar-volume_slider_thumb {
+//     position: absolute;
+//     top: 39px;
+//     width: 19px;
+//     height: 19px;
+//     border: 1px solid $main-color;
+//     border-radius: 50%;
+//     background: #ffffff8a;
+//     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+//     z-index: 5;
+// }
 
+// 볼륨
 .musicbar-volume_slide {
     position: absolute;
-    width: $volume-width;
+    width: 0;
     background-color: $main-color;
     @include set-volume-slider;
-    z-index: 5;
+    z-index: 1;
     @include vertical-center;
     border-radius: 20px;
 }

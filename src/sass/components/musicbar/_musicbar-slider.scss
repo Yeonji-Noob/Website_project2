@@ -36,4 +36,14 @@ input[type="range"]::-webkit-slider-thumb {
 
 .musicbar-slider_container:hover input[type="range"]::-webkit-slider-thumb {
     @include set-slider-thumb;
+    position: relative;
+    z-index: 10;
+}
+
+.musicbar-slide {
+    position: absolute;
+    background-color: $main-color;
+    @include set-slider-range;
+    margin-left: $slider-range-margin;
+    z-index: 1;
 }
