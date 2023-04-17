@@ -27,6 +27,14 @@
     @include set-random_n_repeat;
   }
 
+  & #music-play-button-pause {
+    position: relative;
+    top: -1px;
+    left: 4.4px;
+    width: 59px;
+    height: 59px;
+  }
+
   .blur {
     position: absolute;
     margin-top: -12px;

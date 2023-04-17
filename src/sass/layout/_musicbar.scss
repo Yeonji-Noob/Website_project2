@@ -23,15 +23,16 @@
 
   & .song-by {
     position: relative;
-    width: 90px;
+    width: 95px;
     user-select: none;
     margin: auto $common-margin/2 ;
     & p {
-      font-size: 14px;
-      text-align: center;
+      font-size: 12px;
+      text-align:left;
     }
     & p:first-child {
-      font-weight: 600;
+      font-size: 14px;
+      font-weight: 700;
     }
   }
 }

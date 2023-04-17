@@ -3,12 +3,12 @@ import { useToggleStore } from '../__header/toggle';
 
 //-- import components --//
 import { MusicSlider, MusicVolume, LeftIcons, MusicPlayButtons, MusicListIcon, AlbumFrame, MusicInfo } from "./";
-// import {useState} from "react";
 
+
+// import {useState} from "react";
 // import useSound from 'use-sound';
 
 
-// import KickBack from "../../assets/mp3/Kenshi Yonezu - KICK BACK.mp3";
 
 //(4/17)
 
