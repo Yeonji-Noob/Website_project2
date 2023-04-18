@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { SelectBox, CheckBox } from ".";
+import { SelectBox, CheckBoxItem } from ".";
 
 
 export const TodayNewJeans = (): React.ReactElement => {
 
 
-    const [checkItems, setCheckItems] = useState<Number[]>([]);
-
-
     interface AlbumListProps {
-        id: number;
+        id: string;
+        key: number;
+        idx: string;
         title: string;
         artist: string;
         cover: string;
@@ -23,67 +22,58 @@ export const TodayNewJeans = (): React.ReactElement => {
     // map에서 idx값으로 넘겨도 되긴 하지만 이건 권장하는 방식은 아니라고 한다.
 
     const NewJeansList: AlbumListArrayProps = [
-        { 'id': 0, cover: 'today-omg', title: 'Ditto', artist: 'NewJeans', album: ` NewJeans'OMG' ` },
-        { 'id': 1, cover: 'today-omg', title: 'OMG', artist: 'NewJeans', album: ` NewJeans'OMG' ` },
-        { 'id': 2, cover: 'today-omg', title: 'Cookie', artist: 'NewJeans', album: ` NewJeans'OMG' ` },
-        { 'id': 3, cover: 'today-newjeans', title: 'Hype boy', artist: 'NewJeans', album: ` NewJeans 1st EP 'New Jeans' ` },
-        { 'id': 4, cover: 'today-zero', title: 'Zero', artist: 'NewJeans', album: 'Zero' },
-        { 'id': 5, cover: 'today-newjeans', title: 'Attention', artist: 'NewJeans', album: ` NewJeans 1st EP 'New Jeans' ` },
-        { 'id': 6, cover: 'today-newjeans', title: 'Hurt', artist: 'NewJeans', album: ` NewJeans 1st EP 'New Jeans' ` }
+        { 'id': 'a', key: 1, idx: 'check1', cover: 'today-omg', title: 'Ditto', artist: 'NewJeans', album: ` NewJeans'OMG' ` },
+        { 'id': 'b', key: 2, idx: 'check2', cover: 'today-omg', title: 'OMG', artist: 'NewJeans', album: ` NewJeans'OMG' ` },
+        { 'id': 'c', key: 3, idx: 'check3', cover: 'today-omg', title: 'Cookie', artist: 'NewJeans', album: ` NewJeans'OMG' ` },
+        { 'id': 'd', key: 4, idx: 'check4', cover: 'today-newjeans', title: 'Hype boy', artist: 'NewJeans', album: ` NewJeans 1st EP 'New Jeans' ` },
+        { 'id': 'e', key: 5, idx: 'check5', cover: 'today-zero', title: 'Zero', artist: 'NewJeans', album: 'Zero' },
+        { 'id': 'f', key: 6, idx: 'check6', cover: 'today-newjeans', title: 'Attention', artist: 'NewJeans', album: ` NewJeans 1st EP 'New Jeans' ` },
+        { 'id': 'g', key: 7, idx: 'check7', cover: 'today-newjeans', title: 'Hurt', artist: 'NewJeans', album: ` NewJeans 1st EP 'New Jeans' ` }
     ];
 
 
-    interface HandleProps {
-        checked: boolean;
-        id: number;
-    }
+    //(4/18)
+    // checkbox 상태관리를 array로 할지 Set객체로 할 지 고민
+    // 연습 차원에서 Set 객체 흠,,
 
-    const HandleSingleCheck = ({ checked, id }: HandleProps) => {
-        if (checked) {
-            // 단일 선택 시 체크된 아이템을 배열에 추가
-            setCheckItems(prev => [...prev, id]);
-        } else {
-            // 단일 선택 해제 시 체크된 아이템을 제외한 배열 (필터)
-            setCheckItems(checkItems.filter((el) => el !== id));
-        }
+    //set 객체 생성
 
-    };
 
-    // 체크박스 전체 선택
-    const HandleAllCheck = (checked: boolean) => {
-        if (checked) {
-            // 전체 선택 클릭 시 데이터의 모든 아이템(id)를 담은 배열로 checkItems 상태 업데이트
-            const idArray: number[] = [];
-            NewJeansList.forEach((el) => idArray.push(el.id));
-            setCheckItems(idArray);
-        }
-        else {
-            // 전체 선택 해제 시 checkItems 를 빈 배열로 상태 업데이트
-            setCheckItems([]);
-        }
+    // const [checkedSet, setCheckedSet] = useState(new Set());
+    
+    // interface setBoxProps {
+    //     id: number;
+    //     checked: boolean;
+    // }
 
-   
-    }
+    // const setBox = ({checked, id}: setBoxProps) => {
 
+    //     if(checked) {
+    //         checkedSet.add();
+    //     } else {
+    //         checkedSet.delete();
+    //     }
+    // }
+
+    const [notCheck, setChecked] = useState<boolean>(false);
+
+    const handleClickChange =  (event: React.ChangeEvent<HTMLInputElement>) => {
+        setChecked(event.target.checked);
+      };
 
     return (
         <>
             <div className="today-check_box_select_all_box">
-                <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all'
-                    onChange={(e) => HandleAllCheck(e.target.checked)}
-                    checked={checkItems.length === NewJeansList.length ? true : false} />
+                <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all' />
                 <label htmlFor="btn1">총 7곡</label>
             </div>
 
 
             {NewJeansList.map((info) => {
                 return (
-                    <div className="today-newJeans_check_box_container">
-                        <input className="today-NewJeans_check_box" type="checkbox" name={`select-${info.id}`}
-                        onChange={(e) => HandleSingleCheck({checked: e.target.checked, id: info.id})} 
-                        checked={checkItems.includes(info.id) ? true : false}
-                        />
-                        <SelectBox cover={info.cover} title={info.title} artist={info.artist} album={info.album} key={info.id} />
+                    <div className="today-newJeans_check_box_container" key={info.key}>
+                        <CheckBoxItem idx={info.idx} handleClickChange={handleClickChange} checked={notCheck} />
+                        <SelectBox cover={info.cover} title={info.title} artist={info.artist} album={info.album} id={info.id} />
                     </div>
                 );
             })}

@@ -34,7 +34,7 @@ const MusicBar = () => {
         <div className="music-bar" id={light ? 'light-mode' : 'dark-mode'}>
             <AlbumFrame />
             <MusicInfo />
-            <LeftIcons />
+            <LeftIcons  />
             <MusicPlayButtons />
             <MusicSlider />
             <MusicVolume />

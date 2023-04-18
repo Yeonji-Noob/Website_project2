@@ -73,7 +73,6 @@ const Sidebar: React.FC = () => {
                 <span className="sidetext">
                   {SideText[2]}
                 </span>
-
               </Link>
             </p>
 

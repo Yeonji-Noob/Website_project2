@@ -104,18 +104,21 @@
     /*-----------------------------*/
 }
 
+
+
 // home의 playlist button
 
 .playlist-button {
     position: absolute;
-    top: 10.2vw;
+    top: 9.5vw;
     left: 1vw;
     width: 3vw;
     z-index: 10;
-    transition: all 500ms;
+    transition: $transition-time;
 
-    & rect:hover {
-        fill: #fff;
+    & ellipse:hover {
+        transition: $transition-time;
+        fill-opacity: 1;
     }
 }
 
@@ -125,8 +128,16 @@
     right: 1.5vw;
     width: 2vw;
     z-index: 10;
-    transition: all 500ms;
+    transition: $transition-time;
+
+    & path:hover {
+        transition: $transition-time;
+        fill-opacity: 1;
+    }
 }
+
+
+
 
 //today의 button
 .today-button-container {
@@ -139,7 +150,7 @@
         height: auto;
         margin-right: 30px;
         filter: drop-shadow(0px 20px 11px #00000081);
-        transition: all 500ms;
+        transition: $transition-time;
 
         & rect:hover {
             fill: #3029ff;

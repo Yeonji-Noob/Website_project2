@@ -51,7 +51,7 @@
 .hover-area {
     position: absolute;
     @include set-album-size;
-    transition: all 500ms;
+    transition: $transition-time;
 
 
     &:hover {

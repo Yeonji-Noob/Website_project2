@@ -17,16 +17,27 @@
     }
 
     & label {
-        margin-left: 30px;
+        margin-left: 60px;
         font-size: 24px;
         font-weight: 600;
     }
 }
 
 
+.today-NewJeans_Check {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    margin-top: 91px;
+    margin-left: 51px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+
 .today-NewJeans_select_box {
     display: flex;
-    margin-top: 60px;
+    margin-top: 15px;
     margin-left: 20px;
     align-items: center;
     width: 100%;
@@ -76,11 +87,12 @@
 
 .today-newJeans_check_box_container {
     display:flex;
-    height: 150px;
+    height: 200px;
+
     .today-NewJeans_check_box {
+        position: relative;
         appearance: none;
         flex: 0 0 28px;
-        background-color: #fff;
         color: currentColor;
         width: 28px;
         height: 28px;
@@ -90,14 +102,10 @@
         margin-left: 50px;
         margin-right: 2vw;
         cursor: pointer;
-        
-        &:checked {
-    
-        }
+        z-index: 1;
     }
 
 }
-
 
 
 .today-kebab_container {

@@ -28,7 +28,7 @@
     @include set-album-size;
     margin-right: 2vw;
     margin-bottom: 1vw;
-    transition: all 500ms;
+    transition: $transition-time;
 
     & .playlist--album-img {
     @include set-album-size;
@@ -47,7 +47,7 @@
     left: 4px;
     width: 13.5vw;
     height: 13.5vw;
-    transition: all 500ms;
+    transition: $transition-time;
 
     &:hover {
         background-color: #36363673;
@@ -57,14 +57,15 @@
 
 .playlist-button2 {
     position: absolute;
-    top: 10vw;
+    top: 9vw;
     left: 1vw;
     width: 3vw;
     z-index: 10;
-    transition: all 500ms;
+    transition: $transition-time;
 
-    & rect:hover {
-        fill: #fff;
+    & ellipse:hover {
+        transition: $transition-time;
+        fill-opacity: 1;
     }
 }
 
@@ -74,5 +75,10 @@
     right: 1.5vw;
     z-index: 10;
     width: 2vw;
-    transition: all 500ms;
+    transition: $transition-time;
+
+    & path:hover {
+        transition: $transition-time;
+        fill-opacity: 1;
+    }
 }

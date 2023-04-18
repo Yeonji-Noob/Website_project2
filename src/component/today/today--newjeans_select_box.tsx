@@ -1,7 +1,7 @@
 import { Kebab } from ".";
 
 interface AlbumListProps {
-    key: number;
+    id: string;
     cover:string;
     title: string;
     artist: string;
@@ -10,12 +10,12 @@ interface AlbumListProps {
 
 
 
-export const SelectBox = ({cover, title, artist, album, key}:AlbumListProps ) => {
+export const SelectBox = ({cover, title, artist, album, id}:AlbumListProps ) => {
 
 
 
     return(
-        <div className="today-NewJeans_select_box" key={key} >
+        <div className="today-NewJeans_select_box" key={id} >
             <picture className="today-cover_img_container">
                 <source className="today-NewJeans_cover_img" srcSet={require(`../../assets/today/${cover}.webp`).default} type="image/webp" />
                 <img className="today-NewJeans_cover_img" src={require(`../../assets/today/${cover}.jpg`)} alt="album_cover" />

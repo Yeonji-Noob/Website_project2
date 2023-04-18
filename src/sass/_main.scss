@@ -17,13 +17,13 @@
 /*---------------------------*/
 
 /*home-page-component*/
-@import "components/home-topbanner";
-@import "components/albums";
-@import "components/home-interview";
+@import "components/home/home-topbanner";
+@import "components/home/home-albums";
+@import "components/home/home-interview";
 
 /*today-page-component*/
-@import "components/today-topbanner";
-@import "components/today-newjeans";
+@import "components/today/today-topbanner";
+@import "components/today/today-newjeans";
 
 /*chart-page-component*/
 @import "components/chart-ranking";
