@@ -120,12 +120,12 @@
     bottom: 10px;
     cursor: pointer;
 
-    & img {
+    & .sidebar-sns {
       padding: 9px;
       margin: 0 auto;
     }
 
-    & img:last-child {
+    & .sidebar-sns:last-child {
       position: relative;
       top: -4px;
     }

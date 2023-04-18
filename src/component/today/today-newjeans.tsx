@@ -2,6 +2,18 @@ import { useState } from "react";
 import { SelectBox, CheckBoxItem } from ".";
 
 
+
+
+export interface setBoxProps {
+    checked: boolean;
+}
+
+export interface checkedItemHandlerProps {
+    id: string;
+    checked: boolean;
+}
+
+
 export const TodayNewJeans = (): React.ReactElement => {
 
 
@@ -16,6 +28,8 @@ export const TodayNewJeans = (): React.ReactElement => {
     }
 
     interface AlbumListArrayProps extends Array<AlbumListProps> { }
+
+
 
 
     // id: 0 를 'id': 0 이렇게 하고 key값을 넘겨야 콘솔창 에러가 안뜬다!!!!!!!
@@ -37,33 +51,48 @@ export const TodayNewJeans = (): React.ReactElement => {
     // 연습 차원에서 Set 객체 흠,,
 
     //set 객체 생성
+    const [checkedItems, setCheckedItems] = useState(new Set());
 
 
-    // const [checkedSet, setCheckedSet] = useState(new Set());
-    
-    // interface setBoxProps {
-    //     id: number;
-    //     checked: boolean;
-    // }
 
-    // const setBox = ({checked, id}: setBoxProps) => {
 
-    //     if(checked) {
-    //         checkedSet.add();
-    //     } else {
-    //         checkedSet.delete();
-    //     }
-    // }
+    const checkedItemHandler = ({ id, checked }: checkedItemHandlerProps) => {
+        if (checked) {
+            checkedItems.add(id);
+            setCheckedItems(checkedItems);
+        } else if (!checked && checkedItems.has(id)) {
+            checkedItems.delete(id);
+            setCheckedItems(checkedItems);
+        }
+        return(
+            console.log(checkedItems)
+        );
+    };
 
-    const [notCheck, setChecked] = useState<boolean>(false);
 
-    const handleClickChange =  (event: React.ChangeEvent<HTMLInputElement>) => {
-        setChecked(event.target.checked);
-      };
+//     const [isAllChecked, setIsAllChecked] = useState(false);
+
+// const allCheckedHandler = (checked) => {
+//   if (checked) {
+//     setCheckedItems(new Set(checked.map(({ id }) => id)));
+//     setIsAllChecked(true);
+//   } else {
+//     checkedItems.clear();
+//     setCheckedItems(setCheckedItems);
+//     setIsAllChecked(false);
+//   }
+// };
+
+ 
+    // const handleClickChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     setChecked(event.target.checked);
+    // };
+
+
 
     return (
         <>
-            <div className="today-check_box_select_all_box">
+            <div className="today-check_box_select_all_box" >
                 <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all' />
                 <label htmlFor="btn1">총 7곡</label>
             </div>
@@ -71,12 +100,14 @@ export const TodayNewJeans = (): React.ReactElement => {
 
             {NewJeansList.map((info) => {
                 return (
-                    <div className="today-newJeans_check_box_container" key={info.key}>
-                        <CheckBoxItem idx={info.idx} handleClickChange={handleClickChange} checked={notCheck} />
+                    <div className="today-newJeans_check_box_container" key={info.key} id={info.id}>
+                        <CheckBoxItem idx={info.idx} name={info.idx} checkedItemHandler={checkedItemHandler} />
                         <SelectBox cover={info.cover} title={info.title} artist={info.artist} album={info.album} id={info.id} />
                     </div>
+
                 );
             })}
+            {console.log(checkedItems)}
         </>
     );
 
