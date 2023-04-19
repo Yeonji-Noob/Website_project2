@@ -76,11 +76,15 @@
 
     }
 
-    .today-album_text {
+    & .today-album_text {
         display: block;
         width: 9vw;
         font-size: 1.3542vw;
         margin: 0 auto;
+    }
+
+    & .today-Kebab_menu {
+        cursor: pointer;
     }
     
 }

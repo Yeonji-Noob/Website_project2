@@ -7,7 +7,7 @@ import {ReactComponent as Interview } from "../assets/home/home-artist_interview
 
 //component name 첫글자는 항상 대문자로
 //안그러면 TS(2339)에러 날 수 있음
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
 
     //map 함수를 사용해서 반복되는 부분을 줄임
     let homeText = ['추천앨범', '추천플레이리스트', '장르별추천'];
@@ -41,5 +41,3 @@ const Home: React.FC = () => {
     )
 
 }
-
-export default Home;

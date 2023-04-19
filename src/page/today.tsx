@@ -7,7 +7,7 @@ import { TodayNewJeans } from "component/today/today-newjeans";
 
 
 
-const TodaysMusic = () => {
+export const TodaysMusic = () => {
 
   return (
     <div className="today">
@@ -16,5 +16,3 @@ const TodaysMusic = () => {
     </div>
   );
 };
-
-export default TodaysMusic;

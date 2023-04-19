@@ -1,7 +1,7 @@
 import { Chevron, PlayListAlbums, PlayListAlbums2, PlayListAlbums3  } from "../component/playlist";
 
 
-const PlayList = () => {
+export const PlayList = () => {
 
   let playListText = ['내', '유저', '추천'];
 
@@ -42,5 +42,3 @@ const PlayList = () => {
 
 
 }
-
-export default PlayList;

@@ -1,11 +1,5 @@
-// import { useState } from "react";
 import { create } from "zustand"
 
-
-
-// interface toggleStateProps {
-//     handleToggle: () => void;
-// }
 
 interface ToggleStore {
     light: boolean;

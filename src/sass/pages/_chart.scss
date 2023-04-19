@@ -1,7 +1,21 @@
+.chart-grid {
+    display: grid;
+    grid-template-columns:  repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    place-items: center;
+    width: 84vw;
+    height: 50vw;
+    margin: 30px auto;
+}
+
+
 
 .chart {
     position: relative;
-    margin-bottom: 500px;
+    margin-bottom: 30px;
     overflow: hidden;
 
 
@@ -42,9 +56,11 @@
     & #chart-icon-chevron {
         position: absolute;
         top: 35px;
-        left: 243px;
+        left: 255px;
         width: 9px;
         cursor: pointer;
     }
 
 }
+
+

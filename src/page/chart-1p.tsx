@@ -1,7 +1,9 @@
 import { ChartTitleText, Chart1Page } from "../component/chart"
 
 
-export const Chart: React.FC = () => {
+export const ChartPage2: React.FC = () => {
+
+
     return (
         <>
             <div className="chart">

@@ -2,6 +2,7 @@
     display: flex;
     cursor: pointer;
     user-select: none;
+    margin-top: 30px;
 
     & .playlist-h1 {
         @include set-main-playlist-text;
@@ -17,17 +18,17 @@
     display: flex;
     margin-left: 2vw;
     width: 209px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    
 
-    // & .playlist-albums {
-    // }
 }
 
 .playlist-box {
     position: relative;
     @include set-album-size;
+    margin-top: 1vw;
     margin-right: 2vw;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
     transition: $transition-time;
 
     & .playlist--album-img {

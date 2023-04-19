@@ -1,14 +1,7 @@
-import Home from "../page/home";
-import TodaysMusic from "page/today";
-import Chart from "page/chart";
-import PlayList from "page/playlist";
-import MusicVideo from "page/musicvideo";
+import { Home, TodaysMusic, Chart, PlayList, MusicVideo } from "./";
 
-// import { home, todaysMusic, chart, playList, musicVideo } from "../page";
+import { ChartPage2, ChartPage3, ChartPage4 } from "../component/"
 
-// import를 하나로 합치려 했으나,
-// 경로 지정에서 
-// TS2307: Cannot find module '../page' or its corresponding type declarations. 오류가 떠서 잠시 보류함
 
 
 import Footer from "./__footer/footer"
@@ -29,7 +22,12 @@ const Content = () => {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/home" element={<Home />}></Route>
                 <Route path="/today" element={<TodaysMusic />}></Route>
+
                 <Route path="/chart" element={<Chart />}></Route>
+                <Route path="/chart2p" element={<ChartPage2 />}></Route>
+                <Route path="/chart3p" element={<ChartPage3 />}></Route>
+                <Route path="/chart4p" element={<ChartPage4 />}></Route>
+
                 <Route path="/playlist" element={<PlayList />}></Route>
                 <Route path="/musicvideo" element={<MusicVideo />}></Route>
 

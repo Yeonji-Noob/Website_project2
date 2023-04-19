@@ -104,7 +104,6 @@ export const TodayNewJeans = (): React.ReactElement => {
                         <CheckBoxItem idx={info.idx} name={info.idx} checkedItemHandler={checkedItemHandler} />
                         <SelectBox cover={info.cover} title={info.title} artist={info.artist} album={info.album} id={info.id} />
                     </div>
-
                 );
             })}
             {console.log(checkedItems)}

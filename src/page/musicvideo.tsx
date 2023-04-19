@@ -1,4 +1,4 @@
-const MusicVideo: React.FC = () => {
+export const MusicVideo: React.FC = () => {
     return (
         <div>
             <h1>뮤직비디오 탭</h1>
@@ -7,5 +7,3 @@ const MusicVideo: React.FC = () => {
         </div>
     );
 };
-
-export default MusicVideo;

@@ -36,9 +36,9 @@ export const CheckBoxItem = ({ idx, name, checkedItemHandler }: CheckBoxItemProp
 
     const checkRef = useRef(null);
 
-    const allCheckHandler = () => setChecked(isAllChecked);
+    // const allCheckHandler = () => setChecked(isAllChecked);
 
-    useEffect(() => allCheckHandler(), [isAllChecked]);
+    // useEffect(() => allCheckHandler(), [isAllChecked]);
 
     return (
         <>
