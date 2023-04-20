@@ -88,7 +88,7 @@ export const ChartRanking1p: React.FC = () => {
 
 
   // 이 부분은 후추에 다른 것으로 교체하기
-  if (loading) return <div>로딩중 ...</div>;
+  if (loading) return <div></div>;
   if (error) return <div>에러가 발생했습니다.</div>
   if (!chart) return null;
 

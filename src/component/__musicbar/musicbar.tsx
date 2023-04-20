@@ -2,7 +2,7 @@
 import { useToggleStore } from '../__header/toggle';
 
 //-- import components --//
-import { MusicSlider, MusicVolume, LeftIcons, MusicPlayButtons, MusicListIcon, AlbumFrame, MusicInfo } from "./";
+import { LeftIcons, MusicPlayButtons, MusicListIcon, AlbumFrame, MusicInfo } from "./";
 
 
 // import {useState} from "react";
@@ -36,8 +36,8 @@ const MusicBar = () => {
             <MusicInfo />
             <LeftIcons  />
             <MusicPlayButtons />
-            <MusicSlider />
-            <MusicVolume />
+            {/* <MusicSlider />
+            <MusicVolume /> */}
             <MusicListIcon />
         </div>
 

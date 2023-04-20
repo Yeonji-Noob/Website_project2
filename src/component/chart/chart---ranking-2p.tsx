@@ -47,7 +47,7 @@ export const ChartRanking2p: React.FC = () => {
   }, []);
 
 
-  if (loading) return <div>로딩중 ...</div>;
+  if (loading) return <div></div>;
   if (error) return <div>에러가 발생했습니다.</div>
   if (!chart) return null;
 

@@ -1,7 +1,6 @@
-import { Random, Reverse, Play, Forward, Repeat, Pause } from "./";
+import { Random, Reverse, Play, Forward, Repeat, Pause, MusicSlider, MusicVolume } from "./";
 import useSound from "use-sound";
 import { useState } from 'react';
-
 import Mp3Files from ".";
 
 
@@ -10,8 +9,8 @@ export const MusicPlayButtons = () => {
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
+    const [isPlaying, setIsPlaying] = useState<boolean>(false);
     const [playButton, setPlayButton] = useState<boolean>(true);
     const [pauseButton, setPauseButton] = useState<boolean>(false);
     const [reverseButton, setReverseButton] = useState<boolean>(false);
@@ -52,9 +51,13 @@ export const MusicPlayButtons = () => {
                 setCurrentIndex((currentIndex + 1) % Mp3Files.length);
             }
         }
+
     });
     
+    console.log(Mp3Files);
+
     return (
+      <>
         <div className="music-play-button">
             <Random id="music-play-button-random" />
             <Reverse id="music-play-button-reverse" onClick={handleReverseClick} />
@@ -64,5 +67,8 @@ export const MusicPlayButtons = () => {
             <Repeat id="music-play-button-repeat" />
             <div className="blur"></div>
         </div>
+        <MusicSlider/>
+        <MusicVolume/>
+        </>
     );
 }
