@@ -1,12 +1,56 @@
 import { ChartNextButton } from ".";
 import { ChartPrevButton } from ".";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { chartData } from "./chart---ranking-1p";
+import { useToggleStore } from "component/__header/toggle";
+
+
 
 export const ChartRanking2p: React.FC = () => {
 
-  // 대략 25번까지 있음
-  // 숫자 array는 만들고 싶은데 일일히 끝까지 치기 귀찮다면 Array.from()을 이용하면 된다.
-  const chartItems = Array.from({ length: 25 }, (_, i) => i + 26);
+  // 테마별 글씨 색 변경을 위해서 가져옴
+  const light = useToggleStore((state: { light: boolean }) => state.light);
+
+
+  const [chart, setChart] = useState<null | Array<chartData>>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<null>(null);
+
+
+  useEffect(() => {
+
+    const fetchCharts = async () => {
+
+      try {
+        setChart(null);
+        setError(null);
+        setLoading(true);
+
+        const response = await axios.get('https://raw.githubusercontent.com/KoreanThinker/billboard-json/main/billboard-hot-100/recent.json');
+        const hot100Data = response.data.data.slice(25, 50);
+        setChart(hot100Data);
+
+      }
+      catch (e: unknown) {
+        console.error(e);
+      }
+
+
+      setLoading(false);
+
+    }
+
+    fetchCharts();
+
+  }, []);
+
+
+  if (loading) return <div>로딩중 ...</div>;
+  if (error) return <div>에러가 발생했습니다.</div>
+  if (!chart) return null;
+
 
   return (
     <>
@@ -19,26 +63,28 @@ export const ChartRanking2p: React.FC = () => {
         <ChartPrevButton />
       </Link>
 
-      {chartItems.map((item, idx) => {
+      {chart.map((billboard, idx) => {
         return (
 
           <div key={idx}>
-
             <div className="chart-album-flaxbox">
               <div className="chart-album-flax">
-                <div className="chart-album-cover"></div>
-                <div className="chart-album-textbox">
-                  <p>{item}</p>
-                  <p>song title</p>
-                  <p>composer</p>
+                <div className="chart-album-cover">
+                  <img src={billboard.image} className="chart-album-cover" alt="album_image" />
                 </div>
+                <div className="chart-album-textbox">
+                  <p>{billboard.rank}</p>
+                  <br />
+                  <p style={{ color: light ? '#231edc' : '#aff7d4' }} > { billboard.name }</p>
+                <p>{billboard.artist}</p>
               </div>
             </div>
+          </div>
 
           </div>
 
-        )
-      })}
+  )
+})}
     </>
   );
 };

@@ -6,9 +6,9 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     place-items: center;
-    width: 84vw;
-    height: 50vw;
-    margin: 30px auto;
+    width: 86vw;
+    height: 60vw;
+    margin: 10px auto;
 }
 
 
@@ -27,11 +27,15 @@
         cursor: pointer;
     }
 
+
+
+    //Billboard Hot 100 text//
     & .chart-text-flex {
         display: flex;
         font-size: 19px;
         padding-top: 32px;
         padding-left: 69px;
+        width: 90%;
         cursor: pointer;
         user-select: none;
 
@@ -49,6 +53,11 @@
             font-size: 18px;
             font-weight: 500;
             margin-top: 1px;
+        }
+
+        .chart-date {
+            position: absolute;
+            right: 50px;
         }
 
     }
