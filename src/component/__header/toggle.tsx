@@ -1,11 +1,10 @@
 import { create } from "zustand"
 
 
-interface ToggleStore {
+export interface ToggleStore {
     light: boolean;
     setDark: (value: boolean) => void;
 }
-
 
 // zustand store
 export const useToggleStore = create<ToggleStore>(set => ({

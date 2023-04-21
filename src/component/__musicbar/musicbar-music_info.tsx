@@ -1,18 +1,19 @@
 import Mp3Files from ".";
-import { useState } from "react";
 
+interface CurrentIndexProps {
+    currentIndex: number[];
+  }
 
-export const MusicInfo = () => {
+//musicbar로부터 props를 가져와 곡의 정보가 바뀜
 
+export const MusicInfo = (props: CurrentIndexProps) => {
 
-    const [currentIndex, setCurrentIndex] = useState(0);
 
     
-
     return (
         <div className="song-by">
-            <p>{Mp3Files[currentIndex].title}</p>
-            <p>{Mp3Files[currentIndex].artist}</p>
+            <p>{Mp3Files[props.currentIndex[0]].title}</p>
+            <p>{Mp3Files[props.currentIndex[0]].artist}</p>
         </div>
     );
 }

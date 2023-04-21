@@ -2,12 +2,22 @@
 import { useToggleStore } from '../__header/toggle';
 
 //-- import components --//
-import { LeftIcons, MusicPlayButtons, MusicListIcon, AlbumFrame, MusicInfo } from "./";
+import { LeftIcons, MusicControl, MusicListIcon, AlbumFrame, MusicInfo } from "./";
 
-
-// import {useState} from "react";
+import { useState } from "react";
 // import useSound from 'use-sound';
+// import Mp3Files from ".";
+import { PlayFunction } from 'use-sound/dist/types';
 
+export interface PropsType {
+    currentIndex: number[];
+    setCurrentIndex: React.Dispatch<React.SetStateAction<number[]>>;
+}
+
+export interface PlayProps {
+    play: PlayFunction;
+    pause: (id?: string | undefined) => void;
+}
 
 
 //(4/17)
@@ -25,7 +35,11 @@ import { LeftIcons, MusicPlayButtons, MusicListIcon, AlbumFrame, MusicInfo } fro
 
 const MusicBar = () => {
 
+    //테마 색 변경 store
     const light = useToggleStore((state: { light: boolean }) => state.light);
+
+    //mp3 상태값 관리 state
+    const [currentIndex, setCurrentIndex] = useState([0, 1]);
 
 
 
@@ -33,15 +47,13 @@ const MusicBar = () => {
 
         <div className="music-bar" id={light ? 'light-mode' : 'dark-mode'}>
             <AlbumFrame />
-            <MusicInfo />
-            <LeftIcons  />
-            <MusicPlayButtons />
-            {/* <MusicSlider />
-            <MusicVolume /> */}
+            <MusicInfo currentIndex={currentIndex} />
+            <LeftIcons />
+            <MusicControl currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
             <MusicListIcon />
         </div>
 
-    )
+    );
 }
 
 

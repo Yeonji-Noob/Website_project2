@@ -1,12 +1,10 @@
 
 //export components
-export { MusicSlider } from "./musicbar-slider";
-export { MusicVolume } from "./musicbar-volume";
 export { LeftIcons } from "./musicbar-left_icons";
-export { MusicPlayButtons } from "./musicbar-playbuttons";
 export { MusicListIcon } from "./musicbar-music_list";
 export { AlbumFrame } from "./musicbar-album_frame";
 export { MusicInfo } from "./musicbar-music_info";
+export { MusicControl } from "./musicbar-music_control"
 
 //export svg files
 export { ReactComponent as Random } from "../../assets/__musicbar/musicbar-random_play.svg";
