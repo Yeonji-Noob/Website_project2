@@ -39,14 +39,14 @@ const MusicBar = () => {
     const light = useToggleStore((state: { light: boolean }) => state.light);
 
     //mp3 상태값 관리 state
-    const [currentIndex, setCurrentIndex] = useState([0, 1]);
+    const [currentIndex, setCurrentIndex] = useState([0, 1, 2]);
 
 
 
     return (
 
         <div className="music-bar" id={light ? 'light-mode' : 'dark-mode'}>
-            <AlbumFrame />
+            <AlbumFrame currentIndex={currentIndex} />
             <MusicInfo currentIndex={currentIndex} />
             <LeftIcons />
             <MusicControl currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>

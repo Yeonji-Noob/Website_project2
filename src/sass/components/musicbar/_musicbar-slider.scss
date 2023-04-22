@@ -1,31 +1,41 @@
 .musicbar-slider_container {
-    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 710px;
     height: 100px;
     margin: auto $common-margin;
 
-    & .musicbar-time {
-        position: absolute;
-        top: $music-time-top;
-    }
+    .musicbar-slide_container {
+        width: 670px;
+        height: 100px;
+        margin-left: 25px;
 
-    & .musicbar-time:last-child {
-        position: relative;
-        top: $music-time-top;
-        margin-left: 41vw;
-    }
+        & .musicbar-time_container {
+            height: 100px;
 
-    & .musicbar-slider {
-        @include set-slider-range;
-        -webkit-appearance: none;
-        // 희안하게 input은 1px씩 빼야 맞는다..
-        margin-left: $slider-range-margin + 18;
-        z-index: 4;
-    }
+            & .musicbar-time {
+                position: relative;
+                margin: auto 0px;
+            }
+        }
 
-    & .musicbar-range_track {
-        @include set-slider-range;
-        margin-left: $slider-range-margin + 19;
-        background-color: #8482e1;
+        & .musicbar-time:last-child {
+            position: relative;
+        }
+
+
+        // 움직이는 슬라이더 부분
+        & .musicbar-slider {
+            @include set-slider-range;
+            -webkit-appearance: none;
+            z-index: 4;
+        }
+
+        & .musicbar-range_track {
+            @include set-slider-range;
+            background-color: #8482e1;
+        }
     }
 }
 
@@ -43,18 +53,20 @@ input[type="range"]::-webkit-slider-thumb {
 //   }
 
 .musicbar-slider_container:hover input[type="range"]::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ffffff00;
-    background: #ffffff00;
+    // width: 20px;
+    // height: 20px;
+    // border: 1px solid #ffffff00;
+    // background: #ffffff00;
+    @include set-slider-thumb;
     position: relative;
     z-index: 10;
 }
 
 .musicbar-slide {
     position: absolute;
+
     background-color: $main-color;
     @include set-slider-range;
-    margin-left: $slider-range-margin + 19;
+    width: 100%;
     z-index: 1;
 }

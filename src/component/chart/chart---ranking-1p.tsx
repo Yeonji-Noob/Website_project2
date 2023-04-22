@@ -96,12 +96,11 @@ export const ChartRanking1p: React.FC = () => {
   // const chartItems = Array.from({ length: 25 }, (_, i) => i + 1);
   // api를 가져오기 전에 박스 형태의 모습을 보고싶어서 임의로 만든 배열임
 
-
  
 
   return (
     <>
-      <Link to="/chart2p" style={{ position: 'absolute' }}>
+      <Link to={`${process.env.PUBLIC_URL}/chart2p`} style={{ position: 'absolute' }}>
         <ChartNextButton />
       </Link>
 

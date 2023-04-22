@@ -101,7 +101,8 @@
 
 @mixin set-slider-range {
   position: absolute;
-  width: 36vw;
+  width: 585px;
+  // 36vw
   height: 8px;
   border-radius: 10px;
   top: 46px;

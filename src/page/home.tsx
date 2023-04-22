@@ -2,7 +2,8 @@
 import { HomeAlbums, HomePlayLists, HomeGenreLists, MainBanner} from "../component/home/"
 
 // ======svg import====== //
-import {ReactComponent as Interview } from "../assets/home/home-artist_interview.svg";
+//import {ReactComponent as Interview } from "../assets/home/home-artist_interview.svg";
+
 
 
 //component name 첫글자는 항상 대문자로
@@ -35,7 +36,7 @@ export const Home: React.FC = () => {
 
             
             <div className="home-interview">
-                <Interview />
+                <img src={require('../assets/home/home-artist_interview.jpg')} alt="interview" />
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import Mp3Files from ".";
 
-interface CurrentIndexProps {
+export interface CurrentIndexProps {
     currentIndex: number[];
   }
 

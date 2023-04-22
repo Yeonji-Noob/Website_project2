@@ -2,7 +2,7 @@
     position: relative;
     width: $volume-width;
     height: 100px;
-    margin: auto $common-margin auto 10px ;
+    margin: auto 10px auto 10px ;
 
     & .musicbar-volume_slider {
         -webkit-appearance: none;
@@ -57,6 +57,13 @@
     @include volume-n-music_list-icon;
     margin: auto 5px auto $common-margin;
 }
+
+.musicbar-volume_mute_icon {
+    @include volume-n-music_list-icon;
+    width: 30px;
+    margin: auto 5px auto $common-margin;
+}
+
 
 
 .musicbar-music_list_container {

@@ -55,11 +55,11 @@ export const ChartRanking2p: React.FC = () => {
   return (
     <>
 
-      <Link to="/chart3p" style={{ position: 'absolute' }}>
+      <Link to={`${process.env.PUBLIC_URL}/chart3p`} style={{ position: 'absolute' }}>
         <ChartNextButton />
       </Link>
 
-      <Link to="/chart" style={{ position: 'absolute' }}>
+      <Link to={`${process.env.PUBLIC_URL}/chart`} style={{ position: 'absolute' }}>
         <ChartPrevButton />
       </Link>
 

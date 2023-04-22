@@ -13,17 +13,19 @@
     & .album-frame {
       position: relative;
       top: 18px;
-      margin: 0 $common-margin 0 $common-margin*2;
+      margin: 0 $common-margin ;
       width: 60px;
       height: 60px;
       border: 2px $main-color solid;
       border-radius: 5px;
     }
+
+
   
 
   & .song-by {
     position: relative;
-    width: 95px;
+    width: 60px;
     user-select: none;
     margin: auto $common-margin/2 ;
     & p {
@@ -37,9 +39,17 @@
   }
 }
 
+
+.musicbar-album_cover {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  z-index: -1;
+}
+
 .left-icon {
   display: flex;
-  flex: 0 0 90px;
+  flex: 0 0 85px;
   position: relative;
   width: 90px;
   margin: auto $common-margin;
@@ -48,5 +58,10 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
+    margin-right: 5px;
+
+    &:active {
+      scale: 1.1;
+    }
   }
 }

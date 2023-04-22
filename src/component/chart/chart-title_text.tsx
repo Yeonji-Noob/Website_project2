@@ -1,7 +1,6 @@
 import { Trophy, Chevron } from "./"
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { Chart } from "page/chart";
 
 
 export const ChartTitleText = () => {
@@ -43,7 +42,7 @@ export const ChartTitleText = () => {
 
 
   // 이 부분은 후추에 다른 것으로 교체하기
-  if (loading) return <div>로딩중 ...</div>;
+  if (loading) return <div>loading ...</div>;
   if (error) return <div>에러가 발생했습니다.</div>
   if (!chart) return null;
   // console.log(chart);

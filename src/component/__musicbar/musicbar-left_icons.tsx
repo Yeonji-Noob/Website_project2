@@ -2,9 +2,6 @@
 import { useState } from "react";
 import { useToggleStore } from '../__header/toggle';
 
-//-- import svg --//
-// import { Lylics, Etc } from "./"
-
 
 
 export const LeftIcons = () => {
