@@ -79,8 +79,10 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
   };
 
 
-  console.log(musicBarStateRef.current?.value);
+  // console.log(musicBarStateRef.current?.value);
 
+
+  
   //////////////////////////////////////////////////////////////////////////////////////////////////////
   ////////// volume 영역 //////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -247,9 +249,10 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
 
       </div>
 
-      {console.log(musicBarWidth)}
+      {/* 검사를 위한 console.log */}
+      {/* {console.log(musicBarWidth)}
       {console.log(Math.floor((duration || 0) / 1000))}
-      {console.log(inputRef.current?.value)}
+      {console.log(inputRef.current?.value)} */}
 
       {/* Volume */}
 

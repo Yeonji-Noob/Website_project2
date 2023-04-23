@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { SelectBox, CheckBoxItem } from ".";
+import { useRef, useState } from "react";
+import { SelectBox, CheckBoxItem, CheckBox } from ".";
+import { all } from "axios";
 
 
 
@@ -48,7 +49,9 @@ export const TodayNewJeans = (): React.ReactElement => {
 
     //(4/18)
     // checkbox 상태관리를 array로 할지 Set객체로 할 지 고민
-    // 연습 차원에서 Set 객체 흠,,
+    // 연습 차원에서 Set 객체로 하기로 결정함
+
+
 
     //set 객체 생성
     const [checkedItems, setCheckedItems] = useState(new Set());
@@ -70,30 +73,38 @@ export const TodayNewJeans = (): React.ReactElement => {
     };
 
 
-//     const [isAllChecked, setIsAllChecked] = useState(false);
 
-// const allCheckedHandler = (checked) => {
-//   if (checked) {
-//     setCheckedItems(new Set(checked.map(({ id }) => id)));
-//     setIsAllChecked(true);
-//   } else {
-//     checkedItems.clear();
-//     setCheckedItems(setCheckedItems);
-//     setIsAllChecked(false);
-//   }
-// };
+    const [allCheckedItems, setAllCheckedItems] = useState<boolean>(false);
 
- 
-    // const handleClickChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setChecked(event.target.checked);
-    // };
+    const allCheckedRef = useRef<null>(null)
 
 
+    const allHandleCheck = () => {
+        setAllCheckedItems(!allCheckedItems);
+    }
+
+    const allCheckedItemHandler = () => {
+        if(checkedItems.size === 7)
+            {
+            //  allCheckedRef.current.style
+            }
+        else {
+            setAllCheckedItems(false)
+        }
+        return (console.log())
+    }
+
+    const checkBoxDisplay = allCheckedItems ? "block" : "none";
+
+    console.log(allCheckedItems);
 
     return (
         <>
             <div className="today-check_box_select_all_box" >
-                <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all' />
+                <CheckBox ref={allCheckedRef} className="today-NewJeans_All_Check" 
+                style={{ display: checkBoxDisplay }}
+                />
+                <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all' onClick={allCheckedItemHandler} />
                 <label htmlFor="btn1">총 7곡</label>
             </div>
 

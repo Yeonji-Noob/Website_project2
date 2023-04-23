@@ -6,7 +6,7 @@
 
     & .today-check_box_select_all {
         appearance: none;
-        background-color: #fff;
+        // background-color: #fff;
         margin: 0;
         color: currentColor;
         width: 28px;
@@ -21,6 +21,12 @@
         font-size: 24px;
         font-weight: 600;
     }
+}
+
+.today-NewJeans_All_Check {
+    position: absolute;
+    width: 28px;
+    height: 28px;
 }
 
 

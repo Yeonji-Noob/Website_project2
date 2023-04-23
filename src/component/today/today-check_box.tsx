@@ -25,7 +25,7 @@ export const CheckBoxItem = ({ idx, name, checkedItemHandler }: CheckBoxItemProp
 
       const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
         const target = event.target as HTMLInputElement;
-        setChecked(!notCheck);
+        handleClick();
         checkedItemHandler({ id: target.id, checked: target.checked });
 
       }
