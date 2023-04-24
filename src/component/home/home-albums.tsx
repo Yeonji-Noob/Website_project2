@@ -1,9 +1,13 @@
-import AlbumsInfo from "./home--album_info";
+import React from 'react';
+import AlbumsInfo from './home--album_info';
 
 
 
-// home-AlbumsInfo 컴포넌트의 부모 컴포넌트
-export const HomeAlbums = (): React.ReactElement => {
+/**
+ * 
+ * @returns home-AlbumsInfo 컴포넌트의 부모 컴포넌트
+ */
+export const HomeAlbums :React.FC = () => {
 
 
 
@@ -25,7 +29,7 @@ export const HomeAlbums = (): React.ReactElement => {
     //정해줬던거에다가 [] interface를 씌움
     // <>형태로 씌우는 것을 제네릭(Generic)이라고 함. 
     // 타입정의를 매개변수로 넘겨주는 것임
-    interface AlbumListArrayProps extends Array<AlbumListProps> { }
+    interface AlbumListArrayProps extends Array<AlbumListProps> { };
 
 
     let albumList: AlbumListArrayProps = [
@@ -75,12 +79,12 @@ export const HomeAlbums = (): React.ReactElement => {
 
                 return (
                     <div key={info.key} className="album-info-flexbox">
-                        <img src={require(`../../assets/home/${info.cover}.jpg`)} alt="album-cover" className="home-album" />
+                        <img src={`${process.env.PUBLIC_URL}/images/home/${info.cover}.webp`} alt="album-cover" className="home-album" />
                         <AlbumsInfo key={info.key} title={info.title} artist={info.artist} />
                     </div>
                 )
             })}
         </div>
 
-    )
+    );
 }

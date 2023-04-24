@@ -1,17 +1,20 @@
-import { HoverButtons } from "./";
-import { useState } from "react";
-// playlists와 genres의 자식 컴포넌트 입니다 (#추천플레이리스트)
+import { HoverButtons } from './';
+
+import { useState } from 'react';
 
 
 
 interface AlbumInfoProps {
-    // cover: string
     title: string
 }
 
 
-
-const AlbumsInfo2 = ({ title }: AlbumInfoProps) => {
+/**
+ * 
+ * @param {string} 앨범 타이틀
+ * @returns playlists와 genres의 자식 컴포넌트 입니다 (#추천플레이리스트)
+ */
+const AlbumsInfo2 :React.FC<AlbumInfoProps> = ({ title }: AlbumInfoProps) => {
 
     const [isHovering, setIsHovering] = useState<boolean>(false);
 

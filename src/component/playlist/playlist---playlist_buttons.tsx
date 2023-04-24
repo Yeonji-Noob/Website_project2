@@ -1,4 +1,4 @@
-import { PlayListButton, Etc } from "."
+import { PlayListButton, Etc } from '.';
 
 // (4/18)
 // hover시 색 변화를 추가하였음
@@ -10,6 +10,6 @@ export const HoverButtons2: React.FC = () => {
             <PlayListButton className="playlist-button2" />
             <Etc className="playlist-etc2" />
         </div>
-    )
+    );
 
 }

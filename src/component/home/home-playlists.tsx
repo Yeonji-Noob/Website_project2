@@ -1,16 +1,18 @@
-import AlbumsInfo2 from "./home--album_info2";
+import AlbumsInfo2 from './home--album_info2';
 
 // home-AlbumsInfo2 컴포넌트의 부모 컴포넌트
-export let HomePlayLists = (): React.ReactElement => {
+export const HomePlayLists: React.FC = () => {
 
 
-    interface PlayListsprops {
+    interface PlayListsProps {
         key: number;
         title: string;
         cover: string;
     }
 
-    interface PlayListsArrayProps extends Array<PlayListsprops>{}
+    interface PlayListsArrayProps extends Array<PlayListsProps> { };
+
+
 
     let playLists: PlayListsArrayProps = [
         {
@@ -40,19 +42,19 @@ export let HomePlayLists = (): React.ReactElement => {
 
         }
 
-    ]
+    ];
 
     return (
         <div className="home-album-container">
             {playLists.map(info => {
-                return(
+                return (
                     <div className="album-info-flexbox" key={info.key}>
-                        <img src={require(`../../assets/home/${info.cover}.png`)} alt="playlists" className="home-album" />
+                        <img src={`${process.env.PUBLIC_URL}/images/home/${info.cover}.webp`} alt="playlists" className="home-album" />
                         <AlbumsInfo2 key={info.key} title={info.title} />
                     </div>
                 )
             })}
         </div>
-    )
+    );
 
 }

@@ -1,5 +1,5 @@
-import { ReactComponent as TodayPlay } from "../../assets/today/today-play.svg"
-import { ReactComponent as TodayShuffle } from "../../assets/today/today-shuffle.svg"
+import { ReactComponent as TodayPlay } from '../../assets/today/today-play.svg';
+import { ReactComponent as TodayShuffle } from '../../assets/today/today-shuffle.svg';
 
 
 const TodayButtons = () => {

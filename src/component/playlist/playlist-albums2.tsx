@@ -1,4 +1,4 @@
-import AlbumHover from "./playlist--album_hover"
+import AlbumHover from './playlist--album_hover';
 
 export const PlayListAlbums2: React.FC = () => {
 
@@ -6,7 +6,7 @@ export const PlayListAlbums2: React.FC = () => {
     interface PlayAlbumListProps2 {
         key: number;
         playlist: string;
-        png: string;
+        webp: string;
     }
 
     interface PlayAlbumListArrayProps2 extends Array<PlayAlbumListProps2> { }
@@ -17,30 +17,30 @@ export const PlayListAlbums2: React.FC = () => {
         {
             key: 5,
             playlist: '부릉부릉',
-            png: 'playlist-vroom_vroom'
+            webp: 'playlist-vroom_vroom'
         },
         {
             key: 6,
             playlist: '알바할때',
-            png: 'playlist-when_alba'
+            webp: 'playlist-when_alba'
         },
         {
             key: 7,
             playlist: 'akmaakme',
-            png: 'playlist-akma_akme'
+            webp: 'playlist-akma_akme'
         },
         {
             key: 8,
             playlist: '노동요',
-            png: 'playlist-work_song'
+            webp: 'playlist-work_song'
         },
         {
             key: 9,
             playlist: '아이도루',
-            png: 'playlist-idol'
+            webp: 'playlist-idol'
         }
 
-    ]
+    ];
 
     return (
         <div className="playlist-albums-container">
@@ -49,7 +49,7 @@ export const PlayListAlbums2: React.FC = () => {
                 return (
                     <div key={info.key} className="playlist-box">
                         <AlbumHover />
-                        <img src={require(`../../assets/playlist/${info.png}.png`)} alt="album-cover" className="playlist--album-img" />
+                        <img src={`${process.env.PUBLIC_URL}/images/playlist/${info.webp}.webp`} alt="album-cover" className="playlist--album-img" />
                         <p>{info.playlist}</p>
                     </div>
                 )

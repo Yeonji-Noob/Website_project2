@@ -1,6 +1,7 @@
-import { useRef, useState } from "react";
-import { SelectBox, CheckBoxItem, CheckBox } from ".";
-import { ChangeEventHandler } from "react";
+import { useRef, useState, ChangeEventHandler } from 'react';
+
+import { SelectBox, CheckBoxItem, CheckBox } from '.';
+
 
 
 export interface checkedItemHandlerProps {
@@ -31,7 +32,6 @@ export const TodayNewJeans = (): React.ReactElement => {
     }
 
     interface AlbumListArrayProps extends Array<AlbumListProps> { }
-
 
 
 

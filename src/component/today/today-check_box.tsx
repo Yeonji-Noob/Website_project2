@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
-import { CheckBox } from ".";
-import { checkedItemHandlerProps } from "../today/today-newjeans"
-import { ChangeEventHandler } from "react";
+import { useState, useRef, useEffect } from 'react';
+import { CheckBox } from '.';
+import { checkedItemHandlerProps } from '../today/today-newjeans';
+import { ChangeEventHandler } from 'react';
 
 
 interface CheckBoxItemProps {

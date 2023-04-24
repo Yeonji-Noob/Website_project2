@@ -1,18 +1,23 @@
-import AlbumsInfo2 from "./home--album_info2";
-// home-AlbumsInfo3 컴포넌트의 부모 컴포넌트
-export const HomeGenreLists = () => {
+import AlbumsInfo2 from './home--album_info2';
+
+
+/**
+ * 
+ * @returns home-AlbumsInfo3 컴포넌트의 부모 컴포넌트
+ */
+export const HomeGenreLists: React.FC = () => {
 
 
     interface GenreListsProps {
         key: number;
-        title:string;
+        title: string;
         cover: string;
     }
 
-    interface GenreListsArrayProps extends Array<GenreListsProps>{}  
+    interface GenreListsArrayProps extends Array<GenreListsProps> { };
 
 
-    
+
     let genres: GenreListsArrayProps = [
         {
             key: 10,
@@ -46,15 +51,15 @@ export const HomeGenreLists = () => {
     return (
         <div className="home-album-container" >
             {genres.map(info => {
-                return(
+                return (
                     // ...감싸는 div에도 key를 달아줘야 콘솔창에서 key관련 에러가 안뜬다
-                    <div className="album-info-flexbox"  key={info.key}>
-                        <img src={require(`../../assets/home/${info.cover}.png`)} alt="music-genres" className="home-album" />
+                    <div className="album-info-flexbox" key={info.key}>
+                        <img src={`/images/home/${info.cover}.webp`} alt="music-genres" className="home-album" />
                         <AlbumsInfo2 key={info.key} title={info.title} />
                     </div>
                 )
             })}
         </div>
-    )
+    );
 
 }

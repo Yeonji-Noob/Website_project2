@@ -54,8 +54,12 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
   //////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const musicBarStateRef: RefObject<HTMLInputElement> = useRef(null);
-  const [musicBarWidth, setmusicBarWidth] = useState<string>('0');
 
+  
+  const [musicBarWidth, setMusicBarWidth] = useState<string>('0');
+  
+  // const musicState = useState(0);
+  // const setMusicBarWidth = musicState[1];
 
   const [currentTime, setCurrentTime] = useState({ min: "", sec: "" });
   const [seconds, setSeconds] = useState(0);
@@ -74,7 +78,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
       const value = Number(musicBarStateRef.current.value);
       //산술 연산의 왼쪽은 'any', 'number', 'bigint' 또는 열거형 형식이어야 합니다.ts(2362) 에러가 뜨기 때문에
       //Number()를 사용해서 number로 바꿔줌
-      setmusicBarWidth(`${value}px`);
+      setMusicBarWidth(`${value}px`);
     }
   };
 
@@ -211,12 +215,12 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
 
       {/* play buttons */}
       <div className="music-play-button">
-        <svg id="music-play-button-random" width="14" height="14" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.966c.94.166 3.223-.198 4.834-2.983C6.37 3.99 8.009 2 10.265 2" stroke={light ? '#231edc' : '#ffffff'} stroke-linecap="round" /><path d="M1 2.034c.94-.166 3.223.198 4.834 2.983C6.37 6.01 8.009 8 10.265 8M10.265 1l.66.641a.5.5 0 0 1 0 .718l-.66.641M10.265 7l.66.641a.5.5 0 0 1 0 .718l-.66.641" stroke={light ? '#231edc' : '#ffffff'} stroke-linecap="round" /></svg>
-        <svg id="music-play-button-reverse" onClick={handleReverseClick} width="23" height="23" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)"><path d="M4.454 5.136a1 1 0 0 0 0 1.728l7.309 4.26a1 1 0 0 0 1.503-.864V1.74a1 1 0 0 0-1.503-.864l-7.309 4.26z" fill={light ? '#231edc' : '#ffffff'} /></g><path stroke={light ? '#231edc' : '#ffffff'} stroke-width="2" stroke-linecap="round" d="M1.913 2v8" /><defs><filter id="a" x="2.958" y=".739" width="13.309" height="14.523" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset dx="1" dy="2" /><feGaussianBlur stdDeviation="1" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" /><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_203_1065" /><feBlend in="SourceGraphic" in2="effect1_dropShadow_203_1065" result="shape" /></filter></defs></svg>
+        <svg id="music-play-button-random" width="14" height="14" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.966c.94.166 3.223-.198 4.834-2.983C6.37 3.99 8.009 2 10.265 2" stroke={light ? '#231edc' : '#ffffff'} strokeLinecap="round" /><path d="M1 2.034c.94-.166 3.223.198 4.834 2.983C6.37 6.01 8.009 8 10.265 8M10.265 1l.66.641a.5.5 0 0 1 0 .718l-.66.641M10.265 7l.66.641a.5.5 0 0 1 0 .718l-.66.641" stroke={light ? '#231edc' : '#ffffff'} strokeLinecap="round" /></svg>
+        <svg id="music-play-button-reverse" onClick={handleReverseClick} width="23" height="23" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)"><path d="M4.454 5.136a1 1 0 0 0 0 1.728l7.309 4.26a1 1 0 0 0 1.503-.864V1.74a1 1 0 0 0-1.503-.864l-7.309 4.26z" fill={light ? '#231edc' : '#ffffff'} /></g><path stroke={light ? '#231edc' : '#ffffff'} strokeWidth="2" strokeLinecap="round" d="M1.913 2v8" /><defs><filter id="a" x="2.958" y=".739" width="13.309" height="14.523" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset dx="1" dy="2" /><feGaussianBlur stdDeviation="1" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" /><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_203_1065" /><feBlend in="SourceGraphic" in2="effect1_dropShadow_203_1065" result="shape" /></filter></defs></svg>
         {playButton && <Play id="play" onClick={handleClick} />}
         {pauseButton && <Pause id="music-play-button-pause" onClick={handleClick} />}
-        <svg id="music-play-button-forward" onClick={() => setCurrentIndex([(currentIndex[0] + 1) % Mp3Files.length])} width="23" height="23" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)"><path d="M10.67 5.136a1 1 0 0 1 0 1.728l-7.308 4.26a1 1 0 0 1-1.504-.864V1.74A1 1 0 0 1 3.362.876l7.308 4.26z" fill={light ? '#231edc' : '#ffffff'} /></g><path stroke={light ? '#231edc' : '#ffffff'} stroke-width="2" stroke-linecap="round" d="M13.153 2v8" /><defs><filter id="a" x=".858" y=".739" width="13.309" height="14.523" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset dx="1" dy="2" /><feGaussianBlur stdDeviation="1" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" /><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_203_1068" /><feBlend in="SourceGraphic" in2="effect1_dropShadow_203_1068" result="shape" /></filter></defs></svg>
-        <svg id="music-play-button-repeat" width="14" height="14" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.915 1-.713.624a.5.5 0 0 0 0 .752L1.915 3M9.922 7l.713.624a.5.5 0 0 1 0 .752L9.922 9M1.915 2h6.94c.355 0 1.067.15 1.067.75V5M9.922 8h-6.94c-.355 0-1.067-.15-1.067-.75V5" stroke={light ? '#231edc' : '#ffffff'} stroke-linecap="round" /></svg>
+        <svg id="music-play-button-forward" onClick={() => setCurrentIndex([(currentIndex[0] + 1) % Mp3Files.length])} width="23" height="23" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)"><path d="M10.67 5.136a1 1 0 0 1 0 1.728l-7.308 4.26a1 1 0 0 1-1.504-.864V1.74A1 1 0 0 1 3.362.876l7.308 4.26z" fill={light ? '#231edc' : '#ffffff'} /></g><path stroke={light ? '#231edc' : '#ffffff'} strokeWidth="2" strokeLinecap="round" d="M13.153 2v8" /><defs><filter id="a" x=".858" y=".739" width="13.309" height="14.523" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset dx="1" dy="2" /><feGaussianBlur stdDeviation="1" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" /><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_203_1068" /><feBlend in="SourceGraphic" in2="effect1_dropShadow_203_1068" result="shape" /></filter></defs></svg>
+        <svg id="music-play-button-repeat" width="14" height="14" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.915 1-.713.624a.5.5 0 0 0 0 .752L1.915 3M9.922 7l.713.624a.5.5 0 0 1 0 .752L9.922 9M1.915 2h6.94c.355 0 1.067.15 1.067.75V5M9.922 8h-6.94c-.355 0-1.067-.15-1.067-.75V5" stroke={light ? '#231edc' : '#ffffff'} strokeLinecap="round" /></svg>
         <div className="blur"></div>
       </div>
 
@@ -235,7 +239,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
           {/* 실제 width가 움직여보이는 것은 아래 div박스임 */}
           {duration && <div className="musicbar-slide" style={{ width: `${(seconds / Math.floor((duration || 0) / 1000)) * 585}px` }} ></div>}
           <input ref={musicBarStateRef} type="range" min={0} max={Math.floor((duration || 0) / 1000)} step={0.01} className="musicbar-slider" onInput={handleMusicBarChange}
-            defaultValue={0} value={seconds} onChange={(e) => { sound.seek([e.target.value]) }} />
+            defaultValue={0} value={seconds} onChange={(e) => { sound.seek([e.target.value]) }} aria-label="musicbar_range"/>
           <div className="musicbar-range_track"></div>
         </div>
 
@@ -249,7 +253,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
       </div>
 
       {/* 검사를 위한 console.log */}
-      {console.log(musicBarWidth)}
+      {/* {console.log(musicBarWidth)} */}
       {/* {console.log(Math.floor((duration || 0) / 1000))}
       {console.log(inputRef.current?.value)} */}
 
@@ -274,7 +278,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
           {/* 이벤트는 onChange와 onInput의 선택지가 있었는데, 실시간 반영하는 onInput으로 채택하였다. */}
           <input ref={inputRef} type="range" min={0} max={1} step={0.01} className="musicbar-volume_slider"
             onInput={handleVolumeChange}
-            defaultValue={0.5} />
+            defaultValue={0.5} aria-label="volume_range"/>
           <div className="musicbar-volume_track"></div>
         </div>
       </div>

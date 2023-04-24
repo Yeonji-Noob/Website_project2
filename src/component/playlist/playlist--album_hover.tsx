@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { HoverButtons2 } from "./";
+import { useState } from 'react';
+import { HoverButtons2 } from './';
 
 
 
-const AlbumHover = () => {
+const AlbumHover: React.FC = () => {
 
   const [isHovering, setIsHovering] = useState<boolean>(false);
 

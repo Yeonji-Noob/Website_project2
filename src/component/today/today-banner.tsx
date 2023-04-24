@@ -1,7 +1,4 @@
-import TodayButtons from "component/today/today-banner_buttons";
-
-import TodayMainBannerBG from "assets/today/today-music_banner.png";
-
+import TodayButtons from 'component/today/today-banner_buttons';
 
 
 export const TodayBanner = () => {
@@ -22,7 +19,7 @@ export const TodayBanner = () => {
                 <TodayButtons />
 
             </div>
-            <img className="today-img-box" src={TodayMainBannerBG} alt="today-main-banner-bg" />
+            <img className="today-img-box" src={`${process.env.PUBLIC_URL}/images/today/today-music_banner.webp`} alt="today-main-banner-bg" />
         </div>
     );
 

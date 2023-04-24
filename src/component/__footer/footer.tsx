@@ -1,22 +1,9 @@
 // (3/25일 기록)
-
 // import * as ~~~~는 namespace를 생성하고 모듈의 모든 내용을 가져옴
 // 그냥 import ~~ from은 default export를 가져옴
 
-// * as를 한번 적용해봤으나 밑줄이 떴었음 이유는
-// 이미지 파일은 모듈로 사용할 수 없기 때문에 후자를 사용함
-import Quality from "../../assets/__footer/footer-quality_certification.png"
-import MusicCopyright from "../../assets/__footer/footer-music_copyright.png"
-import Protection from "../../assets/__footer/footer-protection.png"
-import Awards from "../../assets/__footer/footer-awards.png"
-import Kisa from "../../assets/__footer/footer-kisa.png"
 
-
-/**
- * 
- * @returns {string} footer text
- */
-const Footer: React.FC = () => (
+const Footer: React.FC<{}> = () => (
 
     <footer>
         {/* -----상단 메뉴----- */}
@@ -55,11 +42,11 @@ const Footer: React.FC = () => (
 
 
             <div className="certificate">
-                <img src ={Quality} alt="사이트 품질인증" />
-                <img src ={MusicCopyright} alt="음악저작권 이용허락인증"/>
-                <img src ={Protection} alt="한국저작권보호원" /> 
-                <img src ={Awards} alt="2014 스마트 앱 어워즈 기능서비스부문 통합대상" /> 
-                <img src ={Kisa} alt="국내 정보보호 표준인증 KISA ISMS획득" />
+                <img src={`${process.env.PUBLIC_URL}/images/__footer/footer-quality_certification.webp`} alt="사이트 품질인증" />
+                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-music_copyright.webp`} alt="음악저작권 이용허락인증"/>
+                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-protection.webp`} alt="한국저작권보호원" /> 
+                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-awards.webp`} alt="2014 스마트 앱 어워즈 기능서비스부문 통합대상" /> 
+                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-kisa.webp`} alt="국내 정보보호 표준인증 KISA ISMS획득" />
             </div>
 
 

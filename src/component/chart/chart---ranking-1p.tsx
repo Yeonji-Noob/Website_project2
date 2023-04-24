@@ -1,8 +1,8 @@
-import { ChartNextButton } from ".";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useToggleStore } from "component/__header/toggle";
+import { ChartNextButton } from '.';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useToggleStore } from 'component/__header/toggle';
 
 
 // Billboard Hot 100 type //

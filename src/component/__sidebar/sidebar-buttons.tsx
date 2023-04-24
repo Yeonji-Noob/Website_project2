@@ -1,4 +1,4 @@
-import { Ticket } from ".";
+import { Ticket } from '.';
 
 export interface SidebarButtonsProps {
     SideText: string[];

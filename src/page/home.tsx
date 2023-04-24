@@ -1,5 +1,5 @@
 // ======component import====== //
-import { HomeAlbums, HomePlayLists, HomeGenreLists, MainBanner} from "../component/home/"
+import { HomeAlbums, HomePlayLists, HomeGenreLists, MainBanner, HomeInterview } from '../component/home/';
 
 // ======svg import====== //
 //import {ReactComponent as Interview } from "../assets/home/home-artist_interview.svg";
@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
 
     return (
         <div className="home">
-            <MainBanner/>
+            <MainBanner />
             {/* 추천앨범, 추천플레이리스트, 장르별추천 텍스트 */}
 
             <div className="home--contents">
@@ -34,10 +34,7 @@ export const Home: React.FC = () => {
                 <HomeGenreLists />
             </div>
 
-            
-            <div className="home-interview">
-                <img src={require('../assets/home/home-artist_interview.jpg')} alt="interview" />
-            </div>
+            <HomeInterview />
         </div>
     )
 

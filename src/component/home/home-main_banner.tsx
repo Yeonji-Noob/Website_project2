@@ -1,8 +1,12 @@
 // ======image import====== //
-import MainImg from "../../assets/home/home-playlistbox.webp"
-import { Play, Shared, Add, Album4 } from "./"
+import { Play, Shared, Add, Album4 } from './';
 
-export const MainBanner = () => {
+
+/**
+ * 
+ * @returns home 최상단에 있는 메인 배너 이미지 입니다.
+ */
+export const MainBanner :React.FC = () => {
 
 
     return (
@@ -16,7 +20,7 @@ export const MainBanner = () => {
                 <Shared id="home-shared" />
                 <Add id="home-add" />
             </div>
-            <img className="home-img-box" src={MainImg} alt="imgbox" />
+            <img className="home-img-box" src={'/images/home/home-playlistbox.webp'} alt="imgbox" />
             <Album4 className="albums-image" />
         </div>
     );

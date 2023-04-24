@@ -1,6 +1,6 @@
 import { useToggleStore } from '../__header/toggle';
 
-export const SettingButton = () => {
+export const SettingButton: React.FC = () => {
 
     const light = useToggleStore((state: { light: boolean }) => state.light);
 
