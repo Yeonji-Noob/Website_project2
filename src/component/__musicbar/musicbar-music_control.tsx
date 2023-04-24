@@ -70,7 +70,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
   });
 
 
-
+  console.log(musicBarWidth);
 
 
   const handleMusicBarChange = () => {
