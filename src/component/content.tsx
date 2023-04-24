@@ -1,4 +1,4 @@
-import { Home, TodaysMusic, Chart, PlayList, MusicVideo } from "./";
+import { Home, TodaysMusic, Chart, PlayList } from "./";
 
 import { ChartPage2, ChartPage3, ChartPage4 } from "../component/"
 
@@ -24,15 +24,13 @@ const Content = () => {
             <Routes>
 
                 
-                <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />}></Route>
-                <Route path={`${process.env.PUBLIC_URL}/home`} element={<Home />}></Route>
+                <Route path={'/'} element={<Home />}></Route>
+                <Route path={'/home'} element={<Home />}></Route>
                 <Route path={`${process.env.PUBLIC_URL}/today`} element={<TodaysMusic />}></Route>
-
                 <Route path={`${process.env.PUBLIC_URL}/chart`} element={<Chart />}></Route>
                 <Route path={`${process.env.PUBLIC_URL}/chart2p`} element={<ChartPage2 />}></Route>
                 <Route path={`${process.env.PUBLIC_URL}/chart3p`} element={<ChartPage3 />}></Route>
                 <Route path={`${process.env.PUBLIC_URL}/chart4p`} element={<ChartPage4 />}></Route>
-
                 <Route path={`${process.env.PUBLIC_URL}/playlist`} element={<PlayList />}></Route>
                 {/* <Route path={`${process.env.PUBLIC_URL}/musicvideo`} element={<MusicVideo />}></Route> */}
 

@@ -1,18 +1,20 @@
 import { useRef, useState } from "react";
 import { SelectBox, CheckBoxItem, CheckBox } from ".";
-import { all } from "axios";
+import { ChangeEventHandler } from "react";
 
-
-
-
-export interface setBoxProps {
-    checked: boolean;
-}
 
 export interface checkedItemHandlerProps {
     id: string;
     checked: boolean;
 }
+
+interface CheckBoxItemProps {
+    idx: number;
+    name: string;
+    checkedItemHandler: (isChecked: boolean, itemId: number) => void;
+    allCheckedItems: boolean;
+  }
+
 
 
 export const TodayNewJeans = (): React.ReactElement => {
@@ -58,7 +60,7 @@ export const TodayNewJeans = (): React.ReactElement => {
 
 
 
-
+    //개별 체크박스에 props로 전달할 것
     const checkedItemHandler = ({ id, checked }: checkedItemHandlerProps) => {
         if (checked) {
             checkedItems.add(id);
@@ -67,57 +69,74 @@ export const TodayNewJeans = (): React.ReactElement => {
             checkedItems.delete(id);
             setCheckedItems(checkedItems);
         }
-        return(
-            console.log(checkedItems)
-        );
+        // return (
+        //     // console.log(checkedItems)
+        // );
     };
 
+    // 1.전체 체크박스 하나 눌렀을 때 set()에 모든 item이 담겨야 함
+    // 2.전체 체크박스의 상태도 block이 되어야 함
+
+    // 3.전체 체크박스를 해제했을때 set()에서 모든 item이 빠져야(delete)함
+    // 4.전체 체크박스의 상태도 none이 되어야 함
+
+
+    const allCheckedRef = useRef<HTMLInputElement>(null)
 
 
     const [allCheckedItems, setAllCheckedItems] = useState<boolean>(false);
 
-    const allCheckedRef = useRef<null>(null)
-
-
-    const allHandleCheck = () => {
+    const allHandleClick = () => {
         setAllCheckedItems(!allCheckedItems);
     }
 
-    const allCheckedItemHandler = () => {
-        if(checkedItems.size === 7)
-            {
-            //  allCheckedRef.current.style
-            }
-        else {
-            setAllCheckedItems(false)
-        }
-        return (console.log())
+
+
+    const allHandleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+        const target = event.target as HTMLInputElement;
+        allHandleClick();
+        checkedItemHandler({ id: target.id, checked: target.checked });
     }
 
-    const checkBoxDisplay = allCheckedItems ? "block" : "none";
 
-    console.log(allCheckedItems);
+    const allHandleCheck = (isChecked: boolean, CheckBoxItems: CheckBoxItemProps[]) => {
+        if (isChecked) {
+          setAllCheckedItems(true);
+          setCheckedItems(new Set(CheckBoxItems.map(({ idx }) => idx)));
+        } else {
+          checkedItems.clear();
+          setAllCheckedItems(false);
+          setCheckedItems(new Set());
+        }
+      };
+
+    console.log(allHandleCheck);
+
+
+
+
+    const allCheckBoxDisplay = allCheckedItems ? "block" : "none";
+
+    // console.log(allCheckedItems);
 
     return (
         <>
             <div className="today-check_box_select_all_box" >
-                <CheckBox ref={allCheckedRef} className="today-NewJeans_All_Check" 
-                style={{ display: checkBoxDisplay }}
-                />
-                <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all' onClick={allCheckedItemHandler} />
+                <CheckBox className="today-NewJeans_All_Check" style={{ display: allCheckBoxDisplay }} onClick={allHandleClick} />
+                <input className="today-check_box_select_all" id="btn1" type="Checkbox" name='select-all' ref={allCheckedRef} checked={allCheckedItems} onClick={allHandleClick} onChange={allHandleChange} />
                 <label htmlFor="btn1">총 7곡</label>
             </div>
-
+            {console.log(allCheckedItems)}
 
             {NewJeansList.map((info) => {
                 return (
                     <div className="today-newJeans_check_box_container" key={info.key} id={info.id}>
-                        <CheckBoxItem idx={info.idx} name={info.idx} checkedItemHandler={checkedItemHandler} />
+                        <CheckBoxItem idx={info.idx} name={info.idx} checkedItemHandler={checkedItemHandler} allCheckedItems={allCheckedItems}/>
                         <SelectBox cover={info.cover} title={info.title} artist={info.artist} album={info.album} id={info.id} />
                     </div>
                 );
             })}
-            {console.log(checkedItems)}
+            {/* {console.log(checkedItems)} */}
         </>
     );
 

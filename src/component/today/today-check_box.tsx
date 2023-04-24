@@ -1,28 +1,29 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { CheckBox } from ".";
-// import {setBoxProps} from "./today-newjeans"
 import { checkedItemHandlerProps } from "../today/today-newjeans"
 import { ChangeEventHandler } from "react";
 
+
 interface CheckBoxItemProps {
     idx: string;
-    // handleClickChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    // setBox: ({ checked }: setBoxProps) => void;
     name: string | undefined;
     checkedItemHandler: ({ id, checked }: checkedItemHandlerProps) => void;
+    allCheckedItems: boolean;
 }
 
-export const CheckBoxItem = ({ idx, name, checkedItemHandler }: CheckBoxItemProps) => {
 
+export const CheckBoxItem = ({ idx, name, checkedItemHandler, allCheckedItems }: CheckBoxItemProps) => {
 
+    //개별 체크박스의 상태 관리 
     const [notCheck, setChecked] = useState<boolean>(false);
     // const [checkInput, setCheckInput] = useState([]);
 
-
+    //체크박스 누르면 상태 변화
     const handleClick = () => {
         setChecked(!notCheck);
       }
 
+    //   
       const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
         const target = event.target as HTMLInputElement;
         handleClick();
@@ -33,13 +34,17 @@ export const CheckBoxItem = ({ idx, name, checkedItemHandler }: CheckBoxItemProp
 
     const checkBoxDisplay = notCheck ? "block" : "none";
 
-
+    //   console.log(checkBoxDisplay);
     const checkRef = useRef(null);
 
-    // const allCheckHandler = () => setChecked(isAllChecked);
 
-    // useEffect(() => allCheckHandler(), [isAllChecked]);
+    // 전체 체크를 위함
 
+    useEffect(() =>{ 
+      const allCheckHandler = () => setChecked(allCheckedItems);
+      allCheckHandler()}, [allCheckedItems]);
+
+    
     return (
         <>
             <CheckBox values={idx} className="today-NewJeans_Check" style={{ display: checkBoxDisplay }} />
