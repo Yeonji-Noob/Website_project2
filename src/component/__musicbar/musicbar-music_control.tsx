@@ -176,7 +176,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
         sec: secRemain
       });
     }
-  }, [isPlaying]);
+  }, [isPlaying, duration]);
 
 
   useEffect(() => {
@@ -249,8 +249,8 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
       </div>
 
       {/* 검사를 위한 console.log */}
-      {/* {console.log(musicBarWidth)}
-      {console.log(Math.floor((duration || 0) / 1000))}
+      {console.log(musicBarWidth)}
+      {/* {console.log(Math.floor((duration || 0) / 1000))}
       {console.log(inputRef.current?.value)} */}
 
       {/* Volume */}

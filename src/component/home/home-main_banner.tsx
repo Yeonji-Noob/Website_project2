@@ -1,5 +1,5 @@
 // ======image import====== //
-import MainImg from "../../assets/home/home-playlistbox.png"
+import MainImg from "../../assets/home/home-playlistbox.webp"
 import { Play, Shared, Add, Album4 } from "./"
 
 export const MainBanner = () => {

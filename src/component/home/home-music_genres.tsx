@@ -1,5 +1,4 @@
 import AlbumsInfo2 from "./home--album_info2";
-
 // home-AlbumsInfo3 컴포넌트의 부모 컴포넌트
 export const HomeGenreLists = () => {
 
