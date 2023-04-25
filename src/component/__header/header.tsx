@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         <div className="header" id={light ? 'light-mode' : 'dark-mode'}>
 
             <picture>
-                <img className="header-logo" src={`${process.env.PUBLIC_URL}/images/__header/header-soribada_logo.png`} alt="logo" id={light ? '' : 'dark-png'} />
+                <img className="header-logo" width={83} height={45} src={`${process.env.PUBLIC_URL}/images/__header/header-soribada_logo.png`} alt="logo" id={light ? '' : 'dark-png'} />
             </picture>
 
             <div className="header-right">

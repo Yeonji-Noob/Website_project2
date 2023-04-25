@@ -42,11 +42,11 @@ const Footer: React.FC<{}> = () => (
 
 
             <div className="certificate">
-                <img src={`${process.env.PUBLIC_URL}/images/__footer/footer-quality_certification.webp`} alt="사이트 품질인증" />
-                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-music_copyright.webp`} alt="음악저작권 이용허락인증"/>
-                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-protection.webp`} alt="한국저작권보호원" /> 
-                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-awards.webp`} alt="2014 스마트 앱 어워즈 기능서비스부문 통합대상" /> 
-                <img src ={`${process.env.PUBLIC_URL}/images/__footer/footer-kisa.webp`} alt="국내 정보보호 표준인증 KISA ISMS획득" />
+                <img width={113} height={35} src={`${process.env.PUBLIC_URL}/images/__footer/footer-quality_certification.webp`} alt="사이트 품질인증" />
+                <img width={98} height={35} src ={`${process.env.PUBLIC_URL}/images/__footer/footer-music_copyright.webp`} alt="음악저작권 이용허락인증"/>
+                <img width={83} height={35} src ={`${process.env.PUBLIC_URL}/images/__footer/footer-protection.webp`} alt="한국저작권보호원" /> 
+                <img width={138} height={35} src ={`${process.env.PUBLIC_URL}/images/__footer/footer-awards.webp`} alt="2014 스마트 앱 어워즈 기능서비스부문 통합대상" /> 
+                <img width={200} height={35} src ={`${process.env.PUBLIC_URL}/images/__footer/footer-kisa.webp`} alt="국내 정보보호 표준인증 KISA ISMS획득" />
             </div>
 
 

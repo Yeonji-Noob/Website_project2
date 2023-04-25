@@ -6,11 +6,6 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-/*---------------------------*/
-/*---------base 폴더---------*/
-/*---------------------------*/
-@import "base/typo";
-@import "base/reset";
 
 /*---------------------------*/
 /*------components 폴더------*/
@@ -51,10 +46,6 @@
 @import "components/scrollbar";
 
 
-//musicvideo
-@import "components/musicvideo/musicvideo-background";
-
-
 /*---------------------------*/
 /*---------layout 폴더-------*/
 /*---------------------------*/
@@ -84,3 +75,12 @@
 /*---------venders 폴더-------*/
 /*---------------------------*/
 @import "venders/smooth-scrollbar";
+
+
+
+/*---------------------------*/
+/*---------base 폴더---------*/
+/*---------------------------*/
+@import "base/typo";
+@import "base/reset";
+@import "base/mediaquery";

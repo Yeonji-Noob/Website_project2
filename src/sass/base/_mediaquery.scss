@@ -1,0 +1,152 @@
+@media screen and (max-width: 1560px) {
+    .musicbar-slider_container {
+        justify-content: right;
+        width: 100px;
+    }
+
+    .musicbar-slide_container {
+        display: none;
+    }
+    .musicbar-slider {
+        display: none;
+    }
+
+    .musicbar-time_container {
+        display: flex;
+
+        & .musicbar-time {
+            margin-right: 5px;
+        }
+    }
+
+  
+}
+
+
+
+
+
+@media screen and (max-width: 1350px) {
+    body {
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1330px) {
+
+    // today
+
+    // chart
+
+
+    // 푸터
+    .footer--menu {
+        height: 75px;
+        & p {
+            line-height: 45px;
+        }
+
+        & p:nth-child(6) {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+        }
+        & p:nth-child(7) {
+            position: absolute;
+            top: 50px;
+            left: 215px;
+        }
+        & p:nth-child(8) {
+            position: absolute;
+            top: 50px;
+            left: 340px;
+        }
+
+        & p:nth-child(n + 2)::after {
+            top: 18px;
+        }
+    }
+
+    & .customer-service {
+        width: 70vw;
+
+        & p {
+            font-size: 12px;
+            line-height: 40px;
+            margin-right: 0;
+        
+            //---------------------------------
+            // --- 고객센터 | FAQ | 구분선 -----
+            //---------------------------------
+
+            &:nth-child(n + 2) {
+                position: relative;
+                left: 10px;
+            }
+        
+            &:nth-child(n + 2)::after {
+                position: absolute;
+                left: 5px;
+                top: 13px;
+                content: "";
+                height: 5px;
+                background-color: #a0a0a0;
+            }
+        }
+
+        & p:first-child,
+        p:nth-child(2) {
+            font-weight: 600;
+        }
+
+        & p:nth-child(2) {
+            text-align: left;
+            width: 140px;
+        }
+
+        // '본 브라우저는 chrome 브라우저에 최적화되어있습니다' text
+        & .chrome {
+            font-size: 14px;
+            right: 10px;
+        
+        }
+    }
+
+    .certificate {
+       justify-content: space-around;
+
+       & img {
+        margin-right: 12px;
+       }
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .login-container {
+        display: none;
+        & svg {
+            display: none;
+        }
+    }
+
+    .setting-container {
+    }
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+
+
+}
