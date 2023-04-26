@@ -18,30 +18,40 @@
             margin-right: 5px;
         }
     }
-
-  
 }
 
+@media screen and (max-width: 1530px) {
+    // chart
+    .chart-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        margin-top: 20px;
+        width: 70vw;
+        height: 100vw;
+    }
 
-
-
-
-@media screen and (max-width: 1350px) {
-    body {
-        overflow: hidden;
+    .playlist-button2 {
+        top: 8.5vw;
     }
 }
 
+@media screen and (max-width: 1350px) {
+    .playlist-albums-container {
+        height: 250px;
+        width: 1000px;
+        overflow-x: auto;
+        /* white-space: nowrap; */
+    }
 
-
-
+    .album-info-flexbox .album-info p {
+        line-height: 16px;
+    }
+}
 
 @media screen and (max-width: 1330px) {
-
     // today
 
     // chart
-
 
     // 푸터
     .footer--menu {
@@ -78,7 +88,7 @@
             font-size: 12px;
             line-height: 40px;
             margin-right: 0;
-        
+
             //---------------------------------
             // --- 고객센터 | FAQ | 구분선 -----
             //---------------------------------
@@ -87,7 +97,7 @@
                 position: relative;
                 left: 10px;
             }
-        
+
             &:nth-child(n + 2)::after {
                 position: absolute;
                 left: 5px;
@@ -112,41 +122,94 @@
         & .chrome {
             font-size: 14px;
             right: 10px;
-        
         }
     }
 
     .certificate {
-       justify-content: space-around;
+        justify-content: space-around;
 
-       & img {
-        margin-right: 12px;
-       }
+        & img {
+            margin-right: 12px;
+        }
     }
-
-
-
 }
 
+@media screen and (max-width: 1288px) {
+    .playlist-albums-container {
+        width: 900px;
+    }
+
+    .content {
+        overflow-x: hidden;
+    }
+
+    .playlist-box {
+        width: 180px;
+        height: 180px;
+    }
+
+    .playlist-box .playlist--album-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .playlist--album-hover {
+        width: 174px;
+        height: 174px;
+    }
+
+    .playlist-button2 {
+        position: absolute;
+        top: 102px;
+        left: 10px;
+        width: 40px;
+        z-index: 10;
+    }
+
+    .playlist-etc2 {
+        position: absolute;
+        top: 135px;
+        right: 15px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .playlist-albums-container {
+        width: 750px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .playlist-albums-container {
+        width: 590px;
+        margin-left: 30px;
+    }
+
+    .container {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 750px) {
-
     .login-container {
         display: none;
         & svg {
             display: none;
         }
     }
-
-    .setting-container {
-    }
-
 }
 
-
-
-@media screen and (max-width: 500px) {
-
-
-
+// sns 아이콘이 짤리는 현상이 있어서 그부분 수정
+@media screen and (min-height: 1025px) {
+    .sidebar-contents {
+        height: 540px;
+    }
+    .scroll-content {
+        height: 580px;
+    }
+    .sidebar--button--container {
+        height: 150px;
+    }
 }

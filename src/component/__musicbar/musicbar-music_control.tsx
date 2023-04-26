@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { Play, Pause } from "./";
 import useSound from "use-sound";
 import { useState, useRef, useEffect } from 'react';
@@ -56,7 +58,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
   const musicBarStateRef: RefObject<HTMLInputElement> = useRef(null);
 
   
-  const [musicBarWidth, setMusicBarWidth] = useState<string>('0');
+  const [musicBarWidth, setMusicBarWidth] = useState<string>('0'); //eslint-disable-line no-unused-vars
   
   // const musicState = useState(0);
   // const setMusicBarWidth = musicState[1];
@@ -70,7 +72,8 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
   });
 
 
-  console.log(musicBarWidth);
+
+  // console.log(musicBarWidth);
 
 
   const handleMusicBarChange = () => {
@@ -239,7 +242,7 @@ export const MusicControl = ({ currentIndex, setCurrentIndex }: PropsType) => {
           {/* 실제 width가 움직여보이는 것은 아래 div박스임 */}
           {duration && <div className="musicbar-slide" style={{ width: `${(seconds / Math.floor((duration || 0) / 1000)) * 585}px` }} ></div>}
           <input ref={musicBarStateRef} type="range" min={0} max={Math.floor((duration || 0) / 1000)} step={0.01} className="musicbar-slider" onInput={handleMusicBarChange}
-            defaultValue={0} value={seconds} onChange={(e) => { sound.seek([e.target.value]) }} aria-label="musicbar_range"/>
+             value={seconds} onChange={(e) => { sound.seek([e.target.value]) }} aria-label="musicbar_range"/>
           <div className="musicbar-range_track"></div>
         </div>
 

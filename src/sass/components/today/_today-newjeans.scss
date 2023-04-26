@@ -28,11 +28,10 @@
     position: absolute;
     width: 26px;
     height: 26px;
-    margin-left:1px;
+    margin-left: 1px;
     z-index: 1;
     background-color: #fff;
 }
-
 
 .today-NewJeans_Check {
     position: absolute;
@@ -44,15 +43,13 @@
     background-color: #fff;
 }
 
-
 .today-NewJeans_select_box {
     display: flex;
+    justify-content: space-between;
     margin-top: 15px;
     margin-left: 20px;
     align-items: center;
-    width: 100%;
-
-
+    width: 90%;
 
     & .today-cover_img_container {
         position: relative;
@@ -68,39 +65,32 @@
     }
 
     & .today-NewJeans_title {
-        display: block;
-        width: 180px;
-        margin-right: 15.62vw;
+        @include today-title-set;
         font-size: 30px;
         letter-spacing: 5px;
-        font-family: 'Pretendard';
     }
 
     & h3 {
-        display: block;
-        width: 10px;
-        margin-right: 10vw;
+        @include today-title-set;
         font-size: 26px;
         font-weight: 200;
-        font-family: 'Pretendard';
-
     }
 
     & .today-album_text {
         display: block;
         width: 9vw;
         font-size: 1.3542vw;
-        margin: 0 auto;
+        margin: 0 100px 0 0;
     }
 
     & .today-Kebab_menu {
         cursor: pointer;
+        width: 5vw;
     }
-    
 }
 
 .today-newJeans_check_box_container {
-    display:flex;
+    display: flex;
     height: 200px;
 
     .today-NewJeans_check_box {
@@ -118,10 +108,8 @@
         cursor: pointer;
         z-index: 1;
     }
-
 }
 
-
 .today-kebab_container {
-width: 100px;
+    width: 100px;
 }

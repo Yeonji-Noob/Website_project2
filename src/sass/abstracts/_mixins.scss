@@ -124,3 +124,11 @@
   position: relative;
   width: 30px;
 }
+
+//today-newjeans set
+@mixin today-title-set {
+  display: block;
+  width: 10vw;
+  margin-right: 9vw;
+  font-family: $default-font;
+}

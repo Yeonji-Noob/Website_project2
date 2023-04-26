@@ -1,0 +1,109 @@
+.notice {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .notice {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(35, 30, 220);
+        background: radial-gradient(circle, rgba(35, 30, 220, 1) 0%, rgba(27, 23, 163, 1) 49%, rgba(0, 0, 0, 1) 100%);
+        z-index: 100;
+
+        .notice_logo {
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+            margin-bottom: 20px;
+        }
+
+        & .notice_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70vw;
+            height: 60vw;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+            & #notice_img {
+                position: relative;
+                width: 25vw;
+                height: 25vw;
+            }
+
+            & p {
+                text-align: center;
+                font-size: 2vw;
+                font-weight: 600;
+                font-family: $default-font;
+                margin-bottom: 10px;
+            }
+
+            & p:nth-child(2) {
+                font-size: 3vw;
+                font-weight: bold;
+            }
+
+            & p:nth-child(5),
+            p:nth-child(6) {
+                color: #606060;
+                font-weight: 400;
+            }
+
+            & #github_icon {
+                margin-top: 1vw;
+                width: 5vw;
+                height: 5vw;
+                cursor: pointer;
+                margin-bottom: 10px;
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    #github_icon a {
+        width: 25vw;
+        height: 25vw;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .notice {
+        display: flex;
+        z-index: 10;
+
+        & .notice_box {
+            width: 220px;
+            height: 300px;
+
+            & p:nth-child(2) {
+                margin-top: 10px;
+                font-size: 4.5vw;
+                font-weight: bold;
+            }
+
+            & #notice_img {
+                position: relative;
+                width: 80px;
+                height: 80px;
+            }
+
+            & #github_icon {
+                margin-top: 10px;
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+    }
+}

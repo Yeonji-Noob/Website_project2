@@ -3,6 +3,7 @@ import Header from './component/__header/header';
 import Sidebar from './component/__sidebar/sidebar';
 import MusicBar from './component/__musicbar/musicbar';
 import Content from './component/content';
+import { Notice } from 'page/notice';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -16,14 +17,16 @@ const App: React.FC = () => {
 
   return (
     <BrowserRouter>
-    <div className="App" id={light ? '' : 'dark-mode2'}>
-      <div className="container">
-        <Header />
-        <Sidebar />
-        <Content />
-        <MusicBar />
+
+      <div className="App" id={light ? '' : 'dark-mode2'}>
+        <Notice />
+        <div className="container">
+          <Header />
+          <Sidebar />
+          <Content />
+          <MusicBar />
+        </div>
       </div>
-    </div>
     </BrowserRouter>
   );
 }
