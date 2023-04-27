@@ -1,6 +1,10 @@
 # Website redesign project 2
 
 
+
+
+## :triangular_flag_on_post:introduce
+
 + 🎉 첫 리액트 프로젝트! 🥳🎉
 
 + 웹사이트 redesign으로는 두번째 개인 프로젝트입니다. 
@@ -9,17 +13,20 @@
 
 + 제가 만든 [Project-development-guide](https://github.com/Yeonji-Noob/markup-guide) 를 기준으로 프로젝트를 관리하고 있습니다.
 
++ :warning:배포 시점인 현재 반응형은 지원하지 않고 있습니다. (야금야금 잠수패치 할 예정...)
+
+![image](https://user-images.githubusercontent.com/121682565/234746913-33792363-d9e4-4006-9cab-dc8efad68435.png)
 
 
 
 ---
 
 
-## 🍰 Style guide
+## :cake: style guide
 ![style tile](https://user-images.githubusercontent.com/121682565/234733368-f3234847-6a4c-4372-b97d-b6ab34e61b5c.png)
 
 ---
-## 🍡 Comparison designs
+## 🍡 comparison designs
 ![image](https://user-images.githubusercontent.com/121682565/234734156-1937e62f-9cfd-4d3a-a662-a29f64fa7f20.png)
 
 ---
@@ -47,6 +54,7 @@
   + map을 활용하여 비슷한 구조의 컴포넌트 반복 사용
   
   
+  
   + react-router 사용해서 페이지 링크
   
   ![router](https://user-images.githubusercontent.com/121682565/234738371-7d94cb51-105f-434e-89c8-c78e37765058.gif)
@@ -54,8 +62,44 @@
 
   + smooth-scrollbar 라이브러리 사용 
 
+  ![scroll](https://user-images.githubusercontent.com/121682565/234743113-2457c7b8-32eb-4818-97e4-50b15b62e287.gif)
 
 
+---
+
+## 📑 Pages
+
+**Home, 플레이리스트** 
+* useState를 사용해서 앨범 커버에 버튼 hover, map을 활용한 컴포넌트 반복
+  
+  ![page1](https://user-images.githubusercontent.com/121682565/234744221-9e9e16e2-6d31-4fd5-8fca-0aa0ae2d4bba.gif)
+
+
+
+**오늘의 음악**
+* ES6 set객체를 활용한 chackbox 상태관리 ~~(제일 어려웠다..)~~
+  + [참고 링크](https://velog.io/@kingth/Check-Box-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%ACfeat.-Set)
+  
+  ![checkbox](https://user-images.githubusercontent.com/121682565/234745859-1f2d04c3-3ce6-4d45-b0a7-b2104e238421.gif)
+
+
+  
+
+
+**음악 차트**
+* axios를 사용한 빌보드 hot 100 api 호출
+  + [Billboard Chart 비공식 API](https://github.com/KoreanThinker/billboard-json) <- 정말로 너무 감사하게도 이 api 덕분에 진행을 할 수 있었다..
+  + 날짜마다 순위가 업데이트 됩니다.
+  
+  ![billboard](https://user-images.githubusercontent.com/121682565/234746379-9be98cf3-8817-4d7a-bf21-7c25f48005c7.gif)
+
+  
+
+---
+
+* 회고는 차차 블로그에 쓸 예정입니다. 읽어주셔서 감사합니다. :blush::blush:
+
+---
 
 ## 📚 Used Languages
 <p>
