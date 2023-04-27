@@ -99,6 +99,22 @@ https://yeonji-noob-soribada.netlify.app/
 
 ---
 
+## :house:Lighthouse 변화
+
+__4/25일__
+
+![image](https://user-images.githubusercontent.com/121682565/234750735-31ec8105-6931-4aa4-a225-eaf0c46db9f4.png)
+
+* 이미지 확장자를 webp로 교체, oxipng 사용 등 파일 크기 절감
+* 웹 접근성이 떨어지는 사소한 부분들 교정
+* 콘솔창 에러 해결 및 제거 등
+
+__4/27일__
+
+![image](https://user-images.githubusercontent.com/121682565/234751054-111b8b34-addd-4ca9-8419-6a2f4374c4b7.png)
+
+
+
 * 회고는 차차 블로그에 쓸 예정입니다. 읽어주셔서 감사합니다. :blush::blush:
 
 ---
