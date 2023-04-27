@@ -79,7 +79,7 @@ https://yeonji-noob-soribada.netlify.app/
 
 
 **오늘의 음악**
-* ES6 set객체를 활용한 chackbox 상태관리 ~~(제일 어려웠다..)~~
+* ES6 set객체를 활용한 checkbox 상태관리 ~~(제일 어려웠다..)~~
   + [참고 링크](https://velog.io/@kingth/Check-Box-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%ACfeat.-Set)
   
   ![checkbox](https://user-images.githubusercontent.com/121682565/234745859-1f2d04c3-3ce6-4d45-b0a7-b2104e238421.gif)
