@@ -2,8 +2,7 @@
 
 
 
-
-## :triangular_flag_on_post:introduce
+## :triangular_flag_on_post:Introduce
 
 + 🎉 첫 리액트 프로젝트! 🥳🎉
 
@@ -18,15 +17,18 @@
 ![image](https://user-images.githubusercontent.com/121682565/234746913-33792363-d9e4-4006-9cab-dc8efad68435.png)
 
 
+## :link:Link
+
+https://yeonji-noob-soribada.netlify.app/
 
 ---
 
 
-## :cake: style guide
+## :cake: Style guide
 ![style tile](https://user-images.githubusercontent.com/121682565/234733368-f3234847-6a4c-4372-b97d-b6ab34e61b5c.png)
 
 ---
-## 🍡 comparison designs
+## 🍡 Comparison designs
 ![image](https://user-images.githubusercontent.com/121682565/234734156-1937e62f-9cfd-4d3a-a662-a29f64fa7f20.png)
 
 ---
@@ -101,26 +103,26 @@
 
 ---
 
-## 📚 Used Languages
+## 📚 Used languages
 <p>
 <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=SASS&logoColor=white"/>
 <img src="https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
 </p>
 
 
-## 🧰 Used Tools
+## 🧰 Used tools
 <p>
 <img src="https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
 <img src="https://img.shields.io/badge/canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white"/>
 </p>
 
-## 🗂Package manager
+## 🗂 Package manager
 <p>
 <img src="https://img.shields.io/badge/yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white"/>
 </p>
 
-## ✨ library
+## ✨ Library
 <p>
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"/>
 <img src="https://img.shields.io/badge/createreactapp-09D3AC?style=for-the-badge&logo=createreactapp&logoColor=white"/>
