@@ -2,7 +2,7 @@
 
 
 
-## :triangular_flag_on_post:Introduce
+## :triangular_flag_on_post:Introduction
 
 + 🎉 첫 리액트 프로젝트! 🥳🎉
 
