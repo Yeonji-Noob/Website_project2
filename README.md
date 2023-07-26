@@ -21,17 +21,17 @@
 
 https://yeonji-noob-soribada.netlify.app/
 
----
+
 
 
 ## :cake: Style guide
 ![style tile](https://user-images.githubusercontent.com/121682565/234733368-f3234847-6a4c-4372-b97d-b6ab34e61b5c.png)
 
----
+
 ## 🍡 Comparison designs
 ![image](https://user-images.githubusercontent.com/121682565/234734156-1937e62f-9cfd-4d3a-a662-a29f64fa7f20.png)
 
----
+
 ## 📘 Function
 
 + light/dark mode
@@ -49,7 +49,7 @@ https://yeonji-noob-soribada.netlify.app/
   
 ![play](https://user-images.githubusercontent.com/121682565/234736135-07799c2c-7f83-4c0d-9a25-db67f60cdcb6.gif)
 
----
+
  
 * 공통사항
 
@@ -67,7 +67,7 @@ https://yeonji-noob-soribada.netlify.app/
   ![scroll](https://user-images.githubusercontent.com/121682565/234743113-2457c7b8-32eb-4818-97e4-50b15b62e287.gif)
 
 
----
+
 
 ## 📑 Pages
 
@@ -79,7 +79,7 @@ https://yeonji-noob-soribada.netlify.app/
 
 
 **오늘의 음악**
-* ES6 set객체를 활용한 checkbox 상태관리 ~~(제일 어려웠다..)~~
+* ES6 set객체를 활용한 checkbox 상태관리 ~~( 어려웠다..)~~
   + [참고 링크](https://velog.io/@kingth/Check-Box-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%ACfeat.-Set)
   
   ![checkbox](https://user-images.githubusercontent.com/121682565/234745859-1f2d04c3-3ce6-4d45-b0a7-b2104e238421.gif)
@@ -97,7 +97,7 @@ https://yeonji-noob-soribada.netlify.app/
 
   
 
----
+
 
 ## :house:Lighthouse 변화
 
@@ -115,7 +115,8 @@ __4/27일__
 
 
 
-* 회고는 차차 블로그에 쓸 예정입니다. 읽어주셔서 감사합니다. :blush::blush:
+* 읽어주셔서 감사합니다. :blush::blush:
+
 
 ---
 
